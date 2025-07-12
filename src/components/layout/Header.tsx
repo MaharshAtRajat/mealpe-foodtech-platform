@@ -9,11 +9,12 @@ export const Header = () => {
     <header className="sticky top-0 z-50 w-full glass-card border-b-0">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 gradient-primary rounded-xl flex items-center justify-center shadow-glow animate-glow">
-            <span className="text-white font-bold text-sm">M</span>
-          </div>
-          <span className="font-bold text-xl text-foreground">MealPe</span>
+        <div className="flex items-center space-x-3">
+          <img 
+            src="/lovable-uploads/04947d49-1a7b-4126-86e6-24c86b687433.png" 
+            alt="MealPe" 
+            className="h-8 w-auto"
+          />
         </div>
 
         {/* Desktop Navigation */}
