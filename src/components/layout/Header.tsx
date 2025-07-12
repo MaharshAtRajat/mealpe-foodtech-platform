@@ -6,11 +6,11 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-card border-b">
+    <header className="sticky top-0 z-50 w-full glass-card border-b-0">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
+          <div className="w-8 h-8 gradient-primary rounded-xl flex items-center justify-center shadow-glow animate-glow">
             <span className="text-white font-bold text-sm">M</span>
           </div>
           <span className="font-bold text-xl text-foreground">MealPe</span>
@@ -26,8 +26,8 @@ export const Header = () => {
             <span className="text-foreground hover:text-primary cursor-pointer transition-colors">Contact</span>
           </div>
           <div className="flex items-center space-x-3">
-            <Button variant="ghost" className="text-foreground">Login</Button>
-            <Button className="gradient-primary text-white shadow-brand hover:opacity-90">
+            <Button variant="ghost" className="text-foreground hover:glass">Login</Button>
+            <Button className="gradient-primary text-white shadow-brand hover:shadow-glow transition-all duration-300">
               Get Demo
             </Button>
           </div>
@@ -44,7 +44,7 @@ export const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="lg:hidden border-t bg-card">
+        <div className="lg:hidden glass-card border-t-0">
           <div className="container mx-auto px-4 py-4 space-y-4">
             <div className="space-y-3">
               <div className="text-foreground py-2">Products</div>
