@@ -10,10 +10,11 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">M</span>
-              </div>
-              <span className="font-bold text-xl text-white">MealPe</span>
+              <img 
+                src="/lovable-uploads/b8d09f7e-e55d-4dc1-a400-c73897eb310a.png" 
+                alt="MealPe" 
+                className="h-8 w-auto"
+              />
             </div>
             <p className="text-white/80 mb-6 max-w-md">
               The operating system for institutional food services. Digitizing dining experiences across India.
