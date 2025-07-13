@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
+import digitalFoodCourt from "@/assets/digital-food-court.jpg";
 
 export const Hero = () => {
   return (
@@ -74,8 +75,8 @@ export const Hero = () => {
                 <div className="glass-strong rounded-2xl p-1 shadow-glass mb-6 animate-float">
                   <div className="bg-background rounded-xl overflow-hidden">
                     <img 
-                      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop&auto=format"
-                      alt="MealPe Dashboard Interface"
+                      src={digitalFoodCourt}
+                      alt="Digital Food Court with MealPe Platform"
                       className="w-full h-64 object-cover rounded-t-xl"
                     />
                     <div className="p-6">
