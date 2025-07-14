@@ -39,7 +39,9 @@ export const Footer = () => {
             <ul className="space-y-3 text-white/80">
               <li className="hover:text-white cursor-pointer transition-colors">Digital Cafeteria</li>
               <li className="hover:text-white cursor-pointer transition-colors">Mess Manager</li>
-              <li className="hover:text-white cursor-pointer transition-colors">MedMeals</li>
+              <li className="hover:text-white cursor-pointer transition-colors">
+                <a href="https://medmeals.mealpe.app" target="_blank" rel="noopener noreferrer">MedMeals</a>
+              </li>
             </ul>
           </div>
 

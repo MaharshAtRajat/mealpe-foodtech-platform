@@ -134,10 +134,17 @@ export const Products = () => {
                   asChild
                   className="w-full gradient-primary text-white hover:shadow-glow transition-all duration-300"
                 >
-                  <Link to={index === 0 ? "/products/canteen-digitisation" : index === 1 ? "/products/mess-digitisation" : "/products/medmeals"}>
-                    {product.cta}
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  {index === 2 ? (
+                    <a href="https://medmeals.mealpe.app" target="_blank" rel="noopener noreferrer">
+                      {product.cta}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  ) : (
+                    <Link to={index === 0 ? "/products/canteen-digitisation" : "/products/mess-digitisation"}>
+                      {product.cta}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  )}
                 </Button>
               </CardContent>
             </Card>

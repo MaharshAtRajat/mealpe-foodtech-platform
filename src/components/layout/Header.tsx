@@ -40,7 +40,7 @@ export const Header = () => {
                   <Link to="/products/mess-digitisation" className="w-full">Mess Digitisation</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/products/medmeals" className="w-full">MedMeals</Link>
+                  <a href="https://medmeals.mealpe.app" target="_blank" rel="noopener noreferrer" className="w-full">MedMeals</a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -151,9 +151,9 @@ export const Header = () => {
                 <Link to="/products/mess-digitisation" className="block text-sm text-muted-foreground hover:text-primary py-1">
                   Mess Digitisation
                 </Link>
-                <Link to="/products/medmeals" className="block text-sm text-muted-foreground hover:text-primary py-1">
+                <a href="https://medmeals.mealpe.app" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary py-1">
                   MedMeals
-                </Link>
+                </a>
               </div>
               
               <div className="text-foreground py-2 font-medium">Solutions</div>
