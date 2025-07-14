@@ -1,12 +1,959 @@
+import React from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { CheckCircle, TrendingDown, Frown, ClipboardList, Smartphone, Users, BarChart3, Calendar, Shield, UserCheck, Timer, Phone, Mail, Download } from "lucide-react";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+
 export const Hostels = () => {
   return (
-    <div className="min-h-screen pt-16">
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-foreground mb-8">Hostels / Student Housing</h1>
-        <p className="text-lg text-muted-foreground">
-          Digital dining solutions tailored for hostels and student housing facilities.
-        </p>
-      </div>
+    <div className="min-h-screen">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 leading-tight">
+              Eliminate <span className="text-gradient-primary">40% Food Wastage</span> and Transform Your Hostel Dining Experience
+            </h1>
+            <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed">
+              Stop losing ₹2-5 lakh monthly to food wastage. MealPe's smart mess management helps hostels reduce waste by 50%, improve student satisfaction by 90%, and streamline operations completely.
+            </p>
+            
+            {/* Key Benefits Bar */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+              {[
+                "50% Less Food Wastage",
+                "90% Student Satisfaction", 
+                "3-Week Implementation",
+                "₹18L+ Annual Savings"
+              ].map((benefit, index) => (
+                <div key={index} className="bg-gradient-primary p-4 rounded-xl">
+                  <p className="text-white font-semibold text-sm lg:text-base">{benefit}</p>
+                </div>
+              ))}
+            </div>
+            
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg">
+                Get Free Hostel Assessment
+              </Button>
+              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10 px-8 py-4 text-lg">
+                Download Hostel Case Study
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Industry Pain Points Section */}
+      <section className="py-20 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                Why Hostel Mess Management is Broken
+              </h2>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {/* Financial Losses */}
+              <Card className="glass-card border-destructive/20 hover:glass-strong transition-all duration-300">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-destructive/10 rounded-2xl flex items-center justify-center mb-4">
+                    <TrendingDown className="h-8 w-8 text-destructive" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">💸 Massive Financial Losses</CardTitle>
+                  <CardDescription className="text-lg font-semibold text-destructive">
+                    The Problem: 40-50% food wastage in traditional hostel messes
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-muted-foreground mb-6">
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
+                      Unpredictable student attendance
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
+                      Over-preparation due to uncertainty
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
+                      No demand forecasting capability
+                    </li>
+                  </ul>
+                  <div className="bg-destructive/10 p-4 rounded-lg">
+                    <p className="font-bold text-destructive">Average Loss: ₹2-5 lakh per month for 500-student hostels</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Student Dissatisfaction */}
+              <Card className="glass-card border-yellow-500/20 hover:glass-strong transition-all duration-300">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-yellow-500/10 rounded-2xl flex items-center justify-center mb-4">
+                    <Frown className="h-8 w-8 text-yellow-600" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">😤 Student Dissatisfaction</CardTitle>
+                  <CardDescription className="text-lg font-semibold text-yellow-600">
+                    The Problem: Poor dining experience driving complaints
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-muted-foreground mb-6">
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3 mt-2"></div>
+                      Long queues during meal times
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3 mt-2"></div>
+                      No advance meal information
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3 mt-2"></div>
+                      Inability to skip meals when away
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3 mt-2"></div>
+                      Poor food quality due to overproduction
+                    </li>
+                  </ul>
+                  <div className="bg-yellow-500/10 p-4 rounded-lg">
+                    <p className="font-bold text-yellow-600">Result: 60-70% student dissatisfaction rates</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Administrative Chaos */}
+              <Card className="glass-card border-orange-500/20 hover:glass-strong transition-all duration-300">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-4">
+                    <ClipboardList className="h-8 w-8 text-orange-500" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">📋 Administrative Chaos</CardTitle>
+                  <CardDescription className="text-lg font-semibold text-orange-500">
+                    The Problem: Manual processes consuming staff time
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-muted-foreground mb-6">
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></div>
+                      Paper-based attendance tracking
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></div>
+                      Vendor coordination nightmares
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></div>
+                      No real-time consumption data
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></div>
+                      Budget planning guesswork
+                    </li>
+                  </ul>
+                  <div className="bg-orange-500/10 p-4 rounded-lg">
+                    <p className="font-bold text-orange-500">Impact: 15+ hours weekly on mess administration</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            
+            <div className="text-center">
+              <p className="text-xl text-muted-foreground font-medium">
+                Traditional mess management costs you money, time, and student happiness. <span className="text-primary font-bold">MealPe fixes all three.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MealPe Solutions Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                Complete Digital Transformation for Hostel Dining
+              </h2>
+              <p className="text-xl text-muted-foreground">Primary Solution: MealPe Mess Manager</p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              {/* Smart Meal Planning */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
+                    <BarChart3 className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">Smart Meal Planning</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      AI-powered demand forecasting with 95% accuracy
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Automatic adjustment for exams, holidays, and events
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Student travel management and meal skipping
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Seasonal consumption pattern recognition
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Digital Attendance System */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
+                    <UserCheck className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">Digital Attendance System</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      RFID card-based meal check-ins
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Real-time headcount for vendors
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Automatic attendance reporting
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Parent portal for meal monitoring
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Waste Reduction Technology */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
+                    <TrendingDown className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">Waste Reduction Technology</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Precise quantity predictions
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Real-time consumption tracking
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Vendor preparation optimization
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Monthly waste analysis reports
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Student Engagement Platform */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
+                    <Smartphone className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">Student Engagement Platform</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Mobile app for meal planning and RSVP
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Weekly menu browsing and ratings
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Dietary preference management
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Feedback and suggestion system
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Secondary Solution */}
+            <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-3xl p-8">
+              <h3 className="text-3xl font-bold text-foreground mb-6">Secondary Solution: Digital Cafeteria for Common Areas</h3>
+              <p className="text-xl text-muted-foreground mb-6">Additional Revenue Opportunities</p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Snack and beverage ordering for study areas
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Late-night meal delivery within hostel
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Special occasion catering management
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Vendor partnerships for additional income
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Before vs After Comparison */}
+      <section className="py-20 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                Quick Comparison: Before vs. After
+              </h2>
+            </div>
+            
+            <Card className="glass-card overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-border">
+                      <th className="text-left p-6 font-bold text-lg text-foreground">Aspect</th>
+                      <th className="text-left p-6 font-bold text-lg text-destructive">Before MealPe</th>
+                      <th className="text-left p-6 font-bold text-lg text-primary">After MealPe</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      { aspect: "Food Wastage", before: "40-50% daily", after: "5-10% daily" },
+                      { aspect: "Attendance Tracking", before: "Manual, 60% accurate", after: "Automated, 99% accurate" },
+                      { aspect: "Student Satisfaction", before: "60-70%", after: "90-95%" },
+                      { aspect: "Admin Time", before: "15+ hours/week", after: "3-4 hours/week" },
+                      { aspect: "Vendor Disputes", before: "Weekly issues", after: "Rare occurrences" },
+                      { aspect: "Budget Predictability", before: "Quarterly estimates", after: "Daily precise data" }
+                    ].map((row, index) => (
+                      <tr key={index} className="border-b border-border/50">
+                        <td className="p-6 font-semibold text-foreground">{row.aspect}</td>
+                        <td className="p-6 text-muted-foreground">{row.before}</td>
+                        <td className="p-6 text-primary font-semibold">{row.after}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Implementation Process */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                From Manual to Digital in Just 3 Weeks
+              </h2>
+              <p className="text-xl text-muted-foreground">Simple 3-Step Process</p>
+            </div>
+            
+            <div className="relative">
+              {/* Timeline Line */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary via-primary to-primary/50"></div>
+              
+              <div className="space-y-12">
+                {[
+                  {
+                    week: "Week 1",
+                    title: "Assessment & Setup",
+                    description: "Current mess operation analysis and system configuration",
+                    whatWeDo: [
+                      "Current mess operation analysis",
+                      "Student database integration", 
+                      "Vendor onboarding and training",
+                      "Hardware installation (RFID/tablets)"
+                    ],
+                    whatYouGet: [
+                      "Customized system configuration",
+                      "Trained vendor teams",
+                      "Student orientation materials",
+                      "Parent portal setup"
+                    ]
+                  },
+                  {
+                    week: "Week 2", 
+                    title: "Pilot & Training",
+                    description: "Limited testing and comprehensive training phase",
+                    whatWeDo: [
+                      "Limited student group testing",
+                      "Comprehensive staff training",
+                      "System optimization",
+                      "Issue resolution and fine-tuning"
+                    ],
+                    whatYouGet: [
+                      "Confident system operation",
+                      "Trained administrative staff", 
+                      "Student adoption strategy",
+                      "Performance monitoring setup"
+                    ]
+                  },
+                  {
+                    week: "Week 3",
+                    title: "Full Launch", 
+                    description: "Complete activation with ongoing support",
+                    whatWeDo: [
+                      "Complete system activation",
+                      "Real-time monitoring support",
+                      "Success metrics tracking",
+                      "Ongoing optimization"
+                    ],
+                    whatYouGet: [
+                      "Fully operational digital mess",
+                      "Immediate waste reduction",
+                      "Student satisfaction improvement", 
+                      "Data-driven insights dashboard"
+                    ]
+                  }
+                ].map((step, index) => {
+                  const isEven = index % 2 === 0;
+                  return (
+                    <div key={index} className="relative flex items-center">
+                      {/* Timeline Node */}
+                      <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center z-10">
+                        <span className="text-white font-bold">{index + 1}</span>
+                      </div>
+                      
+                      {/* Content Card */}
+                      <div className={`w-5/12 ${isEven ? 'pr-12' : 'ml-auto pl-12'}`}>
+                        <Card className="glass-card border-border/50 hover:glass-strong transition-all duration-300">
+                          <CardHeader>
+                            <Badge variant="secondary" className="w-fit bg-primary/10 text-primary mb-2">
+                              {step.week}
+                            </Badge>
+                            <CardTitle className="text-2xl font-bold text-foreground">{step.title}</CardTitle>
+                            <CardDescription className="text-muted-foreground">{step.description}</CardDescription>
+                          </CardHeader>
+                          <CardContent>
+                            <div className="grid md:grid-cols-2 gap-6">
+                              <div>
+                                <h4 className="font-semibold text-foreground mb-3">What We Do:</h4>
+                                <ul className="space-y-2">
+                                  {step.whatWeDo.map((item, idx) => (
+                                    <li key={idx} className="flex items-start text-sm text-muted-foreground">
+                                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 mt-1.5 flex-shrink-0"></div>
+                                      {item}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                              <div>
+                                <h4 className="font-semibold text-foreground mb-3">What You Get:</h4>
+                                <ul className="space-y-2">
+                                  {step.whatYouGet.map((item, idx) => (
+                                    <li key={idx} className="flex items-start text-sm text-muted-foreground">
+                                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 mt-1.5 flex-shrink-0"></div>
+                                      {item}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            
+            <div className="text-center mt-16 p-8 bg-gradient-to-br from-primary/5 to-primary/10 rounded-3xl">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Implementation Guarantee</h3>
+              <p className="text-lg text-muted-foreground">
+                <span className="font-semibold text-primary">Success Promise:</span> See measurable improvement in food wastage and student satisfaction within 30 days, or we'll optimize the system at no additional cost.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hostel-Specific Features */}
+      <section className="py-20 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                Built Specifically for Student Housing Needs
+              </h2>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Academic Calendar Integration */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
+                    <Calendar className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">Academic Calendar Integration</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Exam Period Adjustments:</h4>
+                      <p className="text-sm text-muted-foreground">Automatic meal planning changes during exams</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Semester Planning:</h4>
+                      <p className="text-sm text-muted-foreground">Student check-in/check-out meal status updates</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Holiday Management:</h4>
+                      <p className="text-sm text-muted-foreground">Reduced capacity planning for breaks</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Event Coordination:</h4>
+                      <p className="text-sm text-muted-foreground">Special meal arrangements for college events</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Parent & Guardian Portal */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
+                    <Users className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">Parent & Guardian Portal</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Meal Monitoring:</h4>
+                      <p className="text-sm text-muted-foreground">Real-time visibility into student eating patterns</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Nutrition Tracking:</h4>
+                      <p className="text-sm text-muted-foreground">Dietary intake and health monitoring</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Alert System:</h4>
+                      <p className="text-sm text-muted-foreground">Notifications for irregular meal attendance</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Payment Transparency:</h4>
+                      <p className="text-sm text-muted-foreground">Clear billing and meal plan usage</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Student Lifecycle Management */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
+                    <UserCheck className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">Student Lifecycle Management</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Room Allocation Sync:</h4>
+                      <p className="text-sm text-muted-foreground">Automatic meal plan assignment</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Transfer Handling:</h4>
+                      <p className="text-sm text-muted-foreground">Seamless meal plan transfers between hostels</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Graduation Process:</h4>
+                      <p className="text-sm text-muted-foreground">Automated meal plan termination</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Readmission Support:</h4>
+                      <p className="text-sm text-muted-foreground">Quick meal plan reactivation</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Compliance & Reporting */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
+                    <Shield className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">Compliance & Reporting</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Government Guidelines:</h4>
+                      <p className="text-sm text-muted-foreground">Nutrition and safety standard compliance</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Audit Trails:</h4>
+                      <p className="text-sm text-muted-foreground">Complete meal and attendance documentation</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Health Monitoring:</h4>
+                      <p className="text-sm text-muted-foreground">Special dietary requirement management</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Financial Reporting:</h4>
+                      <p className="text-sm text-muted-foreground">Detailed cost and wastage analysis</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Integration Capabilities */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                Integration Capabilities
+              </h2>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="glass-card hover:glass-strong transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold text-foreground">Student Information Systems</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Real-time enrollment data synchronization</li>
+                    <li>• Automatic meal plan assignments</li>
+                    <li>• Academic performance correlation</li>
+                    <li>• Demographic analysis for meal planning</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="glass-card hover:glass-strong transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold text-foreground">Hostel Management Systems</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Room allocation integration</li>
+                    <li>• Fee management connectivity</li>
+                    <li>• Disciplinary action coordination</li>
+                    <li>• Maintenance schedule alignment</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="glass-card hover:glass-strong transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold text-foreground">Communication Platforms</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• SMS gateway integration</li>
+                    <li>• Email notification systems</li>
+                    <li>• Mobile app white-labeling</li>
+                    <li>• Parent communication automation</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing & ROI */}
+      <section className="py-20 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              Affordable Pricing with Guaranteed ROI
+            </h2>
+            <p className="text-2xl text-muted-foreground mb-12">Contact for pricing.</p>
+            
+            <Card className="glass-card text-left">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-foreground">What's Included</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Complete mess management platform
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Student and vendor mobile apps
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      RFID integration support
+                    </li>
+                  </ul>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Parent portal access
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Email and chat support
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Monthly optimization reports
+                    </li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Next Steps */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                Ready to Transform Your Hostel Dining?
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Join leading hostels already saving ₹10+ lakh annually while delighting students with modern dining experiences.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {/* Free Assessment */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300 border-primary/20">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
+                    <BarChart3 className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">Option 1: Free Assessment</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4 mb-6">
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">What's Included:</h4>
+                      <ul className="space-y-1 text-sm text-muted-foreground">
+                        <li>• Current mess operation analysis</li>
+                        <li>• Waste reduction opportunity identification</li>
+                        <li>• Custom ROI calculation</li>
+                        <li>• Implementation timeline planning</li>
+                      </ul>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <p className="font-semibold text-foreground">Duration:</p>
+                        <p className="text-muted-foreground">2-hour consultation</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">Cost:</p>
+                        <p className="text-primary">Completely free</p>
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Timeline:</p>
+                      <p className="text-muted-foreground text-sm">Schedule within 48 hours</p>
+                    </div>
+                  </div>
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                    Get Free Assessment
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Live Demo */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300 border-secondary/20">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
+                    <Smartphone className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">Option 2: Live Demo</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4 mb-6">
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">What's Included:</h4>
+                      <ul className="space-y-1 text-sm text-muted-foreground">
+                        <li>• Platform walkthrough with hostel scenarios</li>
+                        <li>• Student and vendor app demonstration</li>
+                        <li>• Parent portal showcase</li>
+                        <li>• Q&A with implementation experts</li>
+                      </ul>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <p className="font-semibold text-foreground">Duration:</p>
+                        <p className="text-muted-foreground">30-minute video call</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">Cost:</p>
+                        <p className="text-primary">Free</p>
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Timeline:</p>
+                      <p className="text-muted-foreground text-sm">Available daily</p>
+                    </div>
+                  </div>
+                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10">
+                    Schedule Live Demo
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Pilot Program */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300 border-orange-500/20">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
+                    <Timer className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">Option 3: Pilot Program</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4 mb-6">
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">What's Included:</h4>
+                      <ul className="space-y-1 text-sm text-muted-foreground">
+                        <li>• 30-day trial with one mess/block</li>
+                        <li>• Complete setup and training</li>
+                        <li>• Performance monitoring</li>
+                        <li>• Success measurement</li>
+                      </ul>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <p className="font-semibold text-foreground">Investment:</p>
+                        <p className="text-muted-foreground">Setup costs only</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">Guarantee:</p>
+                        <p className="text-primary">Full refund if not satisfied</p>
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Timeline:</p>
+                      <p className="text-muted-foreground text-sm">3-week implementation</p>
+                    </div>
+                  </div>
+                  <Button variant="secondary" className="w-full">
+                    Start Pilot Program
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+            
+            {/* Contact Information */}
+            <Card className="glass-card">
+              <CardContent className="p-8">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
+                    <div className="space-y-4">
+                      <div className="flex items-center">
+                        <Mail className="h-5 w-5 text-primary mr-3" />
+                        <div>
+                          <p className="font-semibold text-foreground">Hostel Solutions Team:</p>
+                          <p className="text-muted-foreground">hostels@mealpe.app</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center">
+                        <Phone className="h-5 w-5 text-primary mr-3" />
+                        <div>
+                          <p className="font-semibold text-foreground">Phone Consultation:</p>
+                          <p className="text-muted-foreground">Request callback</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center">
+                        <Timer className="h-5 w-5 text-primary mr-3" />
+                        <div>
+                          <p className="font-semibold text-foreground">Response Time:</p>
+                          <p className="text-muted-foreground">Within 4 hours</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center">
+                        <Calendar className="h-5 w-5 text-primary mr-3" />
+                        <div>
+                          <p className="font-semibold text-foreground">Available:</p>
+                          <p className="text-muted-foreground">Monday-Saturday, 9 AM - 7 PM IST</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground mb-6">Primary CTAs</h3>
+                    <div className="space-y-4">
+                      <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                        Get Free Assessment
+                      </Button>
+                      <Button variant="outline" size="lg" className="w-full border-primary text-primary hover:bg-primary/10">
+                        Schedule Live Demo
+                      </Button>
+                      <Button variant="ghost" className="w-full text-primary hover:bg-primary/10">
+                        <Download className="h-4 w-4 mr-2" />
+                        Download Hostel Guide
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };
