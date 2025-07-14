@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, TrendingDown, Frown, ClipboardList, Smartphone, Users, BarChart3, Calendar, Shield, UserCheck, Timer, Phone, Mail, Download } from "lucide-react";
+import { CheckCircle, TrendingDown, Frown, ClipboardList, Smartphone, Users, BarChart3, Calendar, Shield, UserCheck, Timer, Phone, Mail, Download, Scan, Fingerprint, CreditCard, Award, Clock, Target, Zap } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
@@ -94,73 +94,73 @@ export const Hostels = () => {
               </Card>
 
               {/* Student Dissatisfaction */}
-              <Card className="glass-card border-yellow-500/20 hover:glass-strong transition-all duration-300">
+              <Card className="glass-card border-accent/20 hover:glass-strong transition-all duration-300">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-yellow-500/10 rounded-2xl flex items-center justify-center mb-4">
-                    <Frown className="h-8 w-8 text-yellow-600" />
+                  <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-4">
+                    <Frown className="h-8 w-8 text-accent" />
                   </div>
                   <CardTitle className="text-2xl font-bold text-foreground">😤 Student Dissatisfaction</CardTitle>
-                  <CardDescription className="text-lg font-semibold text-yellow-600">
+                  <CardDescription className="text-lg font-semibold text-accent">
                     The Problem: Poor dining experience driving complaints
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 text-muted-foreground mb-6">
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2"></div>
                       Long queues during meal times
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2"></div>
                       No advance meal information
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2"></div>
                       Inability to skip meals when away
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2"></div>
                       Poor food quality due to overproduction
                     </li>
                   </ul>
-                  <div className="bg-yellow-500/10 p-4 rounded-lg">
-                    <p className="font-bold text-yellow-600">Result: 60-70% student dissatisfaction rates</p>
+                  <div className="bg-accent/10 p-4 rounded-lg">
+                    <p className="font-bold text-accent">Result: 60-70% student dissatisfaction rates</p>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Administrative Chaos */}
-              <Card className="glass-card border-orange-500/20 hover:glass-strong transition-all duration-300">
+              <Card className="glass-card border-secondary/20 hover:glass-strong transition-all duration-300">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-4">
-                    <ClipboardList className="h-8 w-8 text-orange-500" />
+                  <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-4">
+                    <ClipboardList className="h-8 w-8 text-secondary-foreground" />
                   </div>
                   <CardTitle className="text-2xl font-bold text-foreground">📋 Administrative Chaos</CardTitle>
-                  <CardDescription className="text-lg font-semibold text-orange-500">
+                  <CardDescription className="text-lg font-semibold text-secondary-foreground">
                     The Problem: Manual processes consuming staff time
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 text-muted-foreground mb-6">
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-secondary rounded-full mr-3 mt-2"></div>
                       Paper-based attendance tracking
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-secondary rounded-full mr-3 mt-2"></div>
                       Vendor coordination nightmares
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-secondary rounded-full mr-3 mt-2"></div>
                       No real-time consumption data
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-secondary rounded-full mr-3 mt-2"></div>
                       Budget planning guesswork
                     </li>
                   </ul>
-                  <div className="bg-orange-500/10 p-4 rounded-lg">
-                    <p className="font-bold text-orange-500">Impact: 15+ hours weekly on mess administration</p>
+                  <div className="bg-secondary/10 p-4 rounded-lg">
+                    <p className="font-bold text-secondary-foreground">Impact: 15+ hours weekly on mess administration</p>
                   </div>
                 </CardContent>
               </Card>
@@ -517,7 +517,7 @@ export const Hostels = () => {
         </div>
       </section>
 
-      {/* Hostel-Specific Features */}
+      {/* Hostel-Specific Features Section */}
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -527,180 +527,300 @@ export const Hostels = () => {
               </h2>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-2 gap-12">
               {/* Academic Calendar Integration */}
-              <Card className="glass-card hover:glass-strong transition-all duration-300">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
-                    <Calendar className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-foreground">Academic Calendar Integration</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Exam Period Adjustments:</h4>
-                      <p className="text-sm text-muted-foreground">Automatic meal planning changes during exams</p>
+              <div className="space-y-8">
+                <Card className="glass-card hover:glass-strong transition-all duration-300">
+                  <CardHeader>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center">
+                        <Calendar className="h-8 w-8 text-white" />
+                      </div>
+                      <CardTitle className="text-2xl font-bold text-foreground">Academic Calendar Integration</CardTitle>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Semester Planning:</h4>
-                      <p className="text-sm text-muted-foreground">Student check-in/check-out meal status updates</p>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div className="grid gap-4">
+                      <div className="bg-primary/5 p-4 rounded-lg border border-primary/10">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Award className="h-5 w-5 text-primary" />
+                          <h4 className="font-semibold text-foreground">Exam Period Adjustments</h4>
+                        </div>
+                        <p className="text-muted-foreground text-sm">Automatic meal planning changes during exams</p>
+                      </div>
+                      <div className="bg-primary/5 p-4 rounded-lg border border-primary/10">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Clock className="h-5 w-5 text-primary" />
+                          <h4 className="font-semibold text-foreground">Semester Planning</h4>
+                        </div>
+                        <p className="text-muted-foreground text-sm">Student check-in/check-out meal status updates</p>
+                      </div>
+                      <div className="bg-primary/5 p-4 rounded-lg border border-primary/10">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Target className="h-5 w-5 text-primary" />
+                          <h4 className="font-semibold text-foreground">Holiday Management</h4>
+                        </div>
+                        <p className="text-muted-foreground text-sm">Reduced capacity planning for breaks</p>
+                      </div>
+                      <div className="bg-primary/5 p-4 rounded-lg border border-primary/10">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Zap className="h-5 w-5 text-primary" />
+                          <h4 className="font-semibold text-foreground">Event Coordination</h4>
+                        </div>
+                        <p className="text-muted-foreground text-sm">Special meal arrangements for college events</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Holiday Management:</h4>
-                      <p className="text-sm text-muted-foreground">Reduced capacity planning for breaks</p>
+                  </CardContent>
+                </Card>
+
+                {/* Student Lifecycle Management */}
+                <Card className="glass-card hover:glass-strong transition-all duration-300">
+                  <CardHeader>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center">
+                        <UserCheck className="h-8 w-8 text-white" />
+                      </div>
+                      <CardTitle className="text-2xl font-bold text-foreground">Student Lifecycle Management</CardTitle>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Event Coordination:</h4>
-                      <p className="text-sm text-muted-foreground">Special meal arrangements for college events</p>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="grid gap-4">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-foreground">Room Allocation Sync</h4>
+                          <p className="text-muted-foreground text-sm">Automatic meal plan assignment</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-foreground">Transfer Handling</h4>
+                          <p className="text-muted-foreground text-sm">Seamless meal plan transfers between hostels</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-foreground">Graduation Process</h4>
+                          <p className="text-muted-foreground text-sm">Automated meal plan termination</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-foreground">Readmission Support</h4>
+                          <p className="text-muted-foreground text-sm">Quick meal plan reactivation</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* Parent & Guardian Portal */}
-              <Card className="glass-card hover:glass-strong transition-all duration-300">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
-                    <Users className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-foreground">Parent & Guardian Portal</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Meal Monitoring:</h4>
-                      <p className="text-sm text-muted-foreground">Real-time visibility into student eating patterns</p>
+              <div className="space-y-8">
+                <Card className="glass-card hover:glass-strong transition-all duration-300">
+                  <CardHeader>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center">
+                        <Users className="h-8 w-8 text-white" />
+                      </div>
+                      <CardTitle className="text-2xl font-bold text-foreground">Parent & Guardian Portal</CardTitle>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Nutrition Tracking:</h4>
-                      <p className="text-sm text-muted-foreground">Dietary intake and health monitoring</p>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div className="grid gap-4">
+                      <div className="bg-secondary/5 p-4 rounded-lg border border-secondary/10">
+                        <div className="flex items-center gap-3 mb-2">
+                          <BarChart3 className="h-5 w-5 text-secondary-foreground" />
+                          <h4 className="font-semibold text-foreground">Meal Monitoring</h4>
+                        </div>
+                        <p className="text-muted-foreground text-sm">Real-time visibility into student eating patterns</p>
+                      </div>
+                      <div className="bg-secondary/5 p-4 rounded-lg border border-secondary/10">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Shield className="h-5 w-5 text-secondary-foreground" />
+                          <h4 className="font-semibold text-foreground">Nutrition Tracking</h4>
+                        </div>
+                        <p className="text-muted-foreground text-sm">Dietary intake and health monitoring</p>
+                      </div>
+                      <div className="bg-secondary/5 p-4 rounded-lg border border-secondary/10">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Timer className="h-5 w-5 text-secondary-foreground" />
+                          <h4 className="font-semibold text-foreground">Alert System</h4>
+                        </div>
+                        <p className="text-muted-foreground text-sm">Notifications for irregular meal attendance</p>
+                      </div>
+                      <div className="bg-secondary/5 p-4 rounded-lg border border-secondary/10">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Smartphone className="h-5 w-5 text-secondary-foreground" />
+                          <h4 className="font-semibold text-foreground">Payment Transparency</h4>
+                        </div>
+                        <p className="text-muted-foreground text-sm">Clear billing and meal plan usage</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Alert System:</h4>
-                      <p className="text-sm text-muted-foreground">Notifications for irregular meal attendance</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Payment Transparency:</h4>
-                      <p className="text-sm text-muted-foreground">Clear billing and meal plan usage</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
 
-              {/* Student Lifecycle Management */}
-              <Card className="glass-card hover:glass-strong transition-all duration-300">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
-                    <UserCheck className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-foreground">Student Lifecycle Management</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Room Allocation Sync:</h4>
-                      <p className="text-sm text-muted-foreground">Automatic meal plan assignment</p>
+                {/* Compliance & Reporting */}
+                <Card className="glass-card hover:glass-strong transition-all duration-300">
+                  <CardHeader>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center">
+                        <Shield className="h-8 w-8 text-white" />
+                      </div>
+                      <CardTitle className="text-2xl font-bold text-foreground">Compliance & Reporting</CardTitle>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Transfer Handling:</h4>
-                      <p className="text-sm text-muted-foreground">Seamless meal plan transfers between hostels</p>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="grid gap-4">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-foreground">Government Guidelines</h4>
+                          <p className="text-muted-foreground text-sm">Nutrition and safety standard compliance</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-foreground">Audit Trails</h4>
+                          <p className="text-muted-foreground text-sm">Complete meal and attendance documentation</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-foreground">Health Monitoring</h4>
+                          <p className="text-muted-foreground text-sm">Special dietary requirement management</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-foreground">Financial Reporting</h4>
+                          <p className="text-muted-foreground text-sm">Detailed cost and wastage analysis</p>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Graduation Process:</h4>
-                      <p className="text-sm text-muted-foreground">Automated meal plan termination</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Readmission Support:</h4>
-                      <p className="text-sm text-muted-foreground">Quick meal plan reactivation</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Compliance & Reporting */}
-              <Card className="glass-card hover:glass-strong transition-all duration-300">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
-                    <Shield className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-foreground">Compliance & Reporting</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Government Guidelines:</h4>
-                      <p className="text-sm text-muted-foreground">Nutrition and safety standard compliance</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Audit Trails:</h4>
-                      <p className="text-sm text-muted-foreground">Complete meal and attendance documentation</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Health Monitoring:</h4>
-                      <p className="text-sm text-muted-foreground">Special dietary requirement management</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Financial Reporting:</h4>
-                      <p className="text-sm text-muted-foreground">Detailed cost and wastage analysis</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Integration Capabilities */}
+      {/* Hardware Capabilities Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Integration Capabilities
+                Hardware Capabilities
               </h2>
+              <p className="text-xl text-muted-foreground">
+                Multiple authentication options to suit your hostel's needs
+              </p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="glass-card hover:glass-strong transition-all duration-300">
-                <CardHeader>
-                  <CardTitle className="text-xl font-bold text-foreground">Student Information Systems</CardTitle>
+              {/* QR Scanner */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300 group">
+                <CardHeader className="text-center">
+                  <div className="w-20 h-20 bg-gradient-primary rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Scan className="h-10 w-10 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">QR Scanner</CardTitle>
+                  <CardDescription className="text-muted-foreground">
+                    Quick and contactless meal check-ins
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Real-time enrollment data synchronization</li>
-                    <li>• Automatic meal plan assignments</li>
-                    <li>• Academic performance correlation</li>
-                    <li>• Demographic analysis for meal planning</li>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Fast scanning technology
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Works with mobile apps
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Hygiene-friendly solution
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Cost-effective deployment
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
 
-              <Card className="glass-card hover:glass-strong transition-all duration-300">
-                <CardHeader>
-                  <CardTitle className="text-xl font-bold text-foreground">Hostel Management Systems</CardTitle>
+              {/* Biometric System */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300 group">
+                <CardHeader className="text-center">
+                  <div className="w-20 h-20 bg-gradient-primary rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Fingerprint className="h-10 w-10 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">Biometric System</CardTitle>
+                  <CardDescription className="text-muted-foreground">
+                    Secure fingerprint-based authentication
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Room allocation integration</li>
-                    <li>• Fee management connectivity</li>
-                    <li>• Disciplinary action coordination</li>
-                    <li>• Maintenance schedule alignment</li>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Maximum security
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      No card/phone required
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Prevents buddy punching
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Long-term reliability
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
 
-              <Card className="glass-card hover:glass-strong transition-all duration-300">
-                <CardHeader>
-                  <CardTitle className="text-xl font-bold text-foreground">Communication Platforms</CardTitle>
+              {/* RFID Cards */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300 group">
+                <CardHeader className="text-center">
+                  <div className="w-20 h-20 bg-gradient-primary rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <CreditCard className="h-10 w-10 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">RFID Cards</CardTitle>
+                  <CardDescription className="text-muted-foreground">
+                    Traditional and reliable card-based system
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• SMS gateway integration</li>
-                    <li>• Email notification systems</li>
-                    <li>• Mobile app white-labeling</li>
-                    <li>• Parent communication automation</li>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Proven technology
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Quick tap-and-go
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Multi-purpose usage
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Easy replacement
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
@@ -709,22 +829,24 @@ export const Hostels = () => {
         </div>
       </section>
 
-      {/* Pricing & ROI */}
+      {/* Pricing & ROI Section */}
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Affordable Pricing with Guaranteed ROI
-            </h2>
-            <p className="text-2xl text-muted-foreground mb-12">Contact for pricing.</p>
-            
-            <Card className="glass-card text-left">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold text-foreground">What's Included</CardTitle>
-              </CardHeader>
-              <CardContent>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                Affordable Pricing with Guaranteed ROI
+              </h2>
+              <div className="mb-8">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg">
+                  Contact for Pricing
+                </Button>
+              </div>
+              
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-3xl p-8">
+                <h3 className="text-2xl font-bold text-foreground mb-6">What's Included</h3>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <ul className="space-y-3 text-muted-foreground">
+                  <ul className="space-y-3 text-muted-foreground text-left">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
                       Complete mess management platform
@@ -738,7 +860,7 @@ export const Hostels = () => {
                       RFID integration support
                     </li>
                   </ul>
-                  <ul className="space-y-3 text-muted-foreground">
+                  <ul className="space-y-3 text-muted-foreground text-left">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
                       Parent portal access
@@ -753,202 +875,36 @@ export const Hostels = () => {
                     </li>
                   </ul>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Next Steps */}
+      {/* Next Steps Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Ready to Transform Your Hostel Dining?
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                Join leading hostels already saving ₹10+ lakh annually while delighting students with modern dining experiences.
-              </p>
-            </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              Ready to Transform Your Hostel Dining?
+            </h2>
+            <p className="text-xl text-muted-foreground mb-12">
+              Join leading hostels already saving ₹10+ lakh annually while delighting students with modern dining experiences.
+            </p>
             
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              {/* Free Assessment */}
-              <Card className="glass-card hover:glass-strong transition-all duration-300 border-primary/20">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
-                    <BarChart3 className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-foreground">Option 1: Free Assessment</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4 mb-6">
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">What's Included:</h4>
-                      <ul className="space-y-1 text-sm text-muted-foreground">
-                        <li>• Current mess operation analysis</li>
-                        <li>• Waste reduction opportunity identification</li>
-                        <li>• Custom ROI calculation</li>
-                        <li>• Implementation timeline planning</li>
-                      </ul>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4 text-sm">
-                      <div>
-                        <p className="font-semibold text-foreground">Duration:</p>
-                        <p className="text-muted-foreground">2-hour consultation</p>
-                      </div>
-                      <div>
-                        <p className="font-semibold text-foreground">Cost:</p>
-                        <p className="text-primary">Completely free</p>
-                      </div>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground">Timeline:</p>
-                      <p className="text-muted-foreground text-sm">Schedule within 48 hours</p>
-                    </div>
-                  </div>
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                    Get Free Assessment
-                  </Button>
-                </CardContent>
-              </Card>
-
-              {/* Live Demo */}
-              <Card className="glass-card hover:glass-strong transition-all duration-300 border-secondary/20">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
-                    <Smartphone className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-foreground">Option 2: Live Demo</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4 mb-6">
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">What's Included:</h4>
-                      <ul className="space-y-1 text-sm text-muted-foreground">
-                        <li>• Platform walkthrough with hostel scenarios</li>
-                        <li>• Student and vendor app demonstration</li>
-                        <li>• Parent portal showcase</li>
-                        <li>• Q&A with implementation experts</li>
-                      </ul>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4 text-sm">
-                      <div>
-                        <p className="font-semibold text-foreground">Duration:</p>
-                        <p className="text-muted-foreground">30-minute video call</p>
-                      </div>
-                      <div>
-                        <p className="font-semibold text-foreground">Cost:</p>
-                        <p className="text-primary">Free</p>
-                      </div>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground">Timeline:</p>
-                      <p className="text-muted-foreground text-sm">Available daily</p>
-                    </div>
-                  </div>
-                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10">
-                    Schedule Live Demo
-                  </Button>
-                </CardContent>
-              </Card>
-
-              {/* Pilot Program */}
-              <Card className="glass-card hover:glass-strong transition-all duration-300 border-orange-500/20">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
-                    <Timer className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-foreground">Option 3: Pilot Program</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4 mb-6">
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">What's Included:</h4>
-                      <ul className="space-y-1 text-sm text-muted-foreground">
-                        <li>• 30-day trial with one mess/block</li>
-                        <li>• Complete setup and training</li>
-                        <li>• Performance monitoring</li>
-                        <li>• Success measurement</li>
-                      </ul>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4 text-sm">
-                      <div>
-                        <p className="font-semibold text-foreground">Investment:</p>
-                        <p className="text-muted-foreground">Setup costs only</p>
-                      </div>
-                      <div>
-                        <p className="font-semibold text-foreground">Guarantee:</p>
-                        <p className="text-primary">Full refund if not satisfied</p>
-                      </div>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground">Timeline:</p>
-                      <p className="text-muted-foreground text-sm">3-week implementation</p>
-                    </div>
-                  </div>
-                  <Button variant="secondary" className="w-full">
-                    Start Pilot Program
-                  </Button>
-                </CardContent>
-              </Card>
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-xl">
+                Get Free Assessment
+              </Button>
+              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10 px-12 py-6 text-xl">
+                Schedule Live Demo
+              </Button>
+              <Button variant="link" className="text-primary text-xl hover:text-primary/80">
+                <Download className="h-6 w-6 mr-3" />
+                Download Hostel Guide
+              </Button>
             </div>
-            
-            {/* Contact Information */}
-            <Card className="glass-card">
-              <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
-                    <div className="space-y-4">
-                      <div className="flex items-center">
-                        <Mail className="h-5 w-5 text-primary mr-3" />
-                        <div>
-                          <p className="font-semibold text-foreground">Hostel Solutions Team:</p>
-                          <p className="text-muted-foreground">hostels@mealpe.app</p>
-                        </div>
-                      </div>
-                      <div className="flex items-center">
-                        <Phone className="h-5 w-5 text-primary mr-3" />
-                        <div>
-                          <p className="font-semibold text-foreground">Phone Consultation:</p>
-                          <p className="text-muted-foreground">Request callback</p>
-                        </div>
-                      </div>
-                      <div className="flex items-center">
-                        <Timer className="h-5 w-5 text-primary mr-3" />
-                        <div>
-                          <p className="font-semibold text-foreground">Response Time:</p>
-                          <p className="text-muted-foreground">Within 4 hours</p>
-                        </div>
-                      </div>
-                      <div className="flex items-center">
-                        <Calendar className="h-5 w-5 text-primary mr-3" />
-                        <div>
-                          <p className="font-semibold text-foreground">Available:</p>
-                          <p className="text-muted-foreground">Monday-Saturday, 9 AM - 7 PM IST</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-6">Primary CTAs</h3>
-                    <div className="space-y-4">
-                      <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                        Get Free Assessment
-                      </Button>
-                      <Button variant="outline" size="lg" className="w-full border-primary text-primary hover:bg-primary/10">
-                        Schedule Live Demo
-                      </Button>
-                      <Button variant="ghost" className="w-full text-primary hover:bg-primary/10">
-                        <Download className="h-4 w-4 mr-2" />
-                        Download Hostel Guide
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
