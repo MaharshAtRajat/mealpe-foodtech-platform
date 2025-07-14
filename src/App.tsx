@@ -8,7 +8,7 @@ import NotFound from "./pages/NotFound";
 
 // Products
 import CanteenDigitisation from "./pages/products/CanteenDigitisation";
-import { MessDigitisation } from "./pages/products/MessDigitisation";
+import MessDigitisation from "./pages/products/MessDigitisation";
 import { MedMeals } from "./pages/products/MedMeals";
 
 // Solutions by Industry
