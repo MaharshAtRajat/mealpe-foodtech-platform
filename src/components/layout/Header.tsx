@@ -53,42 +53,54 @@ export const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {/* Solutions Dropdown */}
+            {/* Solutions Mega Menu */}
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary cursor-pointer transition-colors">
                 Solutions <ChevronDown className="ml-1 h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="glass-card border-primary/20 bg-background/95 backdrop-blur z-50">
-                <div className="px-2 py-1 text-xs font-semibold text-muted-foreground">Hardware</div>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/hardware/meal-cards" className="w-full">Meal Cards</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/hardware/self-serving-kiosks" className="w-full">Kiosk Food Ordering</Link>
-                </DropdownMenuItem>
-                <div className="border-t my-1"></div>
-                <div className="px-2 py-1 text-xs font-semibold text-muted-foreground">Industry</div>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/industry/hostels" className="w-full">Hostels / Student Housing</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/industry/coliving" className="w-full">Coliving Space / PGs</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/industry/coworking" className="w-full">Coworking Space</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/industry/commercial" className="w-full">Commercial Building</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/industry/corporate" className="w-full">Corporate Park</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/industry/hospital" className="w-full">Hospital / Health Care Centers</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/industry/universities" className="w-full">Universities / Colleges / Schools</Link>
-                </DropdownMenuItem>
+              <DropdownMenuContent className="glass-card border-primary/20 bg-background/95 backdrop-blur z-50 w-96 p-4">
+                <div className="grid grid-cols-2 gap-6">
+                  {/* Hardware Section */}
+                  <div>
+                    <div className="px-2 py-1 text-sm font-semibold text-foreground mb-2">Hardware</div>
+                    <div className="space-y-1">
+                      <DropdownMenuItem asChild>
+                        <Link to="/solutions/hardware/meal-cards" className="w-full text-sm">Meal Cards</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link to="/solutions/hardware/self-serving-kiosks" className="w-full text-sm">Kiosk Food Ordering</Link>
+                      </DropdownMenuItem>
+                    </div>
+                  </div>
+                  
+                  {/* Industry Section */}
+                  <div>
+                    <div className="px-2 py-1 text-sm font-semibold text-foreground mb-2">Industry</div>
+                    <div className="space-y-1">
+                      <DropdownMenuItem asChild>
+                        <Link to="/solutions/industry/hostels" className="w-full text-sm">Hostels / Student Housing</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link to="/solutions/industry/coliving" className="w-full text-sm">Coliving Space / PGs</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link to="/solutions/industry/coworking" className="w-full text-sm">Coworking Space</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link to="/solutions/industry/commercial" className="w-full text-sm">Commercial Building</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link to="/solutions/industry/corporate" className="w-full text-sm">Corporate Park</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link to="/solutions/industry/hospital" className="w-full text-sm">Hospital / Health Care Centers</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link to="/solutions/industry/universities" className="w-full text-sm">Universities / Colleges / Schools</Link>
+                      </DropdownMenuItem>
+                    </div>
+                  </div>
+                </div>
               </DropdownMenuContent>
             </DropdownMenu>
 
