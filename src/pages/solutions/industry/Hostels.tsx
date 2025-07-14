@@ -94,73 +94,73 @@ export const Hostels = () => {
               </Card>
 
               {/* Student Dissatisfaction */}
-              <Card className="glass-card border-destructive/20 hover:glass-strong transition-all duration-300">
+              <Card className="glass-card border-accent/20 hover:glass-strong transition-all duration-300">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-destructive/10 rounded-2xl flex items-center justify-center mb-4">
-                    <Frown className="h-8 w-8 text-destructive" />
+                  <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-4">
+                    <Frown className="h-8 w-8 text-accent" />
                   </div>
                   <CardTitle className="text-2xl font-bold text-foreground">😤 Student Dissatisfaction</CardTitle>
-                  <CardDescription className="text-lg font-semibold text-destructive">
+                  <CardDescription className="text-lg font-semibold text-accent">
                     The Problem: Poor dining experience driving complaints
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 text-muted-foreground mb-6">
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2"></div>
                       Long queues during meal times
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2"></div>
                       No advance meal information
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2"></div>
                       Inability to skip meals when away
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2"></div>
                       Poor food quality due to overproduction
                     </li>
                   </ul>
-                  <div className="bg-destructive/10 p-4 rounded-lg">
-                    <p className="font-bold text-destructive">Result: 60-70% student dissatisfaction rates</p>
+                  <div className="bg-accent/10 p-4 rounded-lg">
+                    <p className="font-bold text-accent">Result: 60-70% student dissatisfaction rates</p>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Administrative Chaos */}
-              <Card className="glass-card border-destructive/20 hover:glass-strong transition-all duration-300">
+              <Card className="glass-card border-secondary/20 hover:glass-strong transition-all duration-300">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-destructive/10 rounded-2xl flex items-center justify-center mb-4">
-                    <ClipboardList className="h-8 w-8 text-destructive" />
+                  <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-4">
+                    <ClipboardList className="h-8 w-8 text-secondary-foreground" />
                   </div>
                   <CardTitle className="text-2xl font-bold text-foreground">📋 Administrative Chaos</CardTitle>
-                  <CardDescription className="text-lg font-semibold text-destructive">
+                  <CardDescription className="text-lg font-semibold text-secondary-foreground">
                     The Problem: Manual processes consuming staff time
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 text-muted-foreground mb-6">
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-secondary rounded-full mr-3 mt-2"></div>
                       Paper-based attendance tracking
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-secondary rounded-full mr-3 mt-2"></div>
                       Vendor coordination nightmares
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-secondary rounded-full mr-3 mt-2"></div>
                       No real-time consumption data
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-secondary rounded-full mr-3 mt-2"></div>
                       Budget planning guesswork
                     </li>
                   </ul>
-                  <div className="bg-destructive/10 p-4 rounded-lg">
-                    <p className="font-bold text-destructive">Impact: 15+ hours weekly on mess administration</p>
+                  <div className="bg-secondary/10 p-4 rounded-lg">
+                    <p className="font-bold text-secondary-foreground">Impact: 15+ hours weekly on mess administration</p>
                   </div>
                 </CardContent>
               </Card>
@@ -712,6 +712,122 @@ export const Hostels = () => {
         </div>
       </section>
 
+      {/* Hardware Capabilities Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                Hardware Capabilities
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Multiple authentication options to suit your hostel's needs
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* QR Scanner */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300 group">
+                <CardHeader className="text-center">
+                  <div className="w-20 h-20 bg-gradient-primary rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Scan className="h-10 w-10 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">QR Scanner</CardTitle>
+                  <CardDescription className="text-muted-foreground">
+                    Quick and contactless meal check-ins
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Fast scanning technology
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Works with mobile apps
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Hygiene-friendly solution
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Cost-effective deployment
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Biometric System */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300 group">
+                <CardHeader className="text-center">
+                  <div className="w-20 h-20 bg-gradient-primary rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Fingerprint className="h-10 w-10 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">Biometric System</CardTitle>
+                  <CardDescription className="text-muted-foreground">
+                    Secure fingerprint-based authentication
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Maximum security
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      No card/phone required
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Prevents buddy punching
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Long-term reliability
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* RFID Cards */}
+              <Card className="glass-card hover:glass-strong transition-all duration-300 group">
+                <CardHeader className="text-center">
+                  <div className="w-20 h-20 bg-gradient-primary rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <CreditCard className="h-10 w-10 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">RFID Cards</CardTitle>
+                  <CardDescription className="text-muted-foreground">
+                    Traditional and reliable card-based system
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Proven technology
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Quick tap-and-go
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Multi-purpose usage
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      Easy replacement
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Pricing & ROI Section */}
       <section className="py-20 bg-muted/20">
