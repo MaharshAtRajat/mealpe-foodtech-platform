@@ -592,6 +592,430 @@ const CanteenDigitisation = () => {
         </div>
       </section>
 
+      {/* Product Mockups Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+              See Your{" "}
+              <span className="text-primary">Digital Cafeteria</span>
+              {" "}in Action
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Experience the complete ecosystem - from employee mobile apps to comprehensive admin dashboards
+            </p>
+          </div>
+          
+          {/* Mobile App Mockups */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                Employee Mobile Experience
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                Intuitive mobile app for seamless ordering and payment
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+              {/* Menu Browsing Screen */}
+              <div className="flex flex-col items-center">
+                <div className="relative">
+                  {/* Phone Frame */}
+                  <div className="w-64 h-[500px] bg-gradient-to-b from-slate-800 to-slate-900 rounded-[3rem] p-2 shadow-2xl">
+                    <div className="w-full h-full bg-background rounded-[2.5rem] overflow-hidden relative">
+                      {/* Status Bar */}
+                      <div className="h-8 bg-muted/20 flex items-center justify-center text-xs">
+                        <span className="text-foreground font-medium">9:41 AM</span>
+                      </div>
+                      
+                      {/* Screen Content */}
+                      <div className="p-4 h-full">
+                        <div className="text-center mb-4">
+                          <h4 className="font-bold text-foreground">Menu Browser</h4>
+                        </div>
+                        
+                        {/* Vendor Tabs */}
+                        <div className="flex gap-2 mb-4">
+                          <div className="bg-primary text-white px-3 py-1 rounded-full text-xs">Cafe A</div>
+                          <div className="bg-muted text-muted-foreground px-3 py-1 rounded-full text-xs">Cafe B</div>
+                          <div className="bg-muted text-muted-foreground px-3 py-1 rounded-full text-xs">Cafe C</div>
+                        </div>
+                        
+                        {/* Menu Items */}
+                        <div className="space-y-3">
+                          {[1, 2, 3, 4].map((item) => (
+                            <div key={item} className="bg-muted/50 p-3 rounded-lg flex items-center gap-3">
+                              <div className="w-12 h-12 bg-primary/20 rounded-lg"></div>
+                              <div className="flex-1">
+                                <div className="h-3 bg-foreground/20 rounded mb-1"></div>
+                                <div className="h-2 bg-muted-foreground/40 rounded w-2/3"></div>
+                              </div>
+                              <div className="text-primary font-bold text-sm">₹{120 + item * 10}</div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Notification Badge */}
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">3</span>
+                  </div>
+                </div>
+                <p className="mt-4 text-center text-sm font-medium text-foreground">Real-time Menu Browsing</p>
+              </div>
+
+              {/* Order Placement Screen */}
+              <div className="flex flex-col items-center">
+                <div className="relative">
+                  <div className="w-64 h-[500px] bg-gradient-to-b from-slate-800 to-slate-900 rounded-[3rem] p-2 shadow-2xl">
+                    <div className="w-full h-full bg-background rounded-[2.5rem] overflow-hidden relative">
+                      <div className="h-8 bg-muted/20 flex items-center justify-center text-xs">
+                        <span className="text-foreground font-medium">9:41 AM</span>
+                      </div>
+                      
+                      <div className="p-4 h-full">
+                        <div className="text-center mb-4">
+                          <h4 className="font-bold text-foreground">Quick Order</h4>
+                        </div>
+                        
+                        {/* Cart Items */}
+                        <div className="space-y-3 mb-6">
+                          <div className="bg-primary/10 p-3 rounded-lg">
+                            <div className="flex justify-between items-center mb-2">
+                              <span className="font-medium text-foreground">Grilled Sandwich</span>
+                              <span className="text-primary font-bold">₹140</span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                              <div className="flex items-center gap-2">
+                                <button className="w-6 h-6 bg-muted rounded-full text-xs">-</button>
+                                <span className="text-sm">2</span>
+                                <button className="w-6 h-6 bg-primary text-white rounded-full text-xs">+</button>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div className="bg-muted/30 p-3 rounded-lg">
+                            <div className="flex justify-between items-center">
+                              <span className="font-medium text-foreground">Coffee</span>
+                              <span className="text-primary font-bold">₹80</span>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* Pickup Time */}
+                        <div className="bg-muted/50 p-3 rounded-lg mb-4">
+                          <span className="text-sm text-muted-foreground">Pickup: </span>
+                          <span className="font-medium text-foreground">12:30 PM</span>
+                        </div>
+                        
+                        {/* Total & Pay Button */}
+                        <div className="space-y-3">
+                          <div className="flex justify-between">
+                            <span className="font-bold text-foreground">Total:</span>
+                            <span className="font-bold text-primary text-lg">₹360</span>
+                          </div>
+                          <button className="w-full bg-primary text-white py-3 rounded-lg font-medium">
+                            Pay Now
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p className="mt-4 text-center text-sm font-medium text-foreground">Smart Order Placement</p>
+              </div>
+
+              {/* Order Tracking Screen */}
+              <div className="flex flex-col items-center">
+                <div className="relative">
+                  <div className="w-64 h-[500px] bg-gradient-to-b from-slate-800 to-slate-900 rounded-[3rem] p-2 shadow-2xl">
+                    <div className="w-full h-full bg-background rounded-[2.5rem] overflow-hidden relative">
+                      <div className="h-8 bg-muted/20 flex items-center justify-center text-xs">
+                        <span className="text-foreground font-medium">9:41 AM</span>
+                      </div>
+                      
+                      <div className="p-4 h-full">
+                        <div className="text-center mb-6">
+                          <h4 className="font-bold text-foreground">Order Status</h4>
+                          <p className="text-sm text-muted-foreground">#ORD-12345</p>
+                        </div>
+                        
+                        {/* Status Timeline */}
+                        <div className="space-y-4 mb-6">
+                          <div className="flex items-center gap-3">
+                            <div className="w-4 h-4 bg-primary rounded-full"></div>
+                            <div>
+                              <p className="font-medium text-foreground">Order Confirmed</p>
+                              <p className="text-xs text-muted-foreground">12:15 PM</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-center gap-3">
+                            <div className="w-4 h-4 bg-primary rounded-full"></div>
+                            <div>
+                              <p className="font-medium text-foreground">Preparing</p>
+                              <p className="text-xs text-muted-foreground">12:20 PM</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-center gap-3">
+                            <div className="w-4 h-4 bg-muted border-2 border-primary rounded-full animate-pulse"></div>
+                            <div>
+                              <p className="font-medium text-primary">Ready for Pickup</p>
+                              <p className="text-xs text-muted-foreground">12:30 PM</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* QR Code */}
+                        <div className="bg-muted/30 p-4 rounded-lg text-center">
+                          <div className="w-20 h-20 bg-foreground/10 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                            <QrCode className="h-12 w-12 text-foreground/60" />
+                          </div>
+                          <p className="text-xs text-muted-foreground">Show QR at pickup</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p className="mt-4 text-center text-sm font-medium text-foreground">Real-time Order Tracking</p>
+              </div>
+
+              {/* Wallet & History Screen */}
+              <div className="flex flex-col items-center">
+                <div className="relative">
+                  <div className="w-64 h-[500px] bg-gradient-to-b from-slate-800 to-slate-900 rounded-[3rem] p-2 shadow-2xl">
+                    <div className="w-full h-full bg-background rounded-[2.5rem] overflow-hidden relative">
+                      <div className="h-8 bg-muted/20 flex items-center justify-center text-xs">
+                        <span className="text-foreground font-medium">9:41 AM</span>
+                      </div>
+                      
+                      <div className="p-4 h-full">
+                        <div className="text-center mb-4">
+                          <h4 className="font-bold text-foreground">My Wallet</h4>
+                        </div>
+                        
+                        {/* Balance Card */}
+                        <div className="bg-gradient-to-r from-primary to-primary/80 p-4 rounded-lg text-white mb-6">
+                          <p className="text-sm opacity-90">Available Balance</p>
+                          <p className="text-2xl font-bold">₹1,250</p>
+                          <button className="mt-2 bg-white/20 px-3 py-1 rounded-full text-xs">
+                            Add Money
+                          </button>
+                        </div>
+                        
+                        {/* Recent Orders */}
+                        <div>
+                          <h5 className="font-medium text-foreground mb-3">Recent Orders</h5>
+                          <div className="space-y-3">
+                            {[
+                              { item: "Grilled Sandwich", date: "Today", amount: "₹140" },
+                              { item: "Pasta & Coffee", date: "Yesterday", amount: "₹220" },
+                              { item: "Burger Combo", date: "2 days ago", amount: "₹180" }
+                            ].map((order, index) => (
+                              <div key={index} className="flex justify-between items-center p-2 bg-muted/30 rounded">
+                                <div>
+                                  <p className="text-sm font-medium text-foreground">{order.item}</p>
+                                  <p className="text-xs text-muted-foreground">{order.date}</p>
+                                </div>
+                                <span className="text-sm font-medium text-foreground">{order.amount}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p className="mt-4 text-center text-sm font-medium text-foreground">Wallet & Order History</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Admin/Vendor Mockups */}
+          <div>
+            <div className="text-center mb-12">
+              <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                Admin & Vendor Dashboard Experience
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                Comprehensive management tools for complete operational control
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+              {/* Vendor Dashboard */}
+              <div className="flex flex-col items-center">
+                <div className="relative">
+                  {/* Laptop Frame */}
+                  <div className="w-full max-w-2xl bg-gradient-to-b from-slate-800 to-slate-900 rounded-t-2xl p-3 shadow-2xl">
+                    <div className="w-full h-80 bg-background rounded-t-xl overflow-hidden relative">
+                      {/* Browser Header */}
+                      <div className="h-8 bg-muted/20 flex items-center px-4 gap-2">
+                        <div className="flex gap-2">
+                          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                        </div>
+                        <div className="flex-1 bg-muted/50 rounded text-xs text-center py-1">
+                          vendor.mealpe.com
+                        </div>
+                      </div>
+                      
+                      {/* Dashboard Content */}
+                      <div className="p-4 h-full bg-background">
+                        {/* Header */}
+                        <div className="flex justify-between items-center mb-4">
+                          <h4 className="font-bold text-foreground">Vendor Dashboard</h4>
+                          <div className="flex gap-2">
+                            <div className="w-8 h-8 bg-primary/20 rounded-full"></div>
+                            <div className="w-8 h-8 bg-muted rounded-full"></div>
+                          </div>
+                        </div>
+                        
+                        {/* Stats Cards */}
+                        <div className="grid grid-cols-4 gap-3 mb-4">
+                          <div className="bg-primary/10 p-3 rounded-lg text-center">
+                            <p className="text-2xl font-bold text-primary">24</p>
+                            <p className="text-xs text-muted-foreground">Orders Today</p>
+                          </div>
+                          <div className="bg-muted/50 p-3 rounded-lg text-center">
+                            <p className="text-2xl font-bold text-foreground">₹3.2K</p>
+                            <p className="text-xs text-muted-foreground">Revenue</p>
+                          </div>
+                          <div className="bg-muted/50 p-3 rounded-lg text-center">
+                            <p className="text-2xl font-bold text-foreground">12</p>
+                            <p className="text-xs text-muted-foreground">Items Sold</p>
+                          </div>
+                          <div className="bg-green-100 p-3 rounded-lg text-center">
+                            <p className="text-2xl font-bold text-green-600">4.8</p>
+                            <p className="text-xs text-muted-foreground">Rating</p>
+                          </div>
+                        </div>
+                        
+                        {/* Active Orders */}
+                        <div className="space-y-2">
+                          <h5 className="font-medium text-foreground">Active Orders</h5>
+                          {[1, 2, 3].map((order) => (
+                            <div key={order} className="flex justify-between items-center p-2 bg-muted/30 rounded">
+                              <div className="flex gap-3 items-center">
+                                <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                                <span className="text-sm font-medium text-foreground">#ORD-{1234 + order}</span>
+                                <span className="text-xs text-muted-foreground">Grilled Sandwich x2</span>
+                              </div>
+                              <div className="flex gap-2">
+                                <button className="bg-primary text-white px-3 py-1 rounded text-xs">
+                                  Ready
+                                </button>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Laptop Base */}
+                  <div className="w-full max-w-2xl h-6 bg-gradient-to-b from-slate-700 to-slate-800 rounded-b-2xl relative">
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-2 bg-slate-600 rounded-t-lg"></div>
+                  </div>
+                </div>
+                <p className="mt-4 text-center text-sm font-medium text-foreground">Vendor Management Dashboard</p>
+              </div>
+
+              {/* Admin Dashboard */}
+              <div className="flex flex-col items-center">
+                <div className="relative">
+                  {/* Laptop Frame */}
+                  <div className="w-full max-w-2xl bg-gradient-to-b from-slate-800 to-slate-900 rounded-t-2xl p-3 shadow-2xl">
+                    <div className="w-full h-80 bg-background rounded-t-xl overflow-hidden relative">
+                      {/* Browser Header */}
+                      <div className="h-8 bg-muted/20 flex items-center px-4 gap-2">
+                        <div className="flex gap-2">
+                          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                        </div>
+                        <div className="flex-1 bg-muted/50 rounded text-xs text-center py-1">
+                          admin.mealpe.com
+                        </div>
+                      </div>
+                      
+                      {/* Dashboard Content */}
+                      <div className="p-4 h-full bg-background">
+                        {/* Header */}
+                        <div className="flex justify-between items-center mb-4">
+                          <h4 className="font-bold text-foreground">Admin Analytics</h4>
+                          <div className="flex gap-2">
+                            <select className="text-xs bg-muted rounded px-2 py-1">
+                              <option>This Week</option>
+                            </select>
+                          </div>
+                        </div>
+                        
+                        {/* Main Stats */}
+                        <div className="grid grid-cols-3 gap-4 mb-4">
+                          <div className="bg-gradient-to-r from-primary/20 to-primary/10 p-4 rounded-lg">
+                            <p className="text-sm text-muted-foreground">Total Orders</p>
+                            <p className="text-2xl font-bold text-primary">342</p>
+                            <p className="text-xs text-green-600">+12% from last week</p>
+                          </div>
+                          <div className="bg-muted/50 p-4 rounded-lg">
+                            <p className="text-sm text-muted-foreground">Revenue</p>
+                            <p className="text-2xl font-bold text-foreground">₹45.2K</p>
+                            <p className="text-xs text-green-600">+8% from last week</p>
+                          </div>
+                          <div className="bg-muted/50 p-4 rounded-lg">
+                            <p className="text-sm text-muted-foreground">Active Users</p>
+                            <p className="text-2xl font-bold text-foreground">156</p>
+                            <p className="text-xs text-muted-foreground">Daily average</p>
+                          </div>
+                        </div>
+                        
+                        {/* Chart Placeholder */}
+                        <div className="bg-muted/30 rounded-lg p-4 flex items-center justify-center h-32">
+                          <div className="flex items-end gap-2">
+                            {[40, 60, 35, 80, 50, 70, 45].map((height, index) => (
+                              <div
+                                key={index}
+                                className="bg-primary/60 rounded-t"
+                                style={{ height: `${height}px`, width: '16px' }}
+                              ></div>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* Vendor Performance */}
+                        <div className="mt-4">
+                          <h5 className="font-medium text-foreground mb-2">Top Vendors</h5>
+                          <div className="space-y-1">
+                            {['Cafe Express', 'Healthy Bites', 'Snack Corner'].map((vendor, index) => (
+                              <div key={index} className="flex justify-between text-xs">
+                                <span className="text-foreground">{vendor}</span>
+                                <span className="text-primary font-medium">₹{(15 - index * 2).toFixed(1)}K</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Laptop Base */}
+                  <div className="w-full max-w-2xl h-6 bg-gradient-to-b from-slate-700 to-slate-800 rounded-b-2xl relative">
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-2 bg-slate-600 rounded-t-lg"></div>
+                  </div>
+                </div>
+                <p className="mt-4 text-center text-sm font-medium text-foreground">Admin Analytics Dashboard</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Next Steps Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
