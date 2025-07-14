@@ -33,19 +33,32 @@ import {
   Lock,
   Smartphone as Phone,
   Monitor,
-  Activity
+  Activity,
+  Play,
+  ChevronRight,
+  ArrowRight,
+  Timer,
+  DollarSign,
+  Award,
+  Headphones,
+  QrCode
 } from "lucide-react";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import digitalMessImage from "@/assets/digital-food-court.jpg";
+import employeeOrderingVector from "@/assets/employee-ordering-vector.png";
+import vendorDashboardVector from "@/assets/vendor-dashboard-vector.png";
+import adminAnalyticsVector from "@/assets/admin-analytics-vector.png";
 
 const MessDigitisation = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   // Data for different sections
-  const benefitsData = [
-    { icon: TrendingDown, text: "Zero Food Wastage", color: "text-green-600" },
-    { icon: Calendar, text: "Smart Meal Planning", color: "text-blue-600" },
-    { icon: UserCheck, text: "Digital Attendance", color: "text-purple-600" },
-    { icon: BarChart3, text: "Predictive Analytics", color: "text-orange-600" }
+  const keyBenefits = [
+    { icon: TrendingDown, title: "Zero Food Wastage", description: "Smart planning" },
+    { icon: Calendar, title: "Smart Meal Planning", description: "AI-powered" },
+    { icon: UserCheck, title: "Digital Attendance", description: "RFID tracking" },
+    { icon: BarChart3, title: "Predictive Analytics", description: "Data insights" }
   ];
 
   const problemPoints = [
@@ -368,69 +381,69 @@ const MessDigitisation = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
+      <Header />
+      
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/20 to-background"></div>
-        <div className="absolute top-20 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
+      <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5"></div>
+        <div className="absolute top-20 right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Content */}
-            <div className="space-y-8">
-              <div>
-                <Badge variant="secondary" className="mb-6 bg-primary/10 text-primary border-primary/20">
-                  <Utensils className="h-4 w-4 mr-2" />
-                  Mess Management Revolution
-                </Badge>
-                <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
-                  Transform Your{" "}
-                  <span className="bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
-                    Hostel Mess
-                  </span>{" "}
-                  From Chaos to Digital Excellence
-                </h1>
-                <p className="text-xl text-muted-foreground mt-6 leading-relaxed">
-                  Eliminate food wastage, streamline meal planning, and create transparent dining experiences for students and residents. The complete mess digitization solution trusted by leading universities and hostels across India.
-                </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            <div>
+              <div className="glass-card inline-flex items-center px-4 py-2 rounded-full mb-6">
+                <Utensils className="h-4 w-4 text-primary mr-2" />
+                <span className="text-sm font-medium text-foreground">Mess Management Revolution</span>
               </div>
-
-              {/* Key Benefits */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                {benefitsData.map((benefit, index) => (
-                  <div key={index} className="glass-card p-4 text-center hover:glass-strong transition-all duration-300">
-                    <benefit.icon className={`h-8 w-8 mx-auto mb-2 ${benefit.color}`} />
-                    <p className="text-sm font-medium text-foreground">{benefit.text}</p>
+              
+              <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+                Transform Your{" "}
+                <span className="text-primary">Hostel Mess</span>{" "}
+                From Chaos to Digital Excellence
+              </h1>
+              
+              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                Eliminate food wastage, streamline meal planning, and create transparent dining experiences for students and residents. The complete mess digitization solution trusted by leading universities and hostels across India.
+              </p>
+              
+              {/* Key Benefits Bar */}
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                {keyBenefits.map((benefit, index) => (
+                  <div key={index} className="text-center">
+                    <div className="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center mx-auto mb-2">
+                      <benefit.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="font-semibold text-sm text-foreground">{benefit.title}</h3>
+                    <p className="text-xs text-muted-foreground">{benefit.description}</p>
                   </div>
                 ))}
               </div>
-
+              
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="gradient-primary text-white font-semibold">
+                <Button size="lg" className="gradient-primary text-white shadow-brand hover:shadow-glow px-8 py-4 text-lg font-semibold">
                   Schedule Demo
+                  <Calendar className="ml-2 h-5 w-5" />
                 </Button>
-                <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white">
+                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg font-semibold">
+                  <Play className="mr-2 h-5 w-5" />
                   View Hostel Success Story
                 </Button>
               </div>
             </div>
-
+            
             {/* Hero Visual */}
             <div className="relative">
-              <div className="glass-card p-8 rounded-3xl">
+              <div className="glass-card p-8 rounded-2xl">
                 <img 
                   src={digitalMessImage}
-                  alt="Digital Mess Management Before/After"
-                  className="w-full h-96 object-cover rounded-2xl"
+                  alt="Digital Mess Management Interface"
+                  className="w-full h-80 object-cover rounded-lg"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-2xl"></div>
               </div>
-              {/* Floating elements */}
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-pulse" style={{animationDelay: '1s'}}></div>
             </div>
           </div>
         </div>
@@ -447,21 +460,18 @@ const MessDigitisation = () => {
             </h2>
           </div>
           
-          <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-12">
+          <div className="grid lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-16">
             {problemPoints.map((problem, index) => (
-              <Card key={index} className="glass-card border-border/50 hover:glass-strong transition-all duration-300 group">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <problem.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-xl font-bold text-foreground">{problem.title}</CardTitle>
+              <Card key={index} className="glass-card border-border/50">
+                <CardHeader>
+                  <CardTitle className="text-lg font-bold text-foreground">{problem.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
                     {problem.points.map((point, pointIndex) => (
-                      <li key={pointIndex} className="flex items-start text-muted-foreground">
-                        <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span className="text-sm">{point}</span>
+                      <li key={pointIndex} className="flex items-start text-sm text-muted-foreground">
+                        <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                        {point}
                       </li>
                     ))}
                   </ul>
@@ -469,10 +479,11 @@ const MessDigitisation = () => {
               </Card>
             ))}
           </div>
-
+          
           <div className="text-center">
-            <p className="text-xl text-foreground font-semibold bg-gradient-to-r from-red-100 to-yellow-100 p-6 rounded-2xl border border-red-200">
-              Traditional mess management wastes money, food, and student satisfaction. MealPe Mess Manager fixes all three.
+            <p className="text-xl font-semibold text-foreground">
+              Traditional mess management wastes money, food, and student satisfaction.{" "}
+              <span className="text-primary">MealPe Mess Manager fixes all three.</span>
             </p>
           </div>
         </div>
@@ -1288,6 +1299,8 @@ const MessDigitisation = () => {
           </div>
         </div>
       </section>
+      <Footer />
+      <Footer />
     </div>
   );
 };
