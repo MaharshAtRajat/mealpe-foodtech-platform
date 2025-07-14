@@ -3,6 +3,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { 
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { 
   Clock, 
   Smartphone, 
   TrendingUp, 
@@ -32,6 +38,9 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import employeeOrderingVector from "@/assets/employee-ordering-vector.png";
+import vendorDashboardVector from "@/assets/vendor-dashboard-vector.png";
+import adminAnalyticsVector from "@/assets/admin-analytics-vector.png";
 
 const CanteenDigitisation = () => {
   const keyBenefits = [
@@ -384,25 +393,117 @@ const CanteenDigitisation = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {solutionComponents.map((component, index) => (
-              <Card key={index} className="glass-card border-border/50 hover:glass-strong transition-all duration-300">
-                <CardHeader>
-                  <CardTitle className="text-xl font-bold text-foreground">{component.title}</CardTitle>
-                  <p className="text-primary font-semibold">{component.subtitle}</p>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {component.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start text-muted-foreground">
-                        <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="max-w-7xl mx-auto space-y-16">
+            {/* For Employees */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="mb-6">
+                  <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-4">
+                    <Smartphone className="h-4 w-4 text-primary mr-2" />
+                    <span className="text-sm font-semibold text-primary">For Employees</span>
+                  </div>
+                  <h3 className="text-3xl font-bold text-foreground mb-4">
+                    Order, Pay, Pickup - That Simple
+                  </h3>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Transform the employee dining experience with intuitive mobile ordering that eliminates queues and reduces wait times.
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  {solutionComponents[0].features.map((feature, index) => (
+                    <div key={index} className="flex items-start">
+                      <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-4 mt-0.5">
+                        <CheckCircle className="h-3 w-3 text-white" />
+                      </div>
+                      <span className="text-foreground">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="relative">
+                <div className="glass-card p-8 rounded-2xl">
+                  <img 
+                    src={employeeOrderingVector}
+                    alt="Employee Mobile Ordering App"
+                    className="w-full h-64 object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* For Vendors */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="lg:order-2">
+                <div className="mb-6">
+                  <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-4">
+                    <Building className="h-4 w-4 text-primary mr-2" />
+                    <span className="text-sm font-semibold text-primary">For Vendors</span>
+                  </div>
+                  <h3 className="text-3xl font-bold text-foreground mb-4">
+                    Streamlined Operations & Growth
+                  </h3>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Empower food vendors with digital tools that automate order management and provide valuable business insights.
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  {solutionComponents[1].features.map((feature, index) => (
+                    <div key={index} className="flex items-start">
+                      <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-4 mt-0.5">
+                        <CheckCircle className="h-3 w-3 text-white" />
+                      </div>
+                      <span className="text-foreground">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="relative lg:order-1">
+                <div className="glass-card p-8 rounded-2xl">
+                  <img 
+                    src={vendorDashboardVector}
+                    alt="Vendor Management Dashboard"
+                    className="w-full h-64 object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* For Administrators */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="mb-6">
+                  <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-4">
+                    <BarChart3 className="h-4 w-4 text-primary mr-2" />
+                    <span className="text-sm font-semibold text-primary">For Administrators</span>
+                  </div>
+                  <h3 className="text-3xl font-bold text-foreground mb-4">
+                    Complete Visibility & Control
+                  </h3>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Gain comprehensive insights into cafeteria operations with powerful analytics and centralized management tools.
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  {solutionComponents[2].features.map((feature, index) => (
+                    <div key={index} className="flex items-start">
+                      <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-4 mt-0.5">
+                        <CheckCircle className="h-3 w-3 text-white" />
+                      </div>
+                      <span className="text-foreground">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="relative">
+                <div className="glass-card p-8 rounded-2xl">
+                  <img 
+                    src={adminAnalyticsVector}
+                    alt="Admin Analytics Dashboard"
+                    className="w-full h-64 object-contain"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -593,7 +694,7 @@ const CanteenDigitisation = () => {
       </section>
 
       {/* Industries and Use Cases Section */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
@@ -604,30 +705,55 @@ const CanteenDigitisation = () => {
           
           {/* Primary Industries */}
           <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
-            {industries.map((industry, index) => (
-              <Card key={index} className="glass-card border-border/50 hover:glass-strong transition-all duration-300">
-                <CardHeader>
-                  <CardTitle className="text-xl font-bold text-foreground flex items-center">
-                    <Building className="h-6 w-6 text-primary mr-3" />
-                    {industry.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <p className="text-sm font-semibold text-muted-foreground mb-1">Challenge:</p>
-                    <p className="text-foreground">{industry.challenge}</p>
+            {industries.map((industry, index) => {
+              const industryIcons = [Building, Users, Target, Star];
+              const IconComponent = industryIcons[index % industryIcons.length];
+              
+              return (
+                <div key={index} className="group relative">
+                  {/* Background Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  <div className="relative glass-card border-border/50 p-8 rounded-2xl hover:shadow-lg transition-all duration-300">
+                    <div className="flex items-start mb-6">
+                      <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mr-4 shadow-lg">
+                        <IconComponent className="h-8 w-8 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-foreground mb-2">{industry.title}</h3>
+                        <div className="w-12 h-1 bg-primary rounded-full"></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-6">
+                      <div className="relative pl-6">
+                        <div className="absolute left-0 top-1 w-4 h-4 bg-red-100 rounded-full flex items-center justify-center">
+                          <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                        </div>
+                        <p className="text-sm font-semibold text-red-600 mb-2">Challenge</p>
+                        <p className="text-foreground text-sm leading-relaxed">{industry.challenge}</p>
+                      </div>
+                      
+                      <div className="relative pl-6">
+                        <div className="absolute left-0 top-1 w-4 h-4 bg-blue-100 rounded-full flex items-center justify-center">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        </div>
+                        <p className="text-sm font-semibold text-blue-600 mb-2">Solution</p>
+                        <p className="text-foreground text-sm leading-relaxed">{industry.solution}</p>
+                      </div>
+                      
+                      <div className="relative pl-6">
+                        <div className="absolute left-0 top-1 w-4 h-4 bg-green-100 rounded-full flex items-center justify-center">
+                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        </div>
+                        <p className="text-sm font-semibold text-green-600 mb-2">Result</p>
+                        <p className="text-primary font-semibold text-sm leading-relaxed">{industry.result}</p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm font-semibold text-muted-foreground mb-1">Solution:</p>
-                    <p className="text-foreground">{industry.solution}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-muted-foreground mb-1">Result:</p>
-                    <p className="text-primary font-semibold">{industry.result}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+              );
+            })}
           </div>
           
           {/* Extended Use Cases */}
@@ -1187,50 +1313,79 @@ const CanteenDigitisation = () => {
       </section>
 
       {/* Implementation Process Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
               From Setup to Success in{" "}
               <span className="text-primary">Just 2 Weeks</span>
             </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Our proven implementation process ensures a smooth transition to digital cafeteria management with minimal disruption to daily operations.
+            </p>
           </div>
           
-          {/* Interactive Timeline */}
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-4 gap-8">
-              {implementationPhases.map((phase, index) => (
-                <div key={index} className="relative">
-                  {/* Timeline Connector */}
-                  {index < implementationPhases.length - 1 && (
-                    <div className="hidden lg:block absolute top-12 right-0 w-full h-0.5 bg-primary/30 z-0"></div>
-                  )}
+          {/* Visual Timeline */}
+          <div className="max-w-7xl mx-auto">
+            <div className="relative">
+              {/* Timeline Line */}
+              <div className="absolute top-20 left-0 w-full h-1 bg-gradient-to-r from-primary via-primary/50 to-primary rounded-full hidden lg:block"></div>
+              
+              <div className="grid lg:grid-cols-4 gap-8 relative">
+                {implementationPhases.map((phase, index) => {
+                  const phaseIcons = [Calendar, Settings, CheckCircle, Award];
+                  const IconComponent = phaseIcons[index];
                   
-                  <Card className="glass-card border-border/50 hover:glass-strong transition-all duration-300 relative z-10">
-                    <CardHeader>
-                      <div className="flex items-center mb-4">
-                        <div className="w-8 h-8 gradient-primary rounded-full flex items-center justify-center mr-3">
-                          <span className="text-white font-bold text-sm">{index + 1}</span>
+                  return (
+                    <div key={index} className="relative group">
+                      {/* Timeline Node */}
+                      <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-full border-4 border-background shadow-lg z-10 hidden lg:flex items-center justify-center">
+                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                      </div>
+                      
+                      {/* Phase Card */}
+                      <div className="glass-card border-border/50 p-6 rounded-2xl hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                        {/* Phase Header */}
+                        <div className="text-center mb-6">
+                          <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <IconComponent className="h-8 w-8 text-white" />
+                          </div>
+                          <div className="inline-flex items-center px-3 py-1 bg-primary/10 rounded-full mb-2">
+                            <span className="text-xs font-bold text-primary">PHASE {index + 1}</span>
+                          </div>
+                          <h3 className="text-xl font-bold text-foreground mb-1">{phase.phase}</h3>
+                          <p className="text-sm text-primary font-semibold">{phase.days}</p>
                         </div>
-                        <div>
-                          <CardTitle className="text-lg font-bold text-foreground">{phase.phase}</CardTitle>
-                          <p className="text-sm text-primary font-medium">{phase.days}</p>
+                        
+                        {/* Tasks */}
+                        <div className="space-y-3">
+                          {phase.tasks.map((task, taskIndex) => (
+                            <div key={taskIndex} className="flex items-start">
+                              <div className="w-5 h-5 bg-primary/20 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                                <CheckCircle className="h-3 w-3 text-primary" />
+                              </div>
+                              <span className="text-sm text-foreground leading-relaxed">{task}</span>
+                            </div>
+                          ))}
+                        </div>
+                        
+                        {/* Progress Bar */}
+                        <div className="mt-6">
+                          <div className="w-full bg-muted/50 rounded-full h-2">
+                            <div 
+                              className="bg-gradient-to-r from-primary to-primary/80 h-2 rounded-full transition-all duration-1000"
+                              style={{ width: `${((index + 1) / implementationPhases.length) * 100}%` }}
+                            ></div>
+                          </div>
+                          <p className="text-xs text-muted-foreground mt-2 text-center">
+                            {Math.round(((index + 1) / implementationPhases.length) * 100)}% Complete
+                          </p>
                         </div>
                       </div>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-2">
-                        {phase.tasks.map((task, taskIndex) => (
-                          <li key={taskIndex} className="flex items-start text-sm text-muted-foreground">
-                            <CheckCircle className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                            {task}
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
             
             {/* Success Metrics */}
@@ -1346,136 +1501,116 @@ const CanteenDigitisation = () => {
               Frequently Asked{" "}
               <span className="text-primary">Questions</span>
             </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Find answers to common questions about our digital cafeteria solution, implementation process, and support.
+            </p>
           </div>
           
-          <div className="max-w-6xl mx-auto">
-            <Tabs defaultValue="implementation" className="w-full">
-              <TabsList className="grid grid-cols-3 w-full max-w-2xl mx-auto mb-12">
-                <TabsTrigger value="implementation">Implementation & Setup</TabsTrigger>
-                <TabsTrigger value="integration">Integration & Compatibility</TabsTrigger>
-                <TabsTrigger value="pricing">Pricing & Contracts</TabsTrigger>
-              </TabsList>
-              
-              <TabsContent value="implementation" className="space-y-6">
-                <div className="grid lg:grid-cols-1 gap-6 max-w-4xl mx-auto">
-                  <Card className="glass-card border-border/50">
-                    <CardHeader>
-                      <CardTitle className="text-lg font-bold text-foreground">How long does implementation take?</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">Complete implementation typically takes 2 weeks from contract signing to full launch, including vendor onboarding and employee training.</p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="glass-card border-border/50">
-                    <CardHeader>
-                      <CardTitle className="text-lg font-bold text-foreground">Do you provide hardware like tablets or kiosks?</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">We can guide hardware procurement or work with your existing systems. Our platform integrates with most standard POS terminals and tablets.</p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="glass-card border-border/50">
-                    <CardHeader>
-                      <CardTitle className="text-lg font-bold text-foreground">Can employees still pay with cash?</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">While our platform focuses on digital payments, vendors can still accept cash for orders placed through the system.</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </TabsContent>
-              
-              <TabsContent value="integration" className="space-y-6">
-                <div className="grid lg:grid-cols-1 gap-6 max-w-4xl mx-auto">
-                  <Card className="glass-card border-border/50">
-                    <CardHeader>
-                      <CardTitle className="text-lg font-bold text-foreground">Does it integrate with our existing employee ID system?</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">Yes, we provide API integrations with most HR systems and employee databases for seamless authentication.</p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="glass-card border-border/50">
-                    <CardHeader>
-                      <CardTitle className="text-lg font-bold text-foreground">What if we have existing POS systems?</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">MealPe integrates with most standard POS systems, or vendors can use our standalone dashboard.</p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="glass-card border-border/50">
-                    <CardHeader>
-                      <CardTitle className="text-lg font-bold text-foreground">Is training required for vendors?</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">We provide comprehensive vendor training as part of onboarding, including ongoing support for new staff.</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </TabsContent>
-              
-              <TabsContent value="pricing" className="space-y-6">
-                <div className="grid lg:grid-cols-1 gap-6 max-w-4xl mx-auto">
-                  <Card className="glass-card border-border/50">
-                    <CardHeader>
-                      <CardTitle className="text-lg font-bold text-foreground">Are there any hidden fees?</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">No hidden fees. Our commission model charges only 3% + GST per transaction, with a transparent one-time setup fee.</p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="glass-card border-border/50">
-                    <CardHeader>
-                      <CardTitle className="text-lg font-bold text-foreground">Can we switch between pricing models?</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">Yes, you can upgrade from commission-based to subscription model as your volume grows.</p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="glass-card border-border/50">
-                    <CardHeader>
-                      <CardTitle className="text-lg font-bold text-foreground">What's included in ongoing support?</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">Email and chat support, regular platform updates, vendor relations management, and performance monitoring.</p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="glass-card border-border/50">
-                    <CardHeader>
-                      <CardTitle className="text-lg font-bold text-foreground">Is employee data secure?</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">Yes, we maintain enterprise-grade security with data encryption, PCI DSS compliance, and GDPR readiness.</p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="glass-card border-border/50">
-                    <CardHeader>
-                      <CardTitle className="text-lg font-bold text-foreground">What happens if the system goes down?</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">We maintain 99.9% uptime with automatic failover systems. Vendors can still accept orders manually if needed.</p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="glass-card border-border/50">
-                    <CardHeader>
-                      <CardTitle className="text-lg font-bold text-foreground">Can it handle high-volume lunch rush?</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">Our platform is built for scale and automatically handles traffic spikes during peak lunch hours.</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </TabsContent>
-            </Tabs>
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {/* Implementation & Setup */}
+              <AccordionItem value="item-1" className="glass-card border-border/50 rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline py-6">
+                  <span className="text-lg font-semibold text-foreground">How long does implementation take?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  Complete implementation typically takes 2 weeks from contract signing to full launch, including vendor onboarding and employee training. Our proven process ensures minimal disruption to daily operations.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="glass-card border-border/50 rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline py-6">
+                  <span className="text-lg font-semibold text-foreground">Do you provide hardware like tablets or kiosks?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  We can guide hardware procurement or work with your existing systems. Our platform integrates with most standard POS terminals and tablets. We also offer hardware package recommendations based on your specific needs.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="glass-card border-border/50 rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline py-6">
+                  <span className="text-lg font-semibold text-foreground">Can employees still pay with cash?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  While our platform focuses on digital payments for efficiency, vendors can still accept cash for orders placed through the system. This provides flexibility during the transition period.
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* Integration & Compatibility */}
+              <AccordionItem value="item-4" className="glass-card border-border/50 rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline py-6">
+                  <span className="text-lg font-semibold text-foreground">Does it integrate with our existing employee ID system?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  Yes, we provide API integrations with most HR systems and employee databases for seamless authentication. This includes integration with RFID cards, biometric systems, and SSO solutions.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="glass-card border-border/50 rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline py-6">
+                  <span className="text-lg font-semibold text-foreground">What if we have existing POS systems?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  MealPe integrates with most standard POS systems, or vendors can use our standalone dashboard. We support popular POS brands and can provide custom integration solutions if needed.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6" className="glass-card border-border/50 rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline py-6">
+                  <span className="text-lg font-semibold text-foreground">Is training required for vendors?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  We provide comprehensive vendor training as part of onboarding, including ongoing support for new staff. Training covers order management, menu updates, and performance analytics.
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* Pricing & Contracts */}
+              <AccordionItem value="item-7" className="glass-card border-border/50 rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline py-6">
+                  <span className="text-lg font-semibold text-foreground">Are there any hidden fees?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  No hidden fees. Our commission model charges only 3% + GST per transaction, with a transparent one-time setup fee. All costs are clearly outlined in our pricing structure.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-8" className="glass-card border-border/50 rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline py-6">
+                  <span className="text-lg font-semibold text-foreground">Can we switch between pricing models?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  Yes, you can upgrade from commission-based to subscription model as your volume grows. We offer flexible pricing tiers to match your organization's scale and usage patterns.
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* Technical & Security */}
+              <AccordionItem value="item-9" className="glass-card border-border/50 rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline py-6">
+                  <span className="text-lg font-semibold text-foreground">Is employee data secure?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  Yes, we maintain enterprise-grade security with data encryption, PCI DSS compliance, and GDPR readiness. All data is stored securely with regular security audits and compliance monitoring.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-10" className="glass-card border-border/50 rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline py-6">
+                  <span className="text-lg font-semibold text-foreground">What happens if the system goes down?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  We maintain 99.9% uptime with automatic failover systems. Vendors can still accept orders manually if needed, and our support team provides immediate assistance during any outages.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-11" className="glass-card border-border/50 rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline py-6">
+                  <span className="text-lg font-semibold text-foreground">Can it handle high-volume lunch rush?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  Our platform is built for scale and automatically handles traffic spikes during peak lunch hours. We use cloud infrastructure that scales dynamically to ensure smooth performance.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
