@@ -632,36 +632,6 @@ export const Coliving = () => {
             </Card>
           </div>
 
-          {/* Integration Capabilities */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle>Property Management Systems</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Room allocation and lease integration</li>
-                  <li>• Resident check-in/check-out meal plan automation</li>
-                  <li>• Rent and meal plan consolidated billing</li>
-                  <li>• Maintenance schedule coordination with meal services</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Communication Platforms</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• WhatsApp integration for meal notifications</li>
-                  <li>• Email automation for weekly menus</li>
-                  <li>• In-app messaging for special announcements</li>
-                  <li>• Social community features for residents</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </section>
 
