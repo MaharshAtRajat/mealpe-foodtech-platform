@@ -1106,39 +1106,41 @@ const MessDigitisation = () => {
 
               {/* Active Step Content */}
               <div className="space-y-12">
-                {implementationSteps[activeStep].phases.map((phase, phaseIndex) => (
-                  <div key={phaseIndex} className={`flex items-start ${phaseIndex % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
-                    <div className={`w-5/12 ${phaseIndex % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                      <Card className="glass-card border-border/50">
-                        <CardHeader>
-                          <div className="flex items-center justify-between">
-                            <CardTitle className="text-xl font-bold text-foreground">{phase.title}</CardTitle>
-                            <Badge variant="secondary" className="bg-primary/10 text-primary">
-                              {phase.days}
-                            </Badge>
-                          </div>
-                        </CardHeader>
-                        <CardContent>
-                          <ul className="space-y-2">
-                            {phase.tasks.map((task, taskIndex) => (
-                              <li key={taskIndex} className="flex items-start text-muted-foreground">
-                                <CheckCircle className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                                <span className="text-sm">{task}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </CardContent>
-                      </Card>
+                {implementationSteps[activeStep].phases.map((phase, phaseIndex) => {
+                  const isEven = phaseIndex % 2 === 0;
+                  return (
+                    <div key={phaseIndex} className="relative flex items-center">
+                      {/* Timeline Node */}
+                      <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center z-10">
+                        <CheckCircle className="h-6 w-6 text-white" />
+                      </div>
+                      
+                      {/* Content Card */}
+                      <div className={`w-5/12 ${isEven ? 'pr-12' : 'ml-auto pl-12'}`}>
+                        <Card className="glass-card border-border/50 hover:glass-strong transition-all duration-300">
+                          <CardHeader>
+                            <div className="flex items-center justify-between">
+                              <CardTitle className="text-lg font-bold text-foreground">{phase.title}</CardTitle>
+                              <Badge variant="secondary" className="bg-primary/10 text-primary">
+                                {phase.days}
+                              </Badge>
+                            </div>
+                          </CardHeader>
+                          <CardContent>
+                            <ul className="space-y-2">
+                              {phase.tasks.map((task, taskIndex) => (
+                                <li key={taskIndex} className="flex items-start text-sm text-muted-foreground">
+                                  <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 mt-1.5 flex-shrink-0"></div>
+                                  {task}
+                                </li>
+                              ))}
+                            </ul>
+                          </CardContent>
+                        </Card>
+                      </div>
                     </div>
-                    
-                    {/* Timeline dot */}
-                    <div className="relative">
-                      <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg"></div>
-                    </div>
-                    
-                    <div className="w-5/12"></div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
 
