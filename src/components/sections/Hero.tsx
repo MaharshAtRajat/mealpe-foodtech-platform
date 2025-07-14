@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
-import digitalFoodCourt from "@/assets/digital-food-court.jpg";
+import heroSplitScreen from "@/assets/hero-split-screen.jpg";
 
 export const Hero = () => {
   return (
@@ -75,8 +75,8 @@ export const Hero = () => {
                 <div className="glass-strong rounded-2xl p-1 shadow-glass mb-6 animate-float">
                   <div className="bg-background rounded-xl overflow-hidden">
                     <img 
-                      src={digitalFoodCourt}
-                      alt="Digital Food Court with MealPe Platform"
+                      src={heroSplitScreen}
+                      alt="Traditional vs Digital Food Service - MealPe Transformation"
                       className="w-full h-64 object-cover rounded-t-xl"
                     />
                     <div className="p-6">

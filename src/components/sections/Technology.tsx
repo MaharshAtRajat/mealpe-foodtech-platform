@@ -13,32 +13,32 @@ export const Technology = () => {
     {
       icon: Cloud,
       title: "Cloud Infrastructure",
-      description: "AWS/GCP powered scalable architecture"
+      description: "AWS & GCP hosting\n99.9% uptime guarantee\nAuto-scaling capabilities\nGlobal CDN delivery"
     },
     {
       icon: Shield,
       title: "Secure Payments",
-      description: "Razorpay PCI DSS compliant transactions"
-    },
-    {
-      icon: Smartphone,
-      title: "RFID/QR Integration",
-      description: "Seamless hardware connectivity"
-    },
-    {
-      icon: BarChart3,
-      title: "Real-time Analytics",
-      description: "Live insights and reporting dashboard"
-    },
-    {
-      icon: Palette,
-      title: "Mobile-First Design",
-      description: "Responsive across all devices"
+      description: "Razorpay PCI DSS compliance\nMultiple payment gateways\nMeal wallet functionality\nEncrypted transactions"
     },
     {
       icon: Zap,
-      title: "API Integrations",
-      description: "Connect with existing systems"
+      title: "Smart Integration",
+      description: "ERP system connectivity\nHIS integration ready\nPOS system compatibility\nCRM data synchronization"
+    },
+    {
+      icon: BarChart3,
+      title: "Real-Time Analytics",
+      description: "Consumption dashboards\nVendor performance metrics\nUser behavior insights\nPredictive forecasting"
+    },
+    {
+      icon: Smartphone,
+      title: "Mobile-First Design",
+      description: "iOS & Android apps\nProgressive web app\nOffline capability\nTouch-optimized interface"
+    },
+    {
+      icon: Palette,
+      title: "Hardware Support",
+      description: "RFID card integration\nQR code scanning\nBiometric attendance\nSelf-service kiosks"
     }
   ];
 
@@ -52,7 +52,7 @@ export const Technology = () => {
             <span className="text-primary">Technology Stack</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Built with cutting-edge technology to ensure reliability, security, and scalability for institutions of all sizes.
+            Built for scale, security, and seamless integration with your existing systems.
           </p>
         </div>
 
@@ -69,9 +69,14 @@ export const Technology = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  {feature.description}
-                </p>
+                <div className="space-y-2">
+                  {feature.description.split('\n').map((line, index) => (
+                    <div key={index} className="flex items-center text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
+                      {line}
+                    </div>
+                  ))}
+                </div>
               </CardContent>
             </Card>
           ))}

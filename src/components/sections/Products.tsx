@@ -1,35 +1,56 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Utensils, Calendar, Heart, ArrowRight, CheckCircle } from "lucide-react";
+import { Monitor, Calendar, Heart, ArrowRight, CheckCircle } from "lucide-react";
 
 export const Products = () => {
   const products = [
     {
-      icon: Utensils,
+      icon: Monitor,
       title: "MealPe Digital Cafeteria",
-      description: "Contactless ordering, payments, and vendor management for corporate cafeterias and food courts",
-      features: ["Real-time menus", "UPI payments", "Vendor dashboards", "Analytics & insights"],
-      cta: "Learn More",
-      mockup: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop&auto=format",
-      stats: { orders: "45K+", vendors: "12+", reduction: "25%" }
+      tagline: "Queue-Free Corporate Dining",
+      description: "Transform corporate cafeterias and food courts with contactless ordering, real-time menus, and seamless payments. Perfect for corporate parks, coworking spaces, and commercial buildings.",
+      features: [
+        "Real-time menu browsing",
+        "Contactless UPI/card payments", 
+        "Vendor dashboard management",
+        "Pre-ordering & scheduling",
+        "RFID/QR integration"
+      ],
+      perfectFor: "Corporate Parks • Coworking Spaces • Food Courts • Commercial Buildings",
+      cta: "Explore Digital Cafeteria",
+      mockup: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&auto=format"
     },
     {
       icon: Calendar,
-      title: "MealPe Mess Manager",
-      description: "Complete mess digitization for hostels and residential campuses with meal planning and attendance",
-      features: ["Meal calendars", "RSVP tracking", "Inventory forecasting", "Waste reduction"],
-      cta: "Learn More",
-      mockup: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&auto=format",
-      stats: { meals: "20K+", wastage: "-30%", satisfaction: "94%" }
+      title: "MealPe Mess Manager", 
+      tagline: "Smart Hostel & Campus Dining",
+      description: "Complete mess digitization for hostels, residential campuses, and student housing. Features meal calendars, RSVP tracking, and intelligent inventory forecasting.",
+      features: [
+        "Weekly/monthly meal calendars",
+        "RSVP and attendance tracking",
+        "Consumption vs expectation analytics",
+        "Biometric meal issuance",
+        "Vendor inventory forecasting"
+      ],
+      perfectFor: "University Hostels • Student Housing • Residential Campuses • PG Accommodations",
+      cta: "Explore Mess Manager",
+      mockup: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400&h=300&fit=crop&auto=format"
     },
     {
       icon: Heart,
       title: "MealPe MedMeals",
-      description: "India's first SaaS for hospital meal management with therapeutic diet integration",
-      features: ["HIS integration", "Diet filtering", "Nutrition tracking", "Patient preferences"],
-      cta: "Learn More",
-      mockup: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop&auto=format",
-      stats: { patients: "15K+", accuracy: "99%", compliance: "100%" }
+      tagline: "India's First Hospital Meal SaaS",
+      description: "Revolutionary hospital meal management with HIS integration, therapeutic diet filtering, and nutrition tracking. Built specifically for healthcare institutions.",
+      features: [
+        "HIS integration for patient records",
+        "Therapeutic diet-based filtering", 
+        "Bed/ward-wise meal mapping",
+        "Nutrition & allergy tracking",
+        "Admin billing & reporting"
+      ],
+      perfectFor: "Hospitals • Healthcare Centers • Senior Care • Clinics",
+      cta: "Explore MedMeals",
+      mockup: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop&auto=format"
     }
   ];
 
@@ -49,70 +70,66 @@ export const Products = () => {
           </div>
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
             Three Products.{" "}
-            <span className="bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
-              Endless Possibilities.
-            </span>
+            <span className="text-primary">Complete Transformation.</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive solutions designed to transform every aspect of institutional food service management.
+            Purpose-built solutions for every institutional food service challenge.
           </p>
         </div>
 
         {/* Products Grid */}
         <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {products.map((product, index) => (
-            <Card key={index} className="glass-card hover:glass-strong transition-all duration-500 border-0 group overflow-hidden">
-              <div className="relative">
-                {/* Product Mockup */}
-                <div className="h-48 bg-gradient-to-br from-primary/10 to-primary/5 overflow-hidden">
-                  <img 
-                    src={product.mockup}
-                    alt={`${product.title} Interface`}
-                    className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
-                </div>
-
-                {/* Floating Icon */}
-                <div className="absolute top-4 right-4 w-12 h-12 gradient-primary rounded-2xl flex items-center justify-center shadow-glow">
-                  <product.icon className="h-6 w-6 text-white" />
+            <Card key={index} className="glass-card hover:glass-strong transition-all duration-500 border-border/50 overflow-hidden group">
+              {/* Product Mockup */}
+              <div className="relative overflow-hidden">
+                <img 
+                  src={product.mockup}
+                  alt={`${product.title} Interface`}
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+                <div className="absolute top-4 left-4">
+                  <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
+                    <product.icon className="h-5 w-5 text-white" />
+                  </div>
                 </div>
               </div>
-
-              <CardHeader className="pb-4">
-                <CardTitle className="text-xl font-bold text-foreground mb-2">
+              
+              <CardContent className="p-6">
+                <CardTitle className="text-xl font-bold text-foreground mb-1">
                   {product.title}
                 </CardTitle>
-                <p className="text-muted-foreground leading-relaxed text-sm">
+                
+                <p className="text-primary font-medium text-sm mb-4">
+                  {product.tagline}
+                </p>
+                
+                <p className="text-muted-foreground mb-6 leading-relaxed">
                   {product.description}
                 </p>
-              </CardHeader>
-
-              <CardContent className="space-y-6">
-                {/* Features */}
-                <ul className="space-y-3">
-                  {product.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-foreground">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Stats */}
-                <div className="grid grid-cols-3 gap-2">
-                  {Object.entries(product.stats).map(([key, value], statIndex) => (
-                    <div key={statIndex} className="text-center glass-card p-2 rounded-lg">
-                      <div className="text-lg font-bold text-primary">{value}</div>
-                      <div className="text-xs text-muted-foreground capitalize">{key}</div>
-                    </div>
-                  ))}
+                
+                {/* Features List */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-foreground mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {product.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-
-                <Button 
-                  className="w-full glass-card border-primary/20 text-primary hover:gradient-primary hover:text-white transition-all duration-300"
-                  variant="outline"
-                >
+                
+                {/* Perfect For */}
+                <div className="mb-6 p-3 glass-card rounded-lg">
+                  <h4 className="text-xs font-semibold text-foreground mb-2">Perfect For:</h4>
+                  <p className="text-sm text-muted-foreground">{product.perfectFor}</p>
+                </div>
+                
+                {/* CTA */}
+                <Button className="w-full gradient-primary text-white hover:shadow-glow transition-all duration-300">
                   {product.cta}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
