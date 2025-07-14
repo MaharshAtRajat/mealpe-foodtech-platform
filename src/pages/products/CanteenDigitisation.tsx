@@ -704,54 +704,35 @@ const CanteenDigitisation = () => {
           </div>
           
           {/* Primary Industries */}
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
             {industries.map((industry, index) => {
               const industryIcons = [Building, Users, Target, Star];
               const IconComponent = industryIcons[index % industryIcons.length];
+              const bgColors = [
+                "from-blue-500/10 to-blue-600/10",
+                "from-green-500/10 to-green-600/10", 
+                "from-purple-500/10 to-purple-600/10",
+                "from-orange-500/10 to-orange-600/10"
+              ];
               
               return (
-                <div key={index} className="group relative">
-                  {/* Background Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <Card key={index} className="glass-card hover:glass-strong transition-all duration-500 border-border/50 overflow-hidden group">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${bgColors[index]} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                   
-                  <div className="relative glass-card border-border/50 p-8 rounded-2xl hover:shadow-lg transition-all duration-300">
-                    <div className="flex items-start mb-6">
-                      <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mr-4 shadow-lg">
-                        <IconComponent className="h-8 w-8 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-foreground mb-2">{industry.title}</h3>
-                        <div className="w-12 h-1 bg-primary rounded-full"></div>
-                      </div>
+                  <CardContent className="p-6 relative z-10">
+                    <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <IconComponent className="h-6 w-6 text-white" />
                     </div>
                     
-                    <div className="space-y-6">
-                      <div className="relative pl-6">
-                        <div className="absolute left-0 top-1 w-4 h-4 bg-red-100 rounded-full flex items-center justify-center">
-                          <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                        </div>
-                        <p className="text-sm font-semibold text-red-600 mb-2">Challenge</p>
-                        <p className="text-foreground text-sm leading-relaxed">{industry.challenge}</p>
-                      </div>
-                      
-                      <div className="relative pl-6">
-                        <div className="absolute left-0 top-1 w-4 h-4 bg-blue-100 rounded-full flex items-center justify-center">
-                          <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                        </div>
-                        <p className="text-sm font-semibold text-blue-600 mb-2">Solution</p>
-                        <p className="text-foreground text-sm leading-relaxed">{industry.solution}</p>
-                      </div>
-                      
-                      <div className="relative pl-6">
-                        <div className="absolute left-0 top-1 w-4 h-4 bg-green-100 rounded-full flex items-center justify-center">
-                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        </div>
-                        <p className="text-sm font-semibold text-green-600 mb-2">Result</p>
-                        <p className="text-primary font-semibold text-sm leading-relaxed">{industry.result}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                    <CardTitle className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                      {industry.title}
+                    </CardTitle>
+                    
+                    <p className="text-muted-foreground leading-relaxed">
+                      {industry.solution}
+                    </p>
+                  </CardContent>
+                </Card>
               );
             })}
           </div>
