@@ -41,8 +41,8 @@ export const ProblemStatement = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-            The Institutional{" "}
-            <span className="text-destructive">Food Service Crisis</span>
+            Current Challenges in{" "}
+            <span className="text-destructive">Institutional Food Service</span>
           </h2>
         </div>
 

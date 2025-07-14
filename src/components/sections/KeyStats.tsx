@@ -1,4 +1,33 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+const CountUp = ({ end, duration = 2 }: { end: string; duration?: number }) => {
+  const [count, setCount] = useState(0);
+  const numericEnd = parseInt(end.replace(/\D/g, ''));
+  
+  useEffect(() => {
+    let startTime: number;
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
+      setCount(Math.floor(progress * numericEnd));
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+    requestAnimationFrame(animate);
+  }, [numericEnd, duration]);
+
+  return (
+    <span>
+      {end.includes('L') ? `${count}L+` : 
+       end.includes('%') ? `${count}%+` : 
+       `${count}+`}
+    </span>
+  );
+};
 
 export const KeyStats = () => {
   const stats = [
@@ -28,7 +57,7 @@ export const KeyStats = () => {
             <Card key={index} className="glass-card border-border/50 text-center">
               <CardContent className="p-6">
                 <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
-                  {stat.value}
+                  <CountUp end={stat.value} />
                 </div>
                 <div className="text-sm lg:text-base text-muted-foreground">
                   {stat.label}

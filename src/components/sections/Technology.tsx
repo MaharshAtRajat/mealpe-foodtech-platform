@@ -1,4 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Cloud, 
   Shield, 
@@ -56,58 +55,60 @@ export const Technology = () => {
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* Features in alternating layout */}
+        <div className="max-w-6xl mx-auto space-y-16">
           {features.map((feature, index) => (
-            <Card key={index} className="shadow-card hover:shadow-brand transition-all duration-300 border-border/50">
-              <CardHeader className="pb-4">
-                <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
+            <div 
+              key={index} 
+              className={`flex items-center gap-12 ${
+                index % 2 === 1 ? 'flex-row-reverse' : ''
+              }`}
+            >
+              <div className="flex-1">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center">
+                    <feature.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground">
+                    {feature.title}
+                  </h3>
                 </div>
-                <CardTitle className="text-lg font-semibold text-foreground">
-                  {feature.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  {feature.description.split('\n').map((line, index) => (
-                    <div key={index} className="flex items-center text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
+                <div className="space-y-3">
+                  {feature.description.split('\n').map((line, lineIndex) => (
+                    <div key={lineIndex} className="flex items-center text-lg text-muted-foreground">
+                      <div className="w-2 h-2 bg-primary rounded-full mr-4"></div>
                       {line}
                     </div>
                   ))}
                 </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Dashboard Preview */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-br from-muted/50 to-muted/20 rounded-2xl p-8 max-w-4xl mx-auto">
-            <div className="bg-card rounded-xl shadow-card p-6 border">
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-3 h-3 bg-destructive rounded-full"></div>
-                <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
               </div>
-              <div className="space-y-3">
-                <div className="h-4 bg-muted rounded w-1/3"></div>
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="h-20 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <BarChart3 className="h-8 w-8 text-primary" />
+              
+              <div className="flex-1">
+                <div className="bg-gradient-to-br from-muted/30 to-muted/10 rounded-2xl p-8 h-64 flex items-center justify-center">
+                  <div className="bg-card rounded-xl shadow-lg p-6 border w-full h-full">
+                    <div className="flex items-center space-x-2 mb-4">
+                      <div className="w-2 h-2 bg-destructive rounded-full"></div>
+                      <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="h-3 bg-muted rounded w-2/3"></div>
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="h-16 bg-primary/10 rounded-lg flex items-center justify-center">
+                          <feature.icon className="h-6 w-6 text-primary" />
+                        </div>
+                        <div className="space-y-2">
+                          <div className="h-2 bg-muted rounded"></div>
+                          <div className="h-2 bg-muted rounded w-3/4"></div>
+                          <div className="h-2 bg-muted rounded w-1/2"></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="h-20 bg-primary/10 rounded-lg"></div>
-                  <div className="h-20 bg-primary/10 rounded-lg"></div>
-                </div>
-                <div className="space-y-2">
-                  <div className="h-3 bg-muted rounded w-full"></div>
-                  <div className="h-3 bg-muted rounded w-2/3"></div>
-                  <div className="h-3 bg-muted rounded w-3/4"></div>
                 </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

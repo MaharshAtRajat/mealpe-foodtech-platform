@@ -1,4 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Users, 
   Store, 
@@ -56,24 +55,22 @@ export const Services = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* Services List */}
+        <div className="max-w-4xl mx-auto space-y-8">
           {services.map((service, index) => (
-            <Card key={index} className="glass-card hover:glass-strong transition-all duration-300 border-border/50">
-              <CardHeader className="pb-4">
-                <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center mb-4">
-                  <service.icon className="h-6 w-6 text-white" />
-                </div>
-                <CardTitle className="text-lg font-semibold text-foreground">
+            <div key={index} className="flex items-start gap-6 p-6 glass-card rounded-2xl hover:glass-strong transition-all duration-300">
+              <div className="w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center flex-shrink-0">
+                <service.icon className="h-8 w-8 text-white" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-foreground mb-2">
                   {service.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
+                </h3>
+                <p className="text-muted-foreground text-lg leading-relaxed">
                   {service.description}
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>
