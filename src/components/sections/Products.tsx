@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Monitor, Calendar, Heart, ArrowRight, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Products = () => {
   const products = [
@@ -129,9 +130,14 @@ export const Products = () => {
                 </div>
                 
                 {/* CTA */}
-                <Button className="w-full gradient-primary text-white hover:shadow-glow transition-all duration-300">
-                  {product.cta}
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                <Button 
+                  asChild
+                  className="w-full gradient-primary text-white hover:shadow-glow transition-all duration-300"
+                >
+                  <Link to={index === 0 ? "/products/canteen-digitisation" : index === 1 ? "/products/mess-digitisation" : "/products/medmeals"}>
+                    {product.cta}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
