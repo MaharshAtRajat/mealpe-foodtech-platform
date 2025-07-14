@@ -94,73 +94,73 @@ export const Hostels = () => {
               </Card>
 
               {/* Student Dissatisfaction */}
-              <Card className="glass-card border-accent/20 hover:glass-strong transition-all duration-300">
+              <Card className="glass-card border-destructive/20 hover:glass-strong transition-all duration-300">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-4">
-                    <Frown className="h-8 w-8 text-accent" />
+                  <div className="w-16 h-16 bg-destructive/10 rounded-2xl flex items-center justify-center mb-4">
+                    <Frown className="h-8 w-8 text-destructive" />
                   </div>
                   <CardTitle className="text-2xl font-bold text-foreground">😤 Student Dissatisfaction</CardTitle>
-                  <CardDescription className="text-lg font-semibold text-accent">
+                  <CardDescription className="text-lg font-semibold text-destructive">
                     The Problem: Poor dining experience driving complaints
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 text-muted-foreground mb-6">
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
                       Long queues during meal times
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
                       No advance meal information
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
                       Inability to skip meals when away
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
                       Poor food quality due to overproduction
                     </li>
                   </ul>
-                  <div className="bg-accent/10 p-4 rounded-lg">
-                    <p className="font-bold text-accent">Result: 60-70% student dissatisfaction rates</p>
+                  <div className="bg-destructive/10 p-4 rounded-lg">
+                    <p className="font-bold text-destructive">Result: 60-70% student dissatisfaction rates</p>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Administrative Chaos */}
-              <Card className="glass-card border-secondary/20 hover:glass-strong transition-all duration-300">
+              <Card className="glass-card border-destructive/20 hover:glass-strong transition-all duration-300">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-4">
-                    <ClipboardList className="h-8 w-8 text-secondary-foreground" />
+                  <div className="w-16 h-16 bg-destructive/10 rounded-2xl flex items-center justify-center mb-4">
+                    <ClipboardList className="h-8 w-8 text-destructive" />
                   </div>
                   <CardTitle className="text-2xl font-bold text-foreground">📋 Administrative Chaos</CardTitle>
-                  <CardDescription className="text-lg font-semibold text-secondary-foreground">
+                  <CardDescription className="text-lg font-semibold text-destructive">
                     The Problem: Manual processes consuming staff time
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 text-muted-foreground mb-6">
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-secondary rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
                       Paper-based attendance tracking
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-secondary rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
                       Vendor coordination nightmares
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-secondary rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
                       No real-time consumption data
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-secondary rounded-full mr-3 mt-2"></div>
+                      <div className="w-2 h-2 bg-destructive rounded-full mr-3 mt-2"></div>
                       Budget planning guesswork
                     </li>
                   </ul>
-                  <div className="bg-secondary/10 p-4 rounded-lg">
-                    <p className="font-bold text-secondary-foreground">Impact: 15+ hours weekly on mess administration</p>
+                  <div className="bg-destructive/10 p-4 rounded-lg">
+                    <p className="font-bold text-destructive">Impact: 15+ hours weekly on mess administration</p>
                   </div>
                 </CardContent>
               </Card>
