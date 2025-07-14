@@ -23,7 +23,9 @@ import {
   UserCheck,
   Utensils,
   Home,
-  Briefcase
+  Briefcase,
+  Monitor,
+  Tablet
 } from "lucide-react";
 
 export const Coliving = () => {
@@ -173,6 +175,63 @@ export const Coliving = () => {
               Traditional PG dining creates resident dissatisfaction, operational chaos, and lost revenue.{" "}
               <span className="text-primary font-semibold">MealPe transforms all three.</span>
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Mockup Section */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-accent/10">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6">MealPe Platform Overview</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Complete ecosystem for modern coliving dining management - from admin dashboards to resident mobile apps
+            </p>
+          </div>
+          
+          <div className="relative max-w-7xl mx-auto">
+            {/* Hero Product Image */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="/lovable-uploads/e87cd8d8-dc8b-4c74-909a-e043d833ea2e.png" 
+                alt="MealPe platform showcasing admin dashboard, financial management, and mobile ordering app across desktop, tablet and mobile devices"
+                className="w-full h-auto"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+            
+            {/* Feature Highlights */}
+            <div className="grid md:grid-cols-3 gap-8 mt-16">
+              <div className="text-center">
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Monitor className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Admin Dashboard</h3>
+                <p className="text-muted-foreground">
+                  Comprehensive analytics, revenue tracking, and operational insights for property managers
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Tablet className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Financial Management</h3>
+                <p className="text-muted-foreground">
+                  Automated settlements, payment tracking, and detailed financial reporting
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Smartphone className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Resident Mobile App</h3>
+                <p className="text-muted-foreground">
+                  Intuitive food ordering, payment, and dining experience for residents
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
