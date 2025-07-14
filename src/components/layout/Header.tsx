@@ -27,17 +27,25 @@ export const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
           <div className="flex items-center space-x-6">
+            <Link to="/" className="text-foreground hover:text-primary cursor-pointer transition-colors">
+              Home
+            </Link>
+            
+            <Link to="/about" className="text-foreground hover:text-primary cursor-pointer transition-colors">
+              About Us
+            </Link>
+
             {/* Products Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary cursor-pointer transition-colors">
                 Products <ChevronDown className="ml-1 h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="glass-card border-primary/20 bg-background/95 backdrop-blur">
+              <DropdownMenuContent className="glass-card border-primary/20 bg-background/95 backdrop-blur z-50">
                 <DropdownMenuItem asChild>
-                  <Link to="/products/canteen-digitisation" className="w-full">Canteen / Cafeteria Digitisation</Link>
+                  <Link to="/products/canteen-digitisation" className="w-full">Canteen Digitisation</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/products/mess-digitisation" className="w-full">Mess Digitisation</Link>
+                  <Link to="/products/mess-digitisation" className="w-full">Mess Manager Solution</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <a href="https://medmeals.mealpe.app" target="_blank" rel="noopener noreferrer" className="w-full">MedMeals</a>
@@ -50,8 +58,16 @@ export const Header = () => {
               <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary cursor-pointer transition-colors">
                 Solutions <ChevronDown className="ml-1 h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="glass-card border-primary/20 bg-background/95 backdrop-blur">
-                <div className="px-2 py-1 text-xs font-semibold text-muted-foreground">By Industry</div>
+              <DropdownMenuContent className="glass-card border-primary/20 bg-background/95 backdrop-blur z-50">
+                <div className="px-2 py-1 text-xs font-semibold text-muted-foreground">Hardware</div>
+                <DropdownMenuItem asChild>
+                  <Link to="/solutions/hardware/meal-cards" className="w-full">Meal Cards</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/solutions/hardware/self-serving-kiosks" className="w-full">Kiosk Food Ordering</Link>
+                </DropdownMenuItem>
+                <div className="border-t my-1"></div>
+                <div className="px-2 py-1 text-xs font-semibold text-muted-foreground">Industry</div>
                 <DropdownMenuItem asChild>
                   <Link to="/solutions/industry/hostels" className="w-full">Hostels / Student Housing</Link>
                 </DropdownMenuItem>
@@ -68,24 +84,10 @@ export const Header = () => {
                   <Link to="/solutions/industry/corporate" className="w-full">Corporate Park</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/solutions/industry/hospital" className="w-full">Hospital / Health Care</Link>
+                  <Link to="/solutions/industry/hospital" className="w-full">Hospital / Health Care Centers</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/solutions/industry/universities" className="w-full">Universities / Colleges / Schools</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/industry/clubs" className="w-full">Clubs / Golf Courses / Hotels</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/industry/airport" className="w-full">Airport Lounges / Waiting Areas</Link>
-                </DropdownMenuItem>
-                <div className="border-t my-1"></div>
-                <div className="px-2 py-1 text-xs font-semibold text-muted-foreground">By Hardware</div>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/hardware/meal-cards" className="w-full">Meal Cards</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/hardware/self-serving-kiosks" className="w-full">Self Serving Kiosks</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -95,7 +97,7 @@ export const Header = () => {
               <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary cursor-pointer transition-colors">
                 Services <ChevronDown className="ml-1 h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="glass-card border-primary/20 bg-background/95 backdrop-blur">
+              <DropdownMenuContent className="glass-card border-primary/20 bg-background/95 backdrop-blur z-50">
                 <DropdownMenuItem asChild>
                   <Link to="/services/vendor-aggregation" className="w-full">Vendor Aggregation</Link>
                 </DropdownMenuItem>
@@ -114,15 +116,15 @@ export const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link to="/features" className="text-foreground hover:text-primary cursor-pointer transition-colors">
-              Features
+            <Link to="/resources" className="text-foreground hover:text-primary cursor-pointer transition-colors">
+              Resources
             </Link>
+            
             <Link to="/contact" className="text-foreground hover:text-primary cursor-pointer transition-colors">
-              Contact
+              Contact Us
             </Link>
           </div>
           <div className="flex items-center space-x-3">
-            <Button variant="ghost" className="text-foreground hover:glass">Login</Button>
             <Button className="gradient-primary text-white shadow-brand hover:shadow-glow transition-all duration-300">
               Get Demo
             </Button>
@@ -143,13 +145,16 @@ export const Header = () => {
         <div className="lg:hidden glass-card border-t-0">
           <div className="container mx-auto px-4 py-4 space-y-4">
             <div className="space-y-3">
+              <Link to="/" className="block text-foreground py-2 font-medium">Home</Link>
+              <Link to="/about" className="block text-foreground py-2 font-medium">About Us</Link>
+              
               <div className="text-foreground py-2 font-medium">Products</div>
               <div className="pl-4 space-y-2">
                 <Link to="/products/canteen-digitisation" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Canteen / Cafeteria Digitisation
+                  Canteen Digitisation
                 </Link>
                 <Link to="/products/mess-digitisation" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Mess Digitisation
+                  Mess Manager Solution
                 </Link>
                 <a href="https://medmeals.mealpe.app" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary py-1">
                   MedMeals
@@ -158,22 +163,34 @@ export const Header = () => {
               
               <div className="text-foreground py-2 font-medium">Solutions</div>
               <div className="pl-4 space-y-2">
-                <div className="text-xs font-semibold text-muted-foreground py-1">By Industry</div>
-                <Link to="/solutions/industry/hostels" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Hostels / Student Housing
-                </Link>
-                <Link to="/solutions/industry/universities" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Universities / Colleges
-                </Link>
-                <Link to="/solutions/industry/hospital" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Hospital / Health Care
-                </Link>
-                <div className="text-xs font-semibold text-muted-foreground py-1 pt-2">By Hardware</div>
+                <div className="text-xs font-semibold text-muted-foreground py-1">Hardware</div>
                 <Link to="/solutions/hardware/meal-cards" className="block text-sm text-muted-foreground hover:text-primary py-1">
                   Meal Cards
                 </Link>
                 <Link to="/solutions/hardware/self-serving-kiosks" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Self Serving Kiosks
+                  Kiosk Food Ordering
+                </Link>
+                <div className="text-xs font-semibold text-muted-foreground py-1 pt-2">Industry</div>
+                <Link to="/solutions/industry/hostels" className="block text-sm text-muted-foreground hover:text-primary py-1">
+                  Hostels / Student Housing
+                </Link>
+                <Link to="/solutions/industry/coliving" className="block text-sm text-muted-foreground hover:text-primary py-1">
+                  Coliving Space / PGs
+                </Link>
+                <Link to="/solutions/industry/coworking" className="block text-sm text-muted-foreground hover:text-primary py-1">
+                  Coworking Space
+                </Link>
+                <Link to="/solutions/industry/commercial" className="block text-sm text-muted-foreground hover:text-primary py-1">
+                  Commercial Building
+                </Link>
+                <Link to="/solutions/industry/corporate" className="block text-sm text-muted-foreground hover:text-primary py-1">
+                  Corporate Park
+                </Link>
+                <Link to="/solutions/industry/hospital" className="block text-sm text-muted-foreground hover:text-primary py-1">
+                  Hospital / Health Care Centers
+                </Link>
+                <Link to="/solutions/industry/universities" className="block text-sm text-muted-foreground hover:text-primary py-1">
+                  Universities / Colleges / Schools
                 </Link>
               </div>
               
@@ -183,18 +200,23 @@ export const Header = () => {
                   Vendor Aggregation
                 </Link>
                 <Link to="/services/canteen-setup" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Canteen Setup
+                  Food Court / Canteen / Cafeteria Setup
+                </Link>
+                <Link to="/services/self-ordering-kiosk" className="block text-sm text-muted-foreground hover:text-primary py-1">
+                  Self Ordering Kiosk
                 </Link>
                 <Link to="/services/campus-food-delivery" className="block text-sm text-muted-foreground hover:text-primary py-1">
                   Campus Food Delivery
                 </Link>
+                <Link to="/services/food-audit" className="block text-sm text-muted-foreground hover:text-primary py-1">
+                  Food Audit as a Service
+                </Link>
               </div>
               
-              <Link to="/features" className="block text-foreground py-2 font-medium">Features</Link>
-              <Link to="/contact" className="block text-foreground py-2 font-medium">Contact</Link>
+              <Link to="/resources" className="block text-foreground py-2 font-medium">Resources</Link>
+              <Link to="/contact" className="block text-foreground py-2 font-medium">Contact Us</Link>
             </div>
             <div className="space-y-3 pt-4 border-t">
-              <Button variant="ghost" className="w-full text-foreground">Login</Button>
               <Button className="w-full gradient-primary text-white">Get Demo</Button>
             </div>
           </div>
