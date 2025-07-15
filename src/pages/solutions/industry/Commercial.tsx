@@ -5,36 +5,10 @@ import { Badge } from "@/components/ui/badge";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CTA } from "@/components/sections/CTA";
-import { 
-  Building2, 
-  TrendingUp, 
-  Users, 
-  Clock, 
-  Star, 
-  DollarSign,
-  ArrowRight,
-  CheckCircle,
-  Target,
-  Zap,
-  BarChart3,
-  Shield,
-  Smartphone,
-  CreditCard,
-  Calendar,
-  FileText,
-  Award,
-  Settings,
-  Phone,
-  Mail,
-  Download,
-  PlayCircle,
-  Calculator
-} from "lucide-react";
-
+import { Building2, TrendingUp, Users, Clock, Star, DollarSign, ArrowRight, CheckCircle, Target, Zap, BarChart3, Shield, Smartphone, CreditCard, Calendar, FileText, Award, Settings, Phone, Mail, Download, PlayCircle, Calculator } from "lucide-react";
 export const Commercial = () => {
   const [activeTab, setActiveTab] = useState("tenant-experience");
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Header />
       
       {/* Hero Section */}
@@ -228,15 +202,7 @@ export const Commercial = () => {
             
             <div className="relative max-w-6xl mx-auto">
               {/* Central Hub */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                <div className="w-32 h-32 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center shadow-2xl border-4 border-white">
-                  <Building2 className="h-12 w-12 text-white" />
-                </div>
-                <div className="text-center mt-4">
-                  <h4 className="font-bold text-foreground">Your Property</h4>
-                  <p className="text-sm text-muted-foreground">Enhanced & Premium</p>
-                </div>
-              </div>
+              
 
               {/* Ecosystem Components */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 relative">
@@ -320,43 +286,26 @@ export const Commercial = () => {
 
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-4 gap-4 mb-8">
-                <Button 
-                  variant={activeTab === "tenant-experience" ? "default" : "outline"} 
-                  className="h-16 flex-col gap-2"
-                  onClick={() => setActiveTab("tenant-experience")}
-                >
+                <Button variant={activeTab === "tenant-experience" ? "default" : "outline"} className="h-16 flex-col gap-2" onClick={() => setActiveTab("tenant-experience")}>
                   <Users className="h-6 w-6" />
                   <span>Tenant Experience</span>
                 </Button>
-                <Button 
-                  variant={activeTab === "revenue-hub" ? "default" : "outline"} 
-                  className="h-16 flex-col gap-2"
-                  onClick={() => setActiveTab("revenue-hub")}
-                >
+                <Button variant={activeTab === "revenue-hub" ? "default" : "outline"} className="h-16 flex-col gap-2" onClick={() => setActiveTab("revenue-hub")}>
                   <DollarSign className="h-6 w-6" />
                   <span>Revenue Hub</span>
                 </Button>
-                <Button 
-                  variant={activeTab === "property-enhancement" ? "default" : "outline"} 
-                  className="h-16 flex-col gap-2"
-                  onClick={() => setActiveTab("property-enhancement")}
-                >
+                <Button variant={activeTab === "property-enhancement" ? "default" : "outline"} className="h-16 flex-col gap-2" onClick={() => setActiveTab("property-enhancement")}>
                   <Award className="h-6 w-6" />
                   <span>Property Enhancement</span>
                 </Button>
-                <Button 
-                  variant={activeTab === "operations" ? "default" : "outline"} 
-                  className="h-16 flex-col gap-2"
-                  onClick={() => setActiveTab("operations")}
-                >
+                <Button variant={activeTab === "operations" ? "default" : "outline"} className="h-16 flex-col gap-2" onClick={() => setActiveTab("operations")}>
                   <Zap className="h-6 w-6" />
                   <span>Operations</span>
                 </Button>
               </div>
 
               {/* Dynamic Tab Content */}
-              {activeTab === "tenant-experience" && (
-                <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
+              {activeTab === "tenant-experience" && <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
                   <CardContent className="p-8">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
                       <div className="space-y-6">
@@ -429,11 +378,9 @@ export const Commercial = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              )}
+                </Card>}
 
-              {activeTab === "revenue-hub" && (
-                <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200">
+              {activeTab === "revenue-hub" && <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200">
                   <CardContent className="p-8">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
                       <div className="space-y-6">
@@ -505,11 +452,9 @@ export const Commercial = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              )}
+                </Card>}
 
-              {activeTab === "property-enhancement" && (
-                <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
+              {activeTab === "property-enhancement" && <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
                   <CardContent className="p-8">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
                       <div className="space-y-6">
@@ -581,11 +526,9 @@ export const Commercial = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              )}
+                </Card>}
 
-              {activeTab === "operations" && (
-                <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
+              {activeTab === "operations" && <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
                   <CardContent className="p-8">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
                       <div className="space-y-6">
@@ -657,8 +600,7 @@ export const Commercial = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              )}
+                </Card>}
             </div>
           </div>
 
@@ -681,18 +623,30 @@ export const Commercial = () => {
                 </div>
                 
                 <div className="space-y-4">
-                  {[
-                    { metric: "Tenant Retention", value: "70%", trend: "decreasing" },
-                    { metric: "Food Options", value: "2-3 vendors", trend: "limited" },
-                    { metric: "Revenue Streams", value: "Rent only", trend: "basic" },
-                    { metric: "Tenant Satisfaction", value: "65%", trend: "average" },
-                    { metric: "Market Position", value: "Standard", trend: "competitive" }
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center justify-between p-4 bg-destructive/5 rounded-lg border border-destructive/20">
+                  {[{
+                  metric: "Tenant Retention",
+                  value: "70%",
+                  trend: "decreasing"
+                }, {
+                  metric: "Food Options",
+                  value: "2-3 vendors",
+                  trend: "limited"
+                }, {
+                  metric: "Revenue Streams",
+                  value: "Rent only",
+                  trend: "basic"
+                }, {
+                  metric: "Tenant Satisfaction",
+                  value: "65%",
+                  trend: "average"
+                }, {
+                  metric: "Market Position",
+                  value: "Standard",
+                  trend: "competitive"
+                }].map((item, index) => <div key={index} className="flex items-center justify-between p-4 bg-destructive/5 rounded-lg border border-destructive/20">
                       <span className="font-medium text-foreground">{item.metric}</span>
                       <span className="text-destructive font-semibold">{item.value}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
 
@@ -707,21 +661,33 @@ export const Commercial = () => {
                 </div>
                 
                 <div className="space-y-4">
-                  {[
-                    { metric: "Tenant Retention", value: "95%", improvement: "+25%" },
-                    { metric: "Food Options", value: "12+ vendors", improvement: "4x more" },
-                    { metric: "Revenue Streams", value: "₹2-5L monthly", improvement: "New income" },
-                    { metric: "Tenant Satisfaction", value: "92%", improvement: "+27%" },
-                    { metric: "Market Position", value: "Premium", improvement: "Leader" }
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center justify-between p-4 bg-primary/5 rounded-lg border border-primary/20">
+                  {[{
+                  metric: "Tenant Retention",
+                  value: "95%",
+                  improvement: "+25%"
+                }, {
+                  metric: "Food Options",
+                  value: "12+ vendors",
+                  improvement: "4x more"
+                }, {
+                  metric: "Revenue Streams",
+                  value: "₹2-5L monthly",
+                  improvement: "New income"
+                }, {
+                  metric: "Tenant Satisfaction",
+                  value: "92%",
+                  improvement: "+27%"
+                }, {
+                  metric: "Market Position",
+                  value: "Premium",
+                  improvement: "Leader"
+                }].map((item, index) => <div key={index} className="flex items-center justify-between p-4 bg-primary/5 rounded-lg border border-primary/20">
                       <span className="font-medium text-foreground">{item.metric}</span>
                       <div className="text-right">
                         <div className="text-primary font-semibold">{item.value}</div>
                         <div className="text-xs text-primary/70">{item.improvement}</div>
                       </div>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </div>
@@ -1283,10 +1249,7 @@ export const Commercial = () => {
               </div>
             </div>
 
-            <Button 
-              size="lg" 
-              className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-6"
-            >
+            <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-6">
               Start Revenue Growth
               <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
@@ -1295,6 +1258,5 @@ export const Commercial = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
