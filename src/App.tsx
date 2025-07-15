@@ -37,6 +37,11 @@ import { FoodAudit } from "./pages/services/FoodAudit";
 import { Features } from "./pages/Features";
 import { Contact } from "./pages/Contact";
 
+// Forms
+import ContactForm from "./pages/forms/ContactForm";
+import DemoRequestForm from "./pages/forms/DemoRequestForm";
+import ExpertCallForm from "./pages/forms/ExpertCallForm";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -78,6 +83,11 @@ const App = () => (
           {/* Other Pages */}
           <Route path="/features" element={<Features />} />
           <Route path="/contact" element={<Contact />} />
+          
+          {/* Forms */}
+          <Route path="/contact-form" element={<ContactForm />} />
+          <Route path="/demo-request" element={<DemoRequestForm />} />
+          <Route path="/expert-call" element={<ExpertCallForm />} />
           
           {/* Catch-all route */}
           <Route path="*" element={<NotFound />} />
