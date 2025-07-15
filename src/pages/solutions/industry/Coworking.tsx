@@ -622,7 +622,7 @@ Just 1 Week!</h2>
                 {
                   title: "Professional Productivity Focus",
                   icon: Timer,
-                  gradient: "from-blue-500/20 to-indigo-500/30",
+                  gradient: "from-primary/10 to-primary/20",
                   features: [
                     "Meeting-Friendly Ordering: Pre-order meals during long meetings",
                     "Quick Break Options: 5-minute ordering for short breaks", 
@@ -634,7 +634,7 @@ Just 1 Week!</h2>
                 {
                   title: "Flexible Membership Integration",
                   icon: CreditCard,
-                  gradient: "from-emerald-500/20 to-teal-500/30",
+                  gradient: "from-secondary/10 to-secondary/20",
                   features: [
                     "Day Pass User Access: Enable food ordering for temporary users",
                     "Membership Tier Benefits: Special pricing for premium members",
@@ -646,7 +646,7 @@ Just 1 Week!</h2>
                 {
                   title: "Community & Networking",
                   icon: MessageSquare,
-                  gradient: "from-orange-500/20 to-red-500/30",
+                  gradient: "from-accent/10 to-accent/20",
                   features: [
                     "Shared Dining Tables: Community lunch coordination",
                     "Food-Based Events: Lunch-and-learn session catering",
@@ -658,7 +658,7 @@ Just 1 Week!</h2>
                 {
                   title: "Business Intelligence",
                   icon: BarChart3,
-                  gradient: "from-purple-500/20 to-pink-500/30",
+                  gradient: "from-muted/30 to-primary/10",
                   features: [
                     "Member Engagement Analytics: Food ordering correlation with retention",
                     "Peak Time Optimization: Vendor capacity planning for busy periods",
@@ -711,9 +711,9 @@ Just 1 Week!</h2>
                             {/* Header */}
                             <div className="flex items-center justify-between mb-4">
                               <div className="flex items-center space-x-2">
-                                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                                <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                                <div className="w-3 h-3 bg-destructive rounded-full"></div>
+                                <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                               </div>
                               <div className="text-xs text-muted-foreground">MealPe Dashboard</div>
                             </div>
