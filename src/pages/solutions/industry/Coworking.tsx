@@ -361,7 +361,7 @@ Co-Working Business</h2>
                     <tr className="border-b border-border">
                       <th className="text-left py-4 px-4 font-bold text-foreground">Aspect</th>
                       <th className="text-left py-4 px-4 font-bold text-foreground">Before MealPe</th>
-                      <th className="text-left py-4 px-4 font-bold text-foreground">After MealPe</th>
+                      <th className="text-left py-4 px-4 font-bold text-foreground">After MealPe (Expected Values)</th>
                     </tr>
                   </thead>
                   <tbody>
