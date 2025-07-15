@@ -593,136 +593,187 @@ Just 1 Week!</h2>
       </section>
 
       {/* Coworking-Specific Features Section */}
-      <section className="py-20 bg-muted/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Built for Dynamic Work Environments
+      <section className="py-20 bg-muted/20 relative overflow-hidden">
+        {/* Dynamic Background Elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full blur-xl"></div>
+          <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-tr from-accent to-primary rounded-lg rotate-45 blur-xl"></div>
+          <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-gradient-to-r from-secondary to-accent rounded-full blur-lg"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
+                Built for{" "}
+                <span className="text-primary relative inline-block">
+                  Dynamic Work Environments
+                  <div className="absolute -bottom-3 left-0 w-full h-2 bg-gradient-to-r from-primary/30 via-primary to-primary/30 rounded-full"></div>
+                </span>
               </h2>
-              <p className="text-xl text-muted-foreground">Unique Coworking Features</p>
+              <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto">
+                Where flexibility meets functionality - crafted for the modern coworking ecosystem
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
-              {/* Professional Productivity Focus */}
-              <Card className="glass-card hover:glass-strong transition-all duration-300">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
-                    <Timer className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-foreground">Professional Productivity Focus</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      Meeting-Friendly Ordering: Pre-order meals during long meetings
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      Quick Break Options: 5-minute ordering for short breaks
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      Desk Delivery Tracking: Know exactly when food arrives
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      Silent Ordering: No disruption to focused work environments
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+            {/* Alternating Feature Layout */}
+            <div className="space-y-16">
+              {[
+                {
+                  title: "Professional Productivity Focus",
+                  icon: Timer,
+                  gradient: "from-blue-500/20 to-indigo-500/30",
+                  features: [
+                    "Meeting-Friendly Ordering: Pre-order meals during long meetings",
+                    "Quick Break Options: 5-minute ordering for short breaks", 
+                    "Desk Delivery Tracking: Know exactly when food arrives",
+                    "Silent Ordering: No disruption to focused work environments"
+                  ],
+                  visual: "⚡"
+                },
+                {
+                  title: "Flexible Membership Integration",
+                  icon: CreditCard,
+                  gradient: "from-emerald-500/20 to-teal-500/30",
+                  features: [
+                    "Day Pass User Access: Enable food ordering for temporary users",
+                    "Membership Tier Benefits: Special pricing for premium members",
+                    "Corporate Account Management: Simplified billing for company teams",
+                    "Guest Ordering: Allow visitors and clients to order meals"
+                  ],
+                  visual: "💎"
+                },
+                {
+                  title: "Community & Networking",
+                  icon: MessageSquare,
+                  gradient: "from-orange-500/20 to-red-500/30",
+                  features: [
+                    "Shared Dining Tables: Community lunch coordination",
+                    "Food-Based Events: Lunch-and-learn session catering",
+                    "Member Taste Matching: Connect members with similar food preferences",
+                    "Group Ordering: Team lunch coordination and splitting"
+                  ],
+                  visual: "🤝"
+                },
+                {
+                  title: "Business Intelligence",
+                  icon: BarChart3,
+                  gradient: "from-purple-500/20 to-pink-500/30",
+                  features: [
+                    "Member Engagement Analytics: Food ordering correlation with retention",
+                    "Peak Time Optimization: Vendor capacity planning for busy periods",
+                    "Revenue Tracking: Commission and upselling opportunity identification",
+                    "Space Utilization: Dining area usage and optimization insights"
+                  ],
+                  visual: "📊"
+                }
+              ].map((feature, index) => {
+                const isEven = index % 2 === 0;
+                const IconComponent = feature.icon;
+                
+                return (
+                  <div key={index} className={`flex items-center gap-12 lg:gap-16 ${!isEven ? 'flex-row-reverse' : ''}`}>
+                    {/* Content Side */}
+                    <div className="flex-1">
+                      <div className={`relative p-8 lg:p-10 rounded-3xl bg-gradient-to-br ${feature.gradient} backdrop-blur-sm border border-border/30 hover:border-primary/40 transition-all duration-500 group hover:shadow-2xl hover:shadow-primary/10`}>
+                        {/* Floating Icon */}
+                        <div className="absolute -top-6 left-8">
+                          <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-lg">
+                            <IconComponent className="h-6 w-6 text-white" />
+                          </div>
+                        </div>
+                        
+                        <div className="pt-8">
+                          <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-6 group-hover:text-primary transition-colors">
+                            {feature.title}
+                          </h3>
+                          
+                          <div className="space-y-4">
+                            {feature.features.map((item, idx) => (
+                              <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-background/50 hover:bg-background/70 transition-all duration-300">
+                                <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
+                                <p className="text-muted-foreground leading-relaxed">
+                                  {item}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-              {/* Flexible Membership Integration */}
-              <Card className="glass-card hover:glass-strong transition-all duration-300">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
-                    <CreditCard className="h-8 w-8 text-white" />
+                    {/* Visual Side */}
+                    <div className="flex-1 hidden lg:block">
+                      <div className={`relative h-80 rounded-3xl bg-gradient-to-br ${feature.gradient} backdrop-blur-sm border border-border/20 overflow-hidden group hover:shadow-xl transition-all duration-500`}>
+                        {/* Interactive Dashboard Mockup */}
+                        <div className="absolute inset-4">
+                          <div className="bg-background/80 rounded-2xl p-6 h-full backdrop-blur-sm">
+                            {/* Header */}
+                            <div className="flex items-center justify-between mb-4">
+                              <div className="flex items-center space-x-2">
+                                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                                <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                              </div>
+                              <div className="text-xs text-muted-foreground">MealPe Dashboard</div>
+                            </div>
+                            
+                            {/* Content */}
+                            <div className="space-y-4">
+                              <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                                  <IconComponent className="h-5 w-5 text-primary" />
+                                </div>
+                                <div>
+                                  <div className="h-3 bg-foreground/20 rounded w-24 mb-1"></div>
+                                  <div className="h-2 bg-foreground/10 rounded w-16"></div>
+                                </div>
+                              </div>
+                              
+                              <div className="grid grid-cols-2 gap-3">
+                                <div className="bg-primary/10 rounded-lg p-3 text-center">
+                                  <div className="text-2xl mb-1">{feature.visual}</div>
+                                  <div className="h-2 bg-primary/30 rounded w-full"></div>
+                                </div>
+                                <div className="space-y-2">
+                                  <div className="h-2 bg-foreground/10 rounded"></div>
+                                  <div className="h-2 bg-foreground/10 rounded w-3/4"></div>
+                                  <div className="h-2 bg-foreground/10 rounded w-1/2"></div>
+                                </div>
+                              </div>
+                              
+                              <div className="bg-gradient-to-r from-primary/20 to-transparent rounded-lg p-4">
+                                <div className="text-4xl opacity-40 text-center">
+                                  {feature.visual}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* Floating Elements */}
+                        <div className="absolute top-4 right-4 w-8 h-8 bg-primary/20 rounded-full blur-sm group-hover:blur-none transition-all duration-500"></div>
+                        <div className="absolute bottom-6 left-6 w-6 h-6 bg-secondary/30 rounded-full blur-sm group-hover:blur-none transition-all duration-700"></div>
+                      </div>
+                    </div>
                   </div>
-                  <CardTitle className="text-2xl font-bold text-foreground">Flexible Membership Integration</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      Day Pass User Access: Enable food ordering for temporary users
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      Membership Tier Benefits: Special pricing for premium members
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      Corporate Account Management: Simplified billing for company teams
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      Guest Ordering: Allow visitors and clients to order meals
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+                );
+              })}
+            </div>
 
-              {/* Community & Networking */}
-              <Card className="glass-card hover:glass-strong transition-all duration-300">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
-                    <MessageSquare className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-foreground">Community & Networking</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      Shared Dining Tables: Community lunch coordination
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      Food-Based Events: Lunch-and-learn session catering
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      Member Taste Matching: Connect members with similar food preferences
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      Group Ordering: Team lunch coordination and splitting
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* Business Intelligence */}
-              <Card className="glass-card hover:glass-strong transition-all duration-300">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
-                    <BarChart3 className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-foreground">Business Intelligence</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      Member Engagement Analytics: Food ordering correlation with retention
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      Peak Time Optimization: Vendor capacity planning for busy periods
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      Revenue Tracking: Commission and upselling opportunity identification
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      Space Utilization: Dining area usage and optimization insights
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+            {/* Bottom CTA */}
+            <div className="mt-20 text-center">
+              <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-3xl p-8 border border-primary/20">
+                <h3 className="text-2xl font-bold text-foreground mb-4">
+                  Ready to Transform Your Coworking Space?
+                </h3>
+                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                  Join 500+ coworking spaces already boosting member satisfaction and revenue with MealPe
+                </p>
+                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
+                  Start Your Free Assessment
+                </Button>
+              </div>
             </div>
           </div>
         </div>
