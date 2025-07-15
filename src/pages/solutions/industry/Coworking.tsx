@@ -166,7 +166,7 @@ Co-Working Business</h2>
 
       {/* Product Mockup Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-0">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 py-[30px]">
           <div className="max-w-6xl mx-auto text-center">
             <div className="mb-12">
               
