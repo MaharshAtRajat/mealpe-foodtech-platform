@@ -675,7 +675,7 @@ Just 1 Week!</h2>
                   <div key={index} className={`flex items-center gap-12 lg:gap-16 ${!isEven ? 'flex-row-reverse' : ''}`}>
                     {/* Content Side */}
                     <div className="flex-1">
-                      <div className={`relative p-8 lg:p-10 rounded-3xl bg-gradient-to-br ${feature.gradient} backdrop-blur-sm border border-border/30 hover:border-primary/40 transition-all duration-500 group hover:shadow-2xl hover:shadow-primary/10`}>
+                      <div className="relative p-8 lg:p-10 rounded-3xl bg-gradient-to-br from-primary/10 to-primary/20 backdrop-blur-sm border border-border/30 hover:border-primary/40 transition-all duration-500 group hover:shadow-2xl hover:shadow-primary/10">
                         {/* Floating Icon */}
                         <div className="absolute -top-6 left-8">
                           <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-lg">
