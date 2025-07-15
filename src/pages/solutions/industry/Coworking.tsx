@@ -6,10 +6,8 @@ import { CheckCircle, TrendingDown, Frown, ClipboardList, Smartphone, Users, Bar
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import coworkingHero from "@/assets/coworking-hero.jpg";
-
 export const Coworking = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Header />
       
       {/* Hero Section */}
@@ -26,16 +24,9 @@ export const Coworking = () => {
             
             {/* Key Benefits Bar */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
-              {[
-                "45% Higher Retention",
-                "60% F&B Revenue Growth",
-                "80% Member Satisfaction",
-                "1-Week Setup"
-              ].map((benefit, index) => (
-                <div key={index} className="bg-gradient-primary p-4 rounded-xl">
+              {["45% Higher Retention", "60% F&B Revenue Growth", "80% Member Satisfaction", "1-Week Setup"].map((benefit, index) => <div key={index} className="bg-gradient-primary p-4 rounded-xl">
                   <p className="text-white font-semibold text-sm lg:text-base">{benefit}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
             
             {/* CTAs */}
@@ -92,9 +83,7 @@ export const Coworking = () => {
                       No community-building around dining experiences
                     </li>
                   </ul>
-                  <div className="bg-destructive/10 p-4 rounded-lg">
-                    <p className="font-bold text-destructive">Business Impact: 40-60% annual member churn, ₹25K+ acquisition cost per lost member</p>
-                  </div>
+                  
                 </CardContent>
               </Card>
 
@@ -128,9 +117,7 @@ export const Coworking = () => {
                       Limited vendor partnerships and commission opportunities
                     </li>
                   </ul>
-                  <div className="bg-destructive/10 p-4 rounded-lg">
-                    <p className="font-bold text-destructive">Revenue Loss: ₹5-15K per month per 100 members in missed F&B revenue</p>
-                  </div>
+                  
                 </CardContent>
               </Card>
 
@@ -164,9 +151,7 @@ export const Coworking = () => {
                       Poor quality control and member complaint handling
                     </li>
                   </ul>
-                  <div className="bg-destructive/10 p-4 rounded-lg">
-                    <p className="font-bold text-destructive">Productivity Impact: 2-3 hours daily spent on food-related coordination</p>
-                  </div>
+                  
                 </CardContent>
               </Card>
             </div>
@@ -960,6 +945,5 @@ export const Coworking = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
