@@ -408,9 +408,8 @@ Co-Working Business</h2>
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                From Basic to Premium Coworking in Just 1 Week
-              </h2>
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">From Basic to Premium Coworking in
+Just 1 Week!</h2>
               <p className="text-xl text-muted-foreground">Simple 3-Step Process</p>
             </div>
 
