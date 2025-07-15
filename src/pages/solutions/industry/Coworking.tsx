@@ -181,7 +181,7 @@ Co-Working Business</h2>
               <img 
                 src="/lovable-uploads/7dea9753-0747-4c66-b1a1-25142872e85c.png" 
                 alt="MealPe Complete Platform - Dashboard, Analytics, and Mobile App Interface" 
-                className="w-full h-auto rounded-xl shadow-2xl"
+                className="w-full h-auto"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-xl"></div>
             </div>
