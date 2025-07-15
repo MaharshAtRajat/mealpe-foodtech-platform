@@ -15,6 +15,8 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { useToast } from "@/hooks/use-toast";
 import { Card } from "@/components/ui/card";
 import { CalendarIcon, PhoneCall, Award, CheckCircle, Download } from "lucide-react";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 
@@ -81,42 +83,46 @@ const ExpertCallForm: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 py-12 px-4">
-        <div className="max-w-2xl mx-auto">
-          <Card className="p-8 text-center bg-gradient-to-br from-primary/10 to-primary/20 border-primary/20">
-            <div className="w-16 h-16 mx-auto mb-6 bg-gradient-primary rounded-full flex items-center justify-center">
-              <PhoneCall className="w-8 h-8 text-white" />
-            </div>
-            <h2 className="text-3xl font-bold text-foreground mb-4">Expert Consultation Booked!</h2>
-            <p className="text-muted-foreground mb-8">
-              Thank you for booking a consultation with our food service expert. You'll receive a confirmation call within 2 hours to finalize the timing. Our expert will also send you a preparation checklist to make the most of your consultation.
-            </p>
-            
-            <div className="space-y-4 mb-8 text-left">
-              <div className="flex items-center gap-3 text-sm">
-                <PhoneCall className="w-4 h-4 text-primary" />
-                <span>Confirmation call within 2 hours</span>
+      <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+        <Header />
+        <div className="py-12 px-4">
+          <div className="max-w-2xl mx-auto">
+            <Card className="p-8 text-center bg-gradient-to-br from-primary/10 to-primary/20 border-primary/20">
+              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-primary rounded-full flex items-center justify-center">
+                <PhoneCall className="w-8 h-8 text-white" />
               </div>
-              <div className="flex items-center gap-3 text-sm">
-                <CheckCircle className="w-4 h-4 text-primary" />
-                <span>Consultation preparation guide via email</span>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Expert Consultation Booked!</h2>
+              <p className="text-muted-foreground mb-8">
+                Thank you for booking a consultation with our food service expert. You'll receive a confirmation call within 2 hours to finalize the timing. Our expert will also send you a preparation checklist to make the most of your consultation.
+              </p>
+              
+              <div className="space-y-4 mb-8 text-left">
+                <div className="flex items-center gap-3 text-sm">
+                  <PhoneCall className="w-4 h-4 text-primary" />
+                  <span>Confirmation call within 2 hours</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <CheckCircle className="w-4 h-4 text-primary" />
+                  <span>Consultation preparation guide via email</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <CalendarIcon className="w-4 h-4 text-primary" />
+                  <span>Calendar invite with call details</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <Award className="w-4 h-4 text-primary" />
+                  <span>Custom ROI analysis during the call</span>
+                </div>
               </div>
-              <div className="flex items-center gap-3 text-sm">
-                <CalendarIcon className="w-4 h-4 text-primary" />
-                <span>Calendar invite with call details</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm">
-                <Award className="w-4 h-4 text-primary" />
-                <span>Custom ROI analysis during the call</span>
-              </div>
-            </div>
-            
-            <Button onClick={() => window.open('/preparation-checklist.pdf', '_blank')} size="lg" className="gap-2">
-              <Download className="w-4 h-4" />
-              Download Preparation Checklist
-            </Button>
-          </Card>
+              
+              <Button onClick={() => window.open('/preparation-checklist.pdf', '_blank')} size="lg" className="gap-2">
+                <Download className="w-4 h-4" />
+                Download Preparation Checklist
+              </Button>
+            </Card>
+          </div>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -166,8 +172,10 @@ const ExpertCallForm: React.FC = () => {
   maxDate.setDate(today.getDate() + 14);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 py-12 px-4">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+      <Header />
+      <div className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -735,7 +743,9 @@ const ExpertCallForm: React.FC = () => {
             </form>
           </Form>
         </Card>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };

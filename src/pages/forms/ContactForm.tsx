@@ -12,6 +12,8 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Clock, Shield } from "lucide-react";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 const contactFormSchema = z.object({
   fullName: z.string().min(2, "Please enter your full name"),
@@ -65,27 +67,33 @@ const ContactForm: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 py-12 px-4">
-        <div className="max-w-2xl mx-auto">
-          <Card className="p-8 text-center bg-gradient-to-br from-primary/10 to-primary/20 border-primary/20">
-            <div className="w-16 h-16 mx-auto mb-6 bg-gradient-primary rounded-full flex items-center justify-center">
-              <Mail className="w-8 h-8 text-white" />
-            </div>
-            <h2 className="text-3xl font-bold text-foreground mb-4">Message Sent Successfully!</h2>
-            <p className="text-muted-foreground mb-8">
-              Thank you for contacting MealPe. Our team will review your message and respond within 4 hours during business days (Mon-Sat, 9 AM - 7 PM IST).
-            </p>
-            <Button onClick={() => window.location.href = "/products"} size="lg">
-              Explore Our Products
-            </Button>
-          </Card>
+      <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+        <Header />
+        <div className="py-12 px-4">
+          <div className="max-w-2xl mx-auto">
+            <Card className="p-8 text-center bg-gradient-to-br from-primary/10 to-primary/20 border-primary/20">
+              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-primary rounded-full flex items-center justify-center">
+                <Mail className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Message Sent Successfully!</h2>
+              <p className="text-muted-foreground mb-8">
+                Thank you for contacting MealPe. Our team will review your message and respond within 4 hours during business days (Mon-Sat, 9 AM - 7 PM IST).
+              </p>
+              <Button onClick={() => window.location.href = "/products"} size="lg">
+                Explore Our Products
+              </Button>
+            </Card>
+          </div>
         </div>
+        <Footer />
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+      <Header />
+      <div className="py-12 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -392,6 +400,8 @@ const ContactForm: React.FC = () => {
           </Form>
         </Card>
       </div>
+      </div>
+      <Footer />
     </div>
   );
 };

@@ -15,6 +15,8 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { useToast } from "@/hooks/use-toast";
 import { Card } from "@/components/ui/card";
 import { CalendarIcon, Video, Users, Award, Download } from "lucide-react";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 
@@ -77,22 +79,26 @@ const DemoRequestForm: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 py-12 px-4">
-        <div className="max-w-2xl mx-auto">
-          <Card className="p-8 text-center bg-gradient-to-br from-primary/10 to-primary/20 border-primary/20">
-            <div className="w-16 h-16 mx-auto mb-6 bg-gradient-primary rounded-full flex items-center justify-center">
-              <Video className="w-8 h-8 text-white" />
-            </div>
-            <h2 className="text-3xl font-bold text-foreground mb-4">Demo Scheduled Successfully!</h2>
-            <p className="text-muted-foreground mb-8">
-              Thank you for requesting a MealPe demo. Our product expert will contact you within 2 hours to confirm the timing and send you a calendar invite with video call details. We're excited to show you how MealPe can transform your food service operations!
-            </p>
-            <Button onClick={() => window.open('/brochure.pdf', '_blank')} size="lg" className="gap-2">
-              <Download className="w-4 h-4" />
-              Download Product Brochure
-            </Button>
-          </Card>
+      <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+        <Header />
+        <div className="py-12 px-4">
+          <div className="max-w-2xl mx-auto">
+            <Card className="p-8 text-center bg-gradient-to-br from-primary/10 to-primary/20 border-primary/20">
+              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-primary rounded-full flex items-center justify-center">
+                <Video className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Demo Scheduled Successfully!</h2>
+              <p className="text-muted-foreground mb-8">
+                Thank you for requesting a MealPe demo. Our product expert will contact you within 2 hours to confirm the timing and send you a calendar invite with video call details. We're excited to show you how MealPe can transform your food service operations!
+              </p>
+              <Button onClick={() => window.open('/brochure.pdf', '_blank')} size="lg" className="gap-2">
+                <Download className="w-4 h-4" />
+                Download Product Brochure
+              </Button>
+            </Card>
+          </div>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -117,8 +123,10 @@ const DemoRequestForm: React.FC = () => {
   maxDate.setDate(today.getDate() + 30);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 py-12 px-4">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+      <Header />
+      <div className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -627,7 +635,9 @@ const DemoRequestForm: React.FC = () => {
             </form>
           </Form>
         </Card>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };
