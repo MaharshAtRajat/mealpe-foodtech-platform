@@ -164,6 +164,31 @@ Co-Working Business</h2>
         </div>
       </section>
 
+      {/* Product Mockup Section */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto text-center">
+            <div className="mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                Complete MealPe Platform Overview
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                See how our comprehensive dashboard and mobile solutions work together to transform your coworking space
+              </p>
+            </div>
+            
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/7dea9753-0747-4c66-b1a1-25142872e85c.png" 
+                alt="MealPe Complete Platform - Dashboard, Analytics, and Mobile App Interface" 
+                className="w-full h-auto rounded-xl shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-xl"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* MealPe Solutions Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
