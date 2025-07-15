@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -31,6 +32,7 @@ import {
 } from "lucide-react";
 
 export const Commercial = () => {
+  const [activeTab, setActiveTab] = useState("tenant-experience");
   return (
     <div className="min-h-screen">
       <Header />
@@ -318,99 +320,345 @@ export const Commercial = () => {
 
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-4 gap-4 mb-8">
-                <Button variant="default" className="h-16 flex-col gap-2">
+                <Button 
+                  variant={activeTab === "tenant-experience" ? "default" : "outline"} 
+                  className="h-16 flex-col gap-2"
+                  onClick={() => setActiveTab("tenant-experience")}
+                >
                   <Users className="h-6 w-6" />
                   <span>Tenant Experience</span>
                 </Button>
-                <Button variant="outline" className="h-16 flex-col gap-2">
+                <Button 
+                  variant={activeTab === "revenue-hub" ? "default" : "outline"} 
+                  className="h-16 flex-col gap-2"
+                  onClick={() => setActiveTab("revenue-hub")}
+                >
                   <DollarSign className="h-6 w-6" />
                   <span>Revenue Hub</span>
                 </Button>
-                <Button variant="outline" className="h-16 flex-col gap-2">
+                <Button 
+                  variant={activeTab === "property-enhancement" ? "default" : "outline"} 
+                  className="h-16 flex-col gap-2"
+                  onClick={() => setActiveTab("property-enhancement")}
+                >
                   <Award className="h-6 w-6" />
                   <span>Property Enhancement</span>
                 </Button>
-                <Button variant="outline" className="h-16 flex-col gap-2">
+                <Button 
+                  variant={activeTab === "operations" ? "default" : "outline"} 
+                  className="h-16 flex-col gap-2"
+                  onClick={() => setActiveTab("operations")}
+                >
                   <Zap className="h-6 w-6" />
                   <span>Operations</span>
                 </Button>
               </div>
 
-              {/* Active Tab Content - Tenant Experience */}
-              <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
-                <CardContent className="p-8">
-                  <div className="grid lg:grid-cols-2 gap-8 items-center">
-                    <div className="space-y-6">
-                      <div>
-                        <h4 className="text-2xl font-bold text-foreground mb-4 flex items-center">
-                          <Users className="h-8 w-8 text-primary mr-3" />
-                          Premium Tenant Experience
-                        </h4>
-                        <p className="text-muted-foreground mb-6">
-                          Transform your commercial building into a food destination that professionals love
-                        </p>
-                      </div>
-                      
-                      <div className="space-y-4">
-                        <div className="flex items-start space-x-4 p-4 bg-white/50 rounded-lg">
-                          <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <Smartphone className="h-5 w-5 text-primary" />
-                          </div>
-                          <div>
-                            <h5 className="font-semibold text-foreground">Multi-Vendor Marketplace</h5>
-                            <p className="text-sm text-muted-foreground">8-15 diverse food vendors in one app, from healthy salads to comfort foods</p>
-                          </div>
+              {/* Dynamic Tab Content */}
+              {activeTab === "tenant-experience" && (
+                <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
+                  <CardContent className="p-8">
+                    <div className="grid lg:grid-cols-2 gap-8 items-center">
+                      <div className="space-y-6">
+                        <div>
+                          <h4 className="text-2xl font-bold text-foreground mb-4 flex items-center">
+                            <Users className="h-8 w-8 text-primary mr-3" />
+                            Premium Tenant Experience
+                          </h4>
+                          <p className="text-muted-foreground mb-6">
+                            Transform your commercial building into a food destination that professionals love
+                          </p>
                         </div>
                         
-                        <div className="flex items-start space-x-4 p-4 bg-white/50 rounded-lg">
-                          <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <Clock className="h-5 w-5 text-primary" />
-                          </div>
-                          <div>
-                            <h5 className="font-semibold text-foreground">Express Professional Ordering</h5>
-                            <p className="text-sm text-muted-foreground">30-second ordering, scheduled deliveries, group orders for meetings</p>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-start space-x-4 p-4 bg-white/50 rounded-lg">
-                          <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <CreditCard className="h-5 w-5 text-primary" />
-                          </div>
-                          <div>
-                            <h5 className="font-semibold text-foreground">Corporate Billing Integration</h5>
-                            <p className="text-sm text-muted-foreground">Company accounts, expense management, department-wise tracking</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="relative">
-                      <div className="bg-gradient-to-br from-primary/20 to-primary/40 rounded-2xl p-8 text-center">
                         <div className="space-y-4">
-                          <div className="text-4xl font-bold text-primary">90%</div>
-                          <div className="text-lg font-semibold text-foreground">Tenant Satisfaction</div>
-                          <div className="text-sm text-muted-foreground">Average rating from buildings using MealPe</div>
+                          <div className="flex items-start space-x-4 p-4 bg-white/50 rounded-lg">
+                            <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                              <Smartphone className="h-5 w-5 text-primary" />
+                            </div>
+                            <div>
+                              <h5 className="font-semibold text-foreground">Multi-Vendor Marketplace</h5>
+                              <p className="text-sm text-muted-foreground">8-15 diverse food vendors in one app, from healthy salads to comfort foods</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start space-x-4 p-4 bg-white/50 rounded-lg">
+                            <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                              <Clock className="h-5 w-5 text-primary" />
+                            </div>
+                            <div>
+                              <h5 className="font-semibold text-foreground">Express Professional Ordering</h5>
+                              <p className="text-sm text-muted-foreground">30-second ordering, scheduled deliveries, group orders for meetings</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start space-x-4 p-4 bg-white/50 rounded-lg">
+                            <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                              <CreditCard className="h-5 w-5 text-primary" />
+                            </div>
+                            <div>
+                              <h5 className="font-semibold text-foreground">Corporate Billing Integration</h5>
+                              <p className="text-sm text-muted-foreground">Company accounts, expense management, department-wise tracking</p>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       
-                      {/* Floating stats */}
-                      <div className="absolute -top-4 -right-4 bg-white rounded-lg p-3 shadow-lg border border-primary/20">
-                        <div className="text-center">
-                          <div className="text-xl font-bold text-primary">15min</div>
-                          <div className="text-xs text-muted-foreground">Avg Order Time</div>
+                      <div className="relative">
+                        <div className="bg-gradient-to-br from-primary/20 to-primary/40 rounded-2xl p-8 text-center">
+                          <div className="space-y-4">
+                            <div className="text-4xl font-bold text-primary">90%</div>
+                            <div className="text-lg font-semibold text-foreground">Tenant Satisfaction</div>
+                            <div className="text-sm text-muted-foreground">Average rating from buildings using MealPe</div>
+                          </div>
                         </div>
-                      </div>
-                      
-                      <div className="absolute -bottom-4 -left-4 bg-white rounded-lg p-3 shadow-lg border border-primary/20">
-                        <div className="text-center">
-                          <div className="text-xl font-bold text-primary">12+</div>
-                          <div className="text-xs text-muted-foreground">Food Partners</div>
+                        
+                        {/* Floating stats */}
+                        <div className="absolute -top-4 -right-4 bg-white rounded-lg p-3 shadow-lg border border-primary/20">
+                          <div className="text-center">
+                            <div className="text-xl font-bold text-primary">15min</div>
+                            <div className="text-xs text-muted-foreground">Avg Order Time</div>
+                          </div>
+                        </div>
+                        
+                        <div className="absolute -bottom-4 -left-4 bg-white rounded-lg p-3 shadow-lg border border-primary/20">
+                          <div className="text-center">
+                            <div className="text-xl font-bold text-primary">12+</div>
+                            <div className="text-xs text-muted-foreground">Food Partners</div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              )}
+
+              {activeTab === "revenue-hub" && (
+                <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200">
+                  <CardContent className="p-8">
+                    <div className="grid lg:grid-cols-2 gap-8 items-center">
+                      <div className="space-y-6">
+                        <div>
+                          <h4 className="text-2xl font-bold text-foreground mb-4 flex items-center">
+                            <DollarSign className="h-8 w-8 text-green-600 mr-3" />
+                            Revenue Generation Hub
+                          </h4>
+                          <p className="text-muted-foreground mb-6">
+                            Create multiple revenue streams while enhancing tenant satisfaction
+                          </p>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div className="flex items-start space-x-4 p-4 bg-white/70 rounded-lg">
+                            <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <BarChart3 className="h-5 w-5 text-green-600" />
+                            </div>
+                            <div>
+                              <h5 className="font-semibold text-foreground">Commission Revenue</h5>
+                              <p className="text-sm text-muted-foreground">8-12% commission on all food orders, ₹75K+ monthly potential</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start space-x-4 p-4 bg-white/70 rounded-lg">
+                            <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <Building2 className="h-5 w-5 text-green-600" />
+                            </div>
+                            <div>
+                              <h5 className="font-semibold text-foreground">Premium Positioning</h5>
+                              <p className="text-sm text-muted-foreground">Justify ₹3-5/sq ft rent premium with modern amenities</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start space-x-4 p-4 bg-white/70 rounded-lg">
+                            <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <Users className="h-5 w-5 text-green-600" />
+                            </div>
+                            <div>
+                              <h5 className="font-semibold text-foreground">Corporate Catering</h5>
+                              <p className="text-sm text-muted-foreground">High-value event catering and meeting services</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="relative">
+                        <div className="bg-gradient-to-br from-green-200 to-green-300 rounded-2xl p-8 text-center">
+                          <div className="space-y-4">
+                            <div className="text-4xl font-bold text-green-700">₹4.75L+</div>
+                            <div className="text-lg font-semibold text-foreground">Monthly Value</div>
+                            <div className="text-sm text-muted-foreground">Total revenue potential for 500-employee building</div>
+                          </div>
+                        </div>
+                        
+                        <div className="absolute -top-4 -right-4 bg-white rounded-lg p-3 shadow-lg border border-green-200">
+                          <div className="text-center">
+                            <div className="text-xl font-bold text-green-600">600%</div>
+                            <div className="text-xs text-muted-foreground">Annual ROI</div>
+                          </div>
+                        </div>
+                        
+                        <div className="absolute -bottom-4 -left-4 bg-white rounded-lg p-3 shadow-lg border border-green-200">
+                          <div className="text-center">
+                            <div className="text-xl font-bold text-green-600">8-12%</div>
+                            <div className="text-xs text-muted-foreground">Commission</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
+
+              {activeTab === "property-enhancement" && (
+                <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
+                  <CardContent className="p-8">
+                    <div className="grid lg:grid-cols-2 gap-8 items-center">
+                      <div className="space-y-6">
+                        <div>
+                          <h4 className="text-2xl font-bold text-foreground mb-4 flex items-center">
+                            <Award className="h-8 w-8 text-purple-600 mr-3" />
+                            Property Value Enhancement
+                          </h4>
+                          <p className="text-muted-foreground mb-6">
+                            Position your building as a premium business destination
+                          </p>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div className="flex items-start space-x-4 p-4 bg-white/70 rounded-lg">
+                            <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <Target className="h-5 w-5 text-purple-600" />
+                            </div>
+                            <div>
+                              <h5 className="font-semibold text-foreground">Competitive Advantage</h5>
+                              <p className="text-sm text-muted-foreground">Stand out in tenant acquisition with modern food amenities</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start space-x-4 p-4 bg-white/70 rounded-lg">
+                            <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <Star className="h-5 w-5 text-purple-600" />
+                            </div>
+                            <div>
+                              <h5 className="font-semibold text-foreground">Market Reputation</h5>
+                              <p className="text-sm text-muted-foreground">Enhanced building reputation and positive word-of-mouth</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start space-x-4 p-4 bg-white/70 rounded-lg">
+                            <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <TrendingUp className="h-5 w-5 text-purple-600" />
+                            </div>
+                            <div>
+                              <h5 className="font-semibold text-foreground">Increased Foot Traffic</h5>
+                              <p className="text-sm text-muted-foreground">More activity and vibrancy throughout the building</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="relative">
+                        <div className="bg-gradient-to-br from-purple-200 to-purple-300 rounded-2xl p-8 text-center">
+                          <div className="space-y-4">
+                            <div className="text-4xl font-bold text-purple-700">95%</div>
+                            <div className="text-lg font-semibold text-foreground">Tenant Retention</div>
+                            <div className="text-sm text-muted-foreground">Buildings with premium amenities</div>
+                          </div>
+                        </div>
+                        
+                        <div className="absolute -top-4 -right-4 bg-white rounded-lg p-3 shadow-lg border border-purple-200">
+                          <div className="text-center">
+                            <div className="text-xl font-bold text-purple-600">+40%</div>
+                            <div className="text-xs text-muted-foreground">Foot Traffic</div>
+                          </div>
+                        </div>
+                        
+                        <div className="absolute -bottom-4 -left-4 bg-white rounded-lg p-3 shadow-lg border border-purple-200">
+                          <div className="text-center">
+                            <div className="text-xl font-bold text-purple-600">Premium</div>
+                            <div className="text-xs text-muted-foreground">Positioning</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
+
+              {activeTab === "operations" && (
+                <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
+                  <CardContent className="p-8">
+                    <div className="grid lg:grid-cols-2 gap-8 items-center">
+                      <div className="space-y-6">
+                        <div>
+                          <h4 className="text-2xl font-bold text-foreground mb-4 flex items-center">
+                            <Zap className="h-8 w-8 text-blue-600 mr-3" />
+                            Operational Excellence
+                          </h4>
+                          <p className="text-muted-foreground mb-6">
+                            Streamlined operations with minimal management overhead
+                          </p>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div className="flex items-start space-x-4 p-4 bg-white/70 rounded-lg">
+                            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <Settings className="h-5 w-5 text-blue-600" />
+                            </div>
+                            <div>
+                              <h5 className="font-semibold text-foreground">Automated Management</h5>
+                              <p className="text-sm text-muted-foreground">Vendor coordination, billing, and quality control automation</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start space-x-4 p-4 bg-white/70 rounded-lg">
+                            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <BarChart3 className="h-5 w-5 text-blue-600" />
+                            </div>
+                            <div>
+                              <h5 className="font-semibold text-foreground">Real-time Analytics</h5>
+                              <p className="text-sm text-muted-foreground">Live performance monitoring and satisfaction tracking</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start space-x-4 p-4 bg-white/70 rounded-lg">
+                            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <Shield className="h-5 w-5 text-blue-600" />
+                            </div>
+                            <div>
+                              <h5 className="font-semibold text-foreground">Integration Ready</h5>
+                              <p className="text-sm text-muted-foreground">Seamless building management system connectivity</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="relative">
+                        <div className="bg-gradient-to-br from-blue-200 to-blue-300 rounded-2xl p-8 text-center">
+                          <div className="space-y-4">
+                            <div className="text-4xl font-bold text-blue-700">24/7</div>
+                            <div className="text-lg font-semibold text-foreground">Automated Operations</div>
+                            <div className="text-sm text-muted-foreground">Round-the-clock system monitoring</div>
+                          </div>
+                        </div>
+                        
+                        <div className="absolute -top-4 -right-4 bg-white rounded-lg p-3 shadow-lg border border-blue-200">
+                          <div className="text-center">
+                            <div className="text-xl font-bold text-blue-600">90%</div>
+                            <div className="text-xs text-muted-foreground">Less Manual Work</div>
+                          </div>
+                        </div>
+                        
+                        <div className="absolute -bottom-4 -left-4 bg-white rounded-lg p-3 shadow-lg border border-blue-200">
+                          <div className="text-center">
+                            <div className="text-xl font-bold text-blue-600">2 Weeks</div>
+                            <div className="text-xs text-muted-foreground">Setup Time</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
             </div>
           </div>
 
