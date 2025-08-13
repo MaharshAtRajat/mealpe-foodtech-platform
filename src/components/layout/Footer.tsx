@@ -96,7 +96,7 @@ export const Footer = () => {
             <Button 
               asChild
               variant="outline" 
-              className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300"
+              className="border-white/30 text-white bg-[hsl(13,100%,62%)] hover:bg-[hsl(13,100%,55%)] hover:border-white/50 transition-all duration-300"
             >
               <a href="https://web.mealpe.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <Globe className="h-4 w-4" />
@@ -106,7 +106,7 @@ export const Footer = () => {
             <Button 
               asChild
               variant="outline" 
-              className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300"
+              className="border-white/30 text-white bg-[hsl(13,100%,62%)] hover:bg-[hsl(13,100%,55%)] hover:border-white/50 transition-all duration-300"
             >
               <a href="https://restaurants.mealpe.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <Store className="h-4 w-4" />
@@ -116,7 +116,7 @@ export const Footer = () => {
             <Button 
               asChild
               variant="outline" 
-              className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300"
+              className="border-white/30 text-white bg-[hsl(13,100%,62%)] hover:bg-[hsl(13,100%,55%)] hover:border-white/50 transition-all duration-300"
             >
               <a href="https://medmeals.mealpe.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <Heart className="h-4 w-4" />
