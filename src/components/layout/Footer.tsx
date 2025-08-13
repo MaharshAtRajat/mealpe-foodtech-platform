@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Smartphone, Play, Globe, Store, Heart } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -70,16 +71,57 @@ export const Footer = () => {
 
         {/* Apps Section */}
         <div className="border-t border-white/20 pt-8 mb-8">
-          <h3 className="font-semibold text-white mb-4">Download Our Apps</h3>
+          <h3 className="font-semibold text-white mb-4">Our Platforms</h3>
           <div className="flex flex-wrap gap-4">
-            <Button variant="outline" className="border-white/30 text-white hover:bg-white/10">
-              iOS App Store
+            <Button 
+              asChild
+              variant="outline" 
+              className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300"
+            >
+              <a href="https://apps.apple.com/in/developer/mealpe/id1711393296" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <Smartphone className="h-4 w-4" />
+                iOS App Store
+              </a>
             </Button>
-            <Button variant="outline" className="border-white/30 text-white hover:bg-white/10">
-              Google Play
+            <Button 
+              asChild
+              variant="outline" 
+              className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300"
+            >
+              <a href="https://play.google.com/store/apps/developer?id=MealPe&hl=en_IN" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <Play className="h-4 w-4" />
+                Google Play
+              </a>
             </Button>
-            <Button variant="outline" className="border-white/30 text-white hover:bg-white/10">
-              Vendor App
+            <Button 
+              asChild
+              variant="outline" 
+              className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300"
+            >
+              <a href="https://web.mealpe.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <Globe className="h-4 w-4" />
+                User Web App
+              </a>
+            </Button>
+            <Button 
+              asChild
+              variant="outline" 
+              className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300"
+            >
+              <a href="https://restaurants.mealpe.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <Store className="h-4 w-4" />
+                Vendor Admin
+              </a>
+            </Button>
+            <Button 
+              asChild
+              variant="outline" 
+              className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300"
+            >
+              <a href="https://medmeals.mealpe.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <Heart className="h-4 w-4" />
+                MedMeals
+              </a>
             </Button>
           </div>
         </div>
