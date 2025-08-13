@@ -14,15 +14,7 @@ export const Footer = () => {
             <p className="text-white/80 mb-6 max-w-md">
               The operating system for institutional food services. Digitizing dining experiences across India.
             </p>
-            <div className="space-y-3">
-              <p className="text-sm text-white/60">Subscribe to our newsletter</p>
-              <div className="flex gap-2 max-w-sm">
-                <Input placeholder="Enter your email" className="bg-white/10 border-white/20 text-white placeholder:text-white/50" />
-                <Button className="bg-primary hover:bg-primary/90">
-                  Subscribe
-                </Button>
-              </div>
-            </div>
+            
           </div>
 
           {/* Products */}
