@@ -54,7 +54,7 @@ export const Footer = () => {
 
         {/* Apps Section */}
         <div className="border-t border-white/20 pt-8 mb-8">
-          <h3 className="font-semibold text-white mb-4">Our Platforms</h3>
+          <h3 className="font-semibold text-white mb-4">Access Our Products</h3>
           <div className="flex flex-wrap gap-4">
             <Button asChild variant="outline" className="border-white/30 text-white bg-[hsl(13,100%,62%)] hover:bg-[hsl(13,100%,55%)] hover:border-white/50 transition-all duration-300">
               <a href="https://apps.apple.com/in/developer/mealpe/id1711393296" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
