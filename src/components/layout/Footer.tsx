@@ -11,7 +11,7 @@ export const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
               <img 
-                src="/lovable-uploads/b8d09f7e-e55d-4dc1-a400-c73897eb310a.png" 
+                src="/lovable-uploads/1ad3bd09-828f-4034-b8b9-f02622dc513d.png" 
                 alt="MealPe" 
                 className="h-8 w-auto"
               />
