@@ -90,72 +90,72 @@ export const Corporate = () => {
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
-            <Card className="bg-white/50 backdrop-blur-sm border-destructive/20">
+            <Card className="group bg-white/50 backdrop-blur-sm border-destructive/20 hover:bg-white/80 hover:border-destructive/40 hover:shadow-lg hover:shadow-destructive/10 transition-all duration-300 hover:scale-105 cursor-pointer">
               <CardHeader>
-                <div className="w-12 h-12 bg-destructive/10 rounded-lg flex items-center justify-center mb-4">
-                  <Timer className="h-6 w-6 text-destructive" />
+                <div className="w-12 h-12 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110">
+                  <Timer className="h-6 w-6 text-destructive group-hover:animate-pulse" />
                 </div>
-                <CardTitle className="text-xl text-destructive">
+                <CardTitle className="text-xl text-destructive group-hover:text-destructive/90 transition-colors duration-300">
                   Long Queues & Operational Inefficiency
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Employees spending 30+ minutes in cafeteria queues</li>
-                  <li>• Manual billing errors causing payment disputes</li>
-                  <li>• Peak hour congestion reducing productivity</li>
-                  <li>• Limited lunch hours creating service bottlenecks</li>
+                <ul className="space-y-2 text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                  <li className="hover:text-destructive transition-colors duration-200">• Employees spending 30+ minutes in cafeteria queues</li>
+                  <li className="hover:text-destructive transition-colors duration-200">• Manual billing errors causing payment disputes</li>
+                  <li className="hover:text-destructive transition-colors duration-200">• Peak hour congestion reducing productivity</li>
+                  <li className="hover:text-destructive transition-colors duration-200">• Limited lunch hours creating service bottlenecks</li>
                 </ul>
-                <div className="p-3 bg-destructive/10 rounded-lg">
-                  <p className="text-sm font-medium text-destructive">
+                <div className="p-3 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg transition-all duration-300 group-hover:shadow-inner">
+                  <p className="text-sm font-medium text-destructive group-hover:font-bold transition-all duration-300">
                     Impact: 2-3 hours daily productivity loss per 100 employees
                   </p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/50 backdrop-blur-sm border-destructive/20">
+            <Card className="group bg-white/50 backdrop-blur-sm border-destructive/20 hover:bg-white/80 hover:border-destructive/40 hover:shadow-lg hover:shadow-destructive/10 transition-all duration-300 hover:scale-105 cursor-pointer">
               <CardHeader>
-                <div className="w-12 h-12 bg-destructive/10 rounded-lg flex items-center justify-center mb-4">
-                  <Utensils className="h-6 w-6 text-destructive" />
+                <div className="w-12 h-12 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110">
+                  <Utensils className="h-6 w-6 text-destructive group-hover:animate-pulse" />
                 </div>
-                <CardTitle className="text-xl text-destructive">
+                <CardTitle className="text-xl text-destructive group-hover:text-destructive/90 transition-colors duration-300">
                   Food Wastage & Inventory Issues
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• 25-30% food wastage due to poor demand forecasting</li>
-                  <li>• Over-ordering and under-ordering issues</li>
-                  <li>• No visibility into consumption patterns</li>
-                  <li>• Manual inventory management causing stockouts</li>
+                <ul className="space-y-2 text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                  <li className="hover:text-destructive transition-colors duration-200">• 25-30% food wastage due to poor demand forecasting</li>
+                  <li className="hover:text-destructive transition-colors duration-200">• Over-ordering and under-ordering issues</li>
+                  <li className="hover:text-destructive transition-colors duration-200">• No visibility into consumption patterns</li>
+                  <li className="hover:text-destructive transition-colors duration-200">• Manual inventory management causing stockouts</li>
                 </ul>
-                <div className="p-3 bg-destructive/10 rounded-lg">
-                  <p className="text-sm font-medium text-destructive">
+                <div className="p-3 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg transition-all duration-300 group-hover:shadow-inner">
+                  <p className="text-sm font-medium text-destructive group-hover:font-bold transition-all duration-300">
                     Loss: ₹50K-2L monthly wastage costs for large cafeterias
                   </p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/50 backdrop-blur-sm border-destructive/20">
+            <Card className="group bg-white/50 backdrop-blur-sm border-destructive/20 hover:bg-white/80 hover:border-destructive/40 hover:shadow-lg hover:shadow-destructive/10 transition-all duration-300 hover:scale-105 cursor-pointer">
               <CardHeader>
-                <div className="w-12 h-12 bg-destructive/10 rounded-lg flex items-center justify-center mb-4">
-                  <BarChart3 className="h-6 w-6 text-destructive" />
+                <div className="w-12 h-12 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110">
+                  <BarChart3 className="h-6 w-6 text-destructive group-hover:animate-pulse" />
                 </div>
-                <CardTitle className="text-xl text-destructive">
+                <CardTitle className="text-xl text-destructive group-hover:text-destructive/90 transition-colors duration-300">
                   Lack of Data-Driven Insights
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• No analytics on vendor performance metrics</li>
-                  <li>• Limited insights into employee food preferences</li>
-                  <li>• Manual reporting causing delayed decision making</li>
-                  <li>• Difficulty in tracking compliance and quality</li>
+                <ul className="space-y-2 text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                  <li className="hover:text-destructive transition-colors duration-200">• No analytics on vendor performance metrics</li>
+                  <li className="hover:text-destructive transition-colors duration-200">• Limited insights into employee food preferences</li>
+                  <li className="hover:text-destructive transition-colors duration-200">• Manual reporting causing delayed decision making</li>
+                  <li className="hover:text-destructive transition-colors duration-200">• Difficulty in tracking compliance and quality</li>
                 </ul>
-                <div className="p-3 bg-destructive/10 rounded-lg">
-                  <p className="text-sm font-medium text-destructive">
+                <div className="p-3 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg transition-all duration-300 group-hover:shadow-inner">
+                  <p className="text-sm font-medium text-destructive group-hover:font-bold transition-all duration-300">
                     Risk: Poor decisions affecting 1000+ employees daily
                   </p>
                 </div>
@@ -401,98 +401,123 @@ export const Corporate = () => {
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
-            <Card className="bg-white/50 backdrop-blur-sm border-primary/20">
+            <Card className="group bg-white/50 backdrop-blur-sm border-primary/20 hover:bg-white/80 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:scale-105 cursor-pointer">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Timer className="h-6 w-6 text-primary" />
+                <div className="w-12 h-12 bg-primary/10 group-hover:bg-primary/20 rounded-lg flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                  <Timer className="h-6 w-6 text-primary group-hover:animate-pulse" />
                 </div>
-                <CardTitle className="text-xl text-primary">
+                <CardTitle className="text-xl text-primary group-hover:text-primary/90 transition-colors duration-300">
                   Reduced Queues & Faster Service
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• 80% reduction in waiting time with pre-ordering</li>
-                  <li>• Faster meal service improving employee productivity</li>
-                  <li>• Smart queue management during peak hours</li>
-                  <li>• Seamless pick-up process with order tracking</li>
+                <ul className="space-y-2 text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• 80% reduction in waiting time with pre-ordering</li>
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• Faster meal service improving employee productivity</li>
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• Smart queue management during peak hours</li>
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• Seamless pick-up process with order tracking</li>
                 </ul>
+                <div className="mt-4 p-3 bg-primary/5 group-hover:bg-primary/10 rounded-lg transition-all duration-300 group-hover:shadow-inner">
+                  <p className="text-sm font-medium text-primary group-hover:font-bold transition-all duration-300">
+                    Result: Maximum efficiency for busy employees
+                  </p>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/50 backdrop-blur-sm border-primary/20">
+            <Card className="group bg-white/50 backdrop-blur-sm border-primary/20 hover:bg-white/80 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:scale-105 cursor-pointer">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="h-6 w-6 text-primary" />
+                <div className="w-12 h-12 bg-primary/10 group-hover:bg-primary/20 rounded-lg flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                  <Shield className="h-6 w-6 text-primary group-hover:animate-pulse" />
                 </div>
-                <CardTitle className="text-xl text-primary">
+                <CardTitle className="text-xl text-primary group-hover:text-primary/90 transition-colors duration-300">
                   Contactless & Cashless Transactions
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• 100% cashless payments improving hygiene</li>
-                  <li>• Contactless ordering reducing health risks</li>
-                  <li>• Digital receipts and transaction tracking</li>
-                  <li>• Enhanced safety protocols compliance</li>
+                <ul className="space-y-2 text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• 100% cashless payments improving hygiene</li>
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• Contactless ordering reducing health risks</li>
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• Digital receipts and transaction tracking</li>
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• Enhanced safety protocols compliance</li>
                 </ul>
+                <div className="mt-4 p-3 bg-primary/5 group-hover:bg-primary/10 rounded-lg transition-all duration-300 group-hover:shadow-inner">
+                  <p className="text-sm font-medium text-primary group-hover:font-bold transition-all duration-300">
+                    Result: Safe and secure dining experience
+                  </p>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/50 backdrop-blur-sm border-primary/20">
+            <Card className="group bg-white/50 backdrop-blur-sm border-primary/20 hover:bg-white/80 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:scale-105 cursor-pointer">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <BarChart3 className="h-6 w-6 text-primary" />
+                <div className="w-12 h-12 bg-primary/10 group-hover:bg-primary/20 rounded-lg flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                  <BarChart3 className="h-6 w-6 text-primary group-hover:animate-pulse" />
                 </div>
-                <CardTitle className="text-xl text-primary">
+                <CardTitle className="text-xl text-primary group-hover:text-primary/90 transition-colors duration-300">
                   Data-driven Meal Planning
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• 30% reduction in food wastage with analytics</li>
-                  <li>• Optimized inventory based on consumption patterns</li>
-                  <li>• Menu planning driven by employee preferences</li>
-                  <li>• Cost optimization through demand forecasting</li>
+                <ul className="space-y-2 text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• 30% reduction in food wastage with analytics</li>
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• Optimized inventory based on consumption patterns</li>
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• Menu planning driven by employee preferences</li>
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• Cost optimization through demand forecasting</li>
                 </ul>
+                <div className="mt-4 p-3 bg-primary/5 group-hover:bg-primary/10 rounded-lg transition-all duration-300 group-hover:shadow-inner">
+                  <p className="text-sm font-medium text-primary group-hover:font-bold transition-all duration-300">
+                    Result: Smart operations with minimal waste
+                  </p>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/50 backdrop-blur-sm border-primary/20">
+            <Card className="group bg-white/50 backdrop-blur-sm border-primary/20 hover:bg-white/80 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:scale-105 cursor-pointer">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-primary" />
+                <div className="w-12 h-12 bg-primary/10 group-hover:bg-primary/20 rounded-lg flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                  <Users className="h-6 w-6 text-primary group-hover:animate-pulse" />
                 </div>
-                <CardTitle className="text-xl text-primary">
+                <CardTitle className="text-xl text-primary group-hover:text-primary/90 transition-colors duration-300">
                   Enhanced Employee Satisfaction
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• 95% employee satisfaction with digital ordering</li>
-                  <li>• Improved workplace productivity and morale</li>
-                  <li>• Personalized dining experience with preferences</li>
-                  <li>• Better work-life balance with efficient meal service</li>
+                <ul className="space-y-2 text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• 95% employee satisfaction with digital ordering</li>
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• Improved workplace productivity and morale</li>
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• Personalized dining experience with preferences</li>
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• Better work-life balance with efficient meal service</li>
                 </ul>
+                <div className="mt-4 p-3 bg-primary/5 group-hover:bg-primary/10 rounded-lg transition-all duration-300 group-hover:shadow-inner">
+                  <p className="text-sm font-medium text-primary group-hover:font-bold transition-all duration-300">
+                    Result: Happier employees, better workplace culture
+                  </p>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/50 backdrop-blur-sm border-primary/20">
+            <Card className="group bg-white/50 backdrop-blur-sm border-primary/20 hover:bg-white/80 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:scale-105 cursor-pointer">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <CheckCircle className="h-6 w-6 text-primary" />
+                <div className="w-12 h-12 bg-primary/10 group-hover:bg-primary/20 rounded-lg flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                  <CheckCircle className="h-6 w-6 text-primary group-hover:animate-pulse" />
                 </div>
-                <CardTitle className="text-xl text-primary">
+                <CardTitle className="text-xl text-primary group-hover:text-primary/90 transition-colors duration-300">
                   Transparent Vendor Operations
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Real-time tracking of vendor performance</li>
-                  <li>• Quality monitoring and compliance tracking</li>
-                  <li>• Automated vendor coordination and communication</li>
-                  <li>• Performance-based vendor management</li>
+                <ul className="space-y-2 text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• Real-time tracking of vendor performance</li>
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• Quality monitoring and compliance tracking</li>
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• Automated vendor coordination and communication</li>
+                  <li className="hover:text-primary transition-colors duration-200 hover:pl-2">• Performance-based vendor management</li>
                 </ul>
+                <div className="mt-4 p-3 bg-primary/5 group-hover:bg-primary/10 rounded-lg transition-all duration-300 group-hover:shadow-inner">
+                  <p className="text-sm font-medium text-primary group-hover:font-bold transition-all duration-300">
+                    Result: Complete operational visibility and control
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
