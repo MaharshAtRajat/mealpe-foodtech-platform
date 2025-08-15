@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CTA } from "@/components/sections/CTA";
+import { MealPeWorkflowFlow } from "@/components/flow/MealPeWorkflowFlow";
 import { Building2, TrendingUp, Users, Clock, Star, DollarSign, ArrowRight, CheckCircle, Target, Zap, BarChart3, Shield, Smartphone, CreditCard, Calendar, FileText, Award, Settings, Phone, Mail, Download, PlayCircle, Calculator, Coffee, Timer, Utensils, ShoppingCart, UserCheck, ChefHat, QrCode, Wifi } from "lucide-react";
 
 export const Corporate = () => {
@@ -533,65 +534,12 @@ export const Corporate = () => {
             <h2 className="text-4xl font-bold text-foreground">
               How MealPe Works in Corporate Cafeterias
             </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Experience the seamless flow from employee login to payment completion with our intuitive workflow design
+            </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid gap-8">
-              {[
-                {
-                  step: "01",
-                  icon: <UserCheck className="h-8 w-8" />,
-                  title: "Employee Login",
-                  description: "Employees log in via MealPe app or RFID card for quick access"
-                },
-                {
-                  step: "02", 
-                  icon: <ShoppingCart className="h-8 w-8" />,
-                  title: "Browse & Order",
-                  description: "Browse menus and place pre-orders or on-site orders with dietary preferences"
-                },
-                {
-                  step: "03",
-                  icon: <ChefHat className="h-8 w-8" />,
-                  title: "Vendor Processing",
-                  description: "Orders are routed to vendors via the Vendor Admin App for preparation"
-                },
-                {
-                  step: "04",
-                  icon: <BarChart3 className="h-8 w-8" />,
-                  title: "Real-time Monitoring",
-                  description: "Admins track analytics and monitor inventory in real-time"
-                },
-                {
-                  step: "05",
-                  icon: <CreditCard className="h-8 w-8" />,
-                  title: "Seamless Payment",
-                  description: "Payments are processed seamlessly through integrated cashless systems"
-                }
-              ].map((item, index) => (
-                <div key={index} className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
-                      {item.step}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <Card className="bg-white/50 backdrop-blur-sm border-primary/20">
-                      <CardContent className="p-6">
-                        <div className="flex items-center gap-4 mb-3">
-                          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
-                            {item.icon}
-                          </div>
-                          <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
-                        </div>
-                        <p className="text-muted-foreground">{item.description}</p>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <MealPeWorkflowFlow />
         </div>
       </section>
 
