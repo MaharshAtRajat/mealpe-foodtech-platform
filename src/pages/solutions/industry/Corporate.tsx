@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CTA } from "@/components/sections/CTA";
-import { MealPeWorkflowFlow } from "@/components/flow/MealPeWorkflowFlow";
+
 import { Building2, TrendingUp, Users, Clock, Star, DollarSign, ArrowRight, CheckCircle, Target, Zap, BarChart3, Shield, Smartphone, CreditCard, Calendar, FileText, Award, Settings, Phone, Mail, Download, PlayCircle, Calculator, Coffee, Timer, Utensils, ShoppingCart, UserCheck, ChefHat, QrCode, Wifi } from "lucide-react";
 
 export const Corporate = () => {
@@ -539,7 +539,61 @@ export const Corporate = () => {
             </p>
           </div>
 
-          <MealPeWorkflowFlow />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                step: "01",
+                icon: UserCheck,
+                title: "Employee Login",
+                description: "Employees log in via MealPe app or RFID card for quick access to the cafeteria system"
+              },
+              {
+                step: "02", 
+                icon: ShoppingCart,
+                title: "Browse & Order",
+                description: "Browse menus and place pre-orders or on-site orders with dietary preferences and filters"
+              },
+              {
+                step: "03",
+                icon: ChefHat,
+                title: "Vendor Processing", 
+                description: "Orders are routed to vendors via the Vendor Admin App for efficient preparation and cooking"
+              },
+              {
+                step: "04",
+                icon: BarChart3,
+                title: "Real-time Monitoring",
+                description: "Admins track analytics and monitor inventory in real-time for optimal cafeteria management"
+              },
+              {
+                step: "05",
+                icon: CreditCard,
+                title: "Seamless Payment",
+                description: "Payments are processed seamlessly through integrated cashless systems and digital wallets"
+              }
+            ].map((step, index) => {
+              const IconComponent = step.icon;
+              return (
+                <div key={index} className="text-center relative">
+                  <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 mb-4">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-4">
+                      {step.step}
+                    </div>
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <IconComponent className="h-8 w-8 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground mb-3">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                  </div>
+                  {index < 4 && (
+                    <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
+                      <div className="w-8 h-0.5 bg-primary/40"></div>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
