@@ -94,29 +94,29 @@ const ContactForm: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
       <Header />
       <div className="py-8 sm:py-12 px-4">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto px-2 sm:px-0">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4">
+          <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground mb-3 sm:mb-4 px-2">
             Get in Touch with MealPe
           </h1>
-          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             Have a question about our products or need help with your food service digitization? We're here to help.
           </p>
         </div>
 
-        <Card className="p-4 sm:p-6 lg:p-8 xl:p-12 bg-gradient-to-br from-card/50 to-card border-border/50 backdrop-blur-sm">
+        <Card className="p-3 sm:p-4 lg:p-6 xl:p-8 bg-gradient-to-br from-card/50 to-card border-border/50 backdrop-blur-sm mx-2 sm:mx-0">
           <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 sm:space-y-8">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6 lg:space-y-8">
                 {/* Personal Information */}
                 <div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4 sm:mb-6 flex items-center gap-2">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-primary rounded-lg flex items-center justify-center">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-foreground mb-3 sm:mb-4 lg:mb-6 flex items-center gap-2">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
                       <span className="text-white text-xs sm:text-sm font-bold">1</span>
                     </div>
-                    Personal Information
+                    <span>Personal Information</span>
                   </h3>
-                  <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
                     <FormField
                       control={form.control}
                       name="fullName"
@@ -163,13 +163,13 @@ const ContactForm: React.FC = () => {
 
                 {/* Organization Details */}
                 <div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4 sm:mb-6 flex items-center gap-2">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-primary rounded-lg flex items-center justify-center">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-foreground mb-3 sm:mb-4 lg:mb-6 flex items-center gap-2">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
                       <span className="text-white text-xs sm:text-sm font-bold">2</span>
                     </div>
-                    Organization Details
+                    <span>Organization Details</span>
                   </h3>
-                  <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
                   <FormField
                     control={form.control}
                     name="companyName"
@@ -243,13 +243,13 @@ const ContactForm: React.FC = () => {
 
                 {/* Inquiry Details */}
                 <div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4 sm:mb-6 flex items-center gap-2">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-primary rounded-lg flex items-center justify-center">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-foreground mb-3 sm:mb-4 lg:mb-6 flex items-center gap-2">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
                       <span className="text-white text-xs sm:text-sm font-bold">3</span>
                     </div>
-                    Inquiry Details
+                    <span>Inquiry Details</span>
                   </h3>
-                  <div className="space-y-4 sm:space-y-6">
+                  <div className="space-y-3 sm:space-y-4 lg:space-y-6">
                   <FormField
                     control={form.control}
                     name="inquiryType"
@@ -286,7 +286,7 @@ const ContactForm: React.FC = () => {
                         <FormControl>
                           <Textarea 
                             placeholder="Tell us more about your requirements, current challenges, or any specific questions you have..."
-                            className="min-h-[120px]"
+                            className="min-h-[100px] sm:min-h-[120px] text-sm sm:text-base"
                             maxLength={500}
                             {...field}
                           />
@@ -303,13 +303,13 @@ const ContactForm: React.FC = () => {
 
                 {/* Preferences */}
                 <div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4 sm:mb-6 flex items-center gap-2">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-primary rounded-lg flex items-center justify-center">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-foreground mb-3 sm:mb-4 lg:mb-6 flex items-center gap-2">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
                       <span className="text-white text-xs sm:text-sm font-bold">4</span>
                     </div>
-                    Preferences
+                    <span>Preferences</span>
                   </h3>
-                  <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
                   <FormField
                     control={form.control}
                     name="contactMethod"
@@ -372,25 +372,25 @@ const ContactForm: React.FC = () => {
               </div>
 
                 {/* Submit Button */}
-                <div className="pt-4 sm:pt-6">
+                <div className="pt-3 sm:pt-4 lg:pt-6">
                   <Button 
                     type="submit" 
                     size="lg" 
-                    className="w-full sm:w-auto min-w-[200px]"
+                    className="w-full sm:w-auto min-w-[180px] sm:min-w-[200px]"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
-                  <p className="text-xs sm:text-sm text-muted-foreground mt-3">
+                  <p className="text-xs sm:text-sm text-muted-foreground mt-2 sm:mt-3">
                     We'll respond within 4 hours during business days
                   </p>
                 </div>
 
                 {/* Privacy Notice */}
-                <div className="border-t border-border pt-4 sm:pt-6">
-                <div className="flex items-start gap-3 p-4 bg-muted/30 rounded-lg">
-                  <Shield className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <p className="text-sm text-muted-foreground">
+                <div className="border-t border-border pt-3 sm:pt-4 lg:pt-6">
+                <div className="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 bg-muted/30 rounded-lg">
+                  <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                     Your information is secure and will only be used to respond to your inquiry. 
                     We respect your privacy and won't share your details with third parties.
                   </p>

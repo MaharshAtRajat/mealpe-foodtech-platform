@@ -16,60 +16,60 @@ export const Corporate = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-primary/5 pt-16">
+      <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-primary/5 pt-16 px-4 sm:px-0">
         <div className="container mx-auto px-4 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground leading-tight">
+              <div className="space-y-3 sm:space-y-4">
+                <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground leading-tight">
                   Digitize Your Corporate Cafeteria with{" "}
                   <span className="text-primary">MealPe</span>{" "}
                   – Smart Food Solutions for Employees
                 </h1>
-                <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
                   Streamline cafeteria operations, reduce food wastage, and elevate employee dining experience across corporate campuses with MealPe Digital Cafeteria.
                 </p>
               </div>
 
               {/* Key Benefits Bar */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-                <div className="text-center p-3 sm:p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/20">
-                  <div className="text-xl sm:text-2xl font-bold text-primary">80%</div>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 lg:gap-4">
+                <div className="text-center p-2 sm:p-3 lg:p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/20">
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-primary">80%</div>
                   <div className="text-xs sm:text-sm text-muted-foreground">Queue Reduction</div>
                 </div>
-                <div className="text-center p-3 sm:p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/20">
-                  <div className="text-xl sm:text-2xl font-bold text-primary">30%</div>
+                <div className="text-center p-2 sm:p-3 lg:p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/20">
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-primary">30%</div>
                   <div className="text-xs sm:text-sm text-muted-foreground">Food Waste Reduction</div>
                 </div>
-                <div className="text-center p-3 sm:p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/20">
-                  <div className="text-xl sm:text-2xl font-bold text-primary">95%</div>
+                <div className="text-center p-2 sm:p-3 lg:p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/20">
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-primary">95%</div>
                   <div className="text-xs sm:text-sm text-muted-foreground">Employee Satisfaction</div>
                 </div>
-                <div className="text-center p-3 sm:p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/20">
-                  <div className="text-xl sm:text-2xl font-bold text-primary">1-Week</div>
+                <div className="text-center p-2 sm:p-3 lg:p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/20">
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-primary">1-Week</div>
                   <div className="text-xs sm:text-sm text-muted-foreground">Setup</div>
                 </div>
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Button size="lg" className="text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 w-full sm:w-auto">
                   Get a Demo
-                  <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
+                  <ArrowRight className="ml-2 h-3 sm:h-4 lg:h-5 w-3 sm:w-4 lg:w-5" />
                 </Button>
-                <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto">
-                  <PlayCircle className="mr-2 h-4 sm:h-5 w-4 sm:w-5" />
+                <Button variant="outline" size="lg" className="text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 w-full sm:w-auto">
+                  <PlayCircle className="mr-2 h-3 sm:h-4 lg:h-5 w-3 sm:w-4 lg:w-5" />
                   Schedule a Free Walkthrough
                 </Button>
               </div>
             </div>
 
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-primary/10 to-primary/30 rounded-3xl p-8 flex items-center justify-center">
+            <div className="relative mt-8 lg:mt-0">
+              <div className="aspect-square bg-gradient-to-br from-primary/10 to-primary/30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex items-center justify-center">
                 <div className="relative">
-                  <Coffee className="h-32 w-32 text-primary" />
-                  <div className="absolute -top-4 -right-4 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
-                    <Smartphone className="h-8 w-8 text-primary" />
+                  <Coffee className="h-24 w-24 sm:h-32 sm:w-32 text-primary" />
+                  <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
+                    <Smartphone className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
                   </div>
                 </div>
               </div>
@@ -79,36 +79,36 @@ export const Corporate = () => {
       </section>
 
       {/* Problem Statement Section */}
-      <section className="py-20 bg-gradient-to-br from-muted/30 to-background">
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-muted/30 to-background">
         <div className="container mx-auto px-4">
-          <div className="text-center space-y-4 mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
+          <div className="text-center space-y-3 sm:space-y-4 mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground px-4">
               Why Corporate Cafeterias Need MealPe
             </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4">
               Managing food services in corporate parks is challenging. High employee volumes create long queues, manual billing errors, and food wastage. Administrators lack insights into consumption trends and vendor performance. MealPe solves these challenges by providing digital cafeteria management software, improving operational efficiency and enhancing employee satisfaction.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12">
             <Card className="group bg-white/50 backdrop-blur-sm border-destructive/20 hover:bg-white/80 hover:border-destructive/40 hover:shadow-lg hover:shadow-destructive/10 transition-all duration-300 hover:scale-105 cursor-pointer">
               <CardHeader>
-                <div className="w-12 h-12 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110">
-                  <Timer className="h-6 w-6 text-destructive group-hover:animate-pulse" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg flex items-center justify-center mb-3 sm:mb-4 transition-all duration-300 group-hover:scale-110">
+                  <Timer className="h-5 w-5 sm:h-6 sm:w-6 text-destructive group-hover:animate-pulse" />
                 </div>
-                <CardTitle className="text-xl text-destructive group-hover:text-destructive/90 transition-colors duration-300">
+                <CardTitle className="text-lg sm:text-xl text-destructive group-hover:text-destructive/90 transition-colors duration-300">
                   Long Queues & Operational Inefficiency
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                <ul className="space-y-2 text-xs sm:text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
                   <li className="hover:text-destructive transition-colors duration-200">• Employees spending 30+ minutes in cafeteria queues</li>
                   <li className="hover:text-destructive transition-colors duration-200">• Manual billing errors causing payment disputes</li>
                   <li className="hover:text-destructive transition-colors duration-200">• Peak hour congestion reducing productivity</li>
                   <li className="hover:text-destructive transition-colors duration-200">• Limited lunch hours creating service bottlenecks</li>
                 </ul>
-                <div className="p-3 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg transition-all duration-300 group-hover:shadow-inner">
-                  <p className="text-sm font-medium text-destructive group-hover:font-bold transition-all duration-300">
+                <div className="p-2 sm:p-3 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg transition-all duration-300 group-hover:shadow-inner">
+                  <p className="text-xs sm:text-sm font-medium text-destructive group-hover:font-bold transition-all duration-300">
                     Impact: 2-3 hours daily productivity loss per 100 employees
                   </p>
                 </div>
@@ -117,22 +117,22 @@ export const Corporate = () => {
 
             <Card className="group bg-white/50 backdrop-blur-sm border-destructive/20 hover:bg-white/80 hover:border-destructive/40 hover:shadow-lg hover:shadow-destructive/10 transition-all duration-300 hover:scale-105 cursor-pointer">
               <CardHeader>
-                <div className="w-12 h-12 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110">
-                  <Utensils className="h-6 w-6 text-destructive group-hover:animate-pulse" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg flex items-center justify-center mb-3 sm:mb-4 transition-all duration-300 group-hover:scale-110">
+                  <Utensils className="h-5 w-5 sm:h-6 sm:w-6 text-destructive group-hover:animate-pulse" />
                 </div>
-                <CardTitle className="text-xl text-destructive group-hover:text-destructive/90 transition-colors duration-300">
+                <CardTitle className="text-lg sm:text-xl text-destructive group-hover:text-destructive/90 transition-colors duration-300">
                   Food Wastage & Inventory Issues
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                <ul className="space-y-2 text-xs sm:text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
                   <li className="hover:text-destructive transition-colors duration-200">• 25-30% food wastage due to poor demand forecasting</li>
                   <li className="hover:text-destructive transition-colors duration-200">• Over-ordering and under-ordering issues</li>
                   <li className="hover:text-destructive transition-colors duration-200">• No visibility into consumption patterns</li>
                   <li className="hover:text-destructive transition-colors duration-200">• Manual inventory management causing stockouts</li>
                 </ul>
-                <div className="p-3 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg transition-all duration-300 group-hover:shadow-inner">
-                  <p className="text-sm font-medium text-destructive group-hover:font-bold transition-all duration-300">
+                <div className="p-2 sm:p-3 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg transition-all duration-300 group-hover:shadow-inner">
+                  <p className="text-xs sm:text-sm font-medium text-destructive group-hover:font-bold transition-all duration-300">
                     Loss: ₹50K-2L monthly wastage costs for large cafeterias
                   </p>
                 </div>
@@ -141,22 +141,22 @@ export const Corporate = () => {
 
             <Card className="group bg-white/50 backdrop-blur-sm border-destructive/20 hover:bg-white/80 hover:border-destructive/40 hover:shadow-lg hover:shadow-destructive/10 transition-all duration-300 hover:scale-105 cursor-pointer">
               <CardHeader>
-                <div className="w-12 h-12 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110">
-                  <BarChart3 className="h-6 w-6 text-destructive group-hover:animate-pulse" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg flex items-center justify-center mb-3 sm:mb-4 transition-all duration-300 group-hover:scale-110">
+                  <BarChart3 className="h-5 w-5 sm:h-6 sm:w-6 text-destructive group-hover:animate-pulse" />
                 </div>
-                <CardTitle className="text-xl text-destructive group-hover:text-destructive/90 transition-colors duration-300">
+                <CardTitle className="text-lg sm:text-xl text-destructive group-hover:text-destructive/90 transition-colors duration-300">
                   Lack of Data-Driven Insights
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                <ul className="space-y-2 text-xs sm:text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
                   <li className="hover:text-destructive transition-colors duration-200">• No analytics on vendor performance metrics</li>
                   <li className="hover:text-destructive transition-colors duration-200">• Limited insights into employee food preferences</li>
                   <li className="hover:text-destructive transition-colors duration-200">• Manual reporting causing delayed decision making</li>
                   <li className="hover:text-destructive transition-colors duration-200">• Difficulty in tracking compliance and quality</li>
                 </ul>
-                <div className="p-3 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg transition-all duration-300 group-hover:shadow-inner">
-                  <p className="text-sm font-medium text-destructive group-hover:font-bold transition-all duration-300">
+                <div className="p-2 sm:p-3 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg transition-all duration-300 group-hover:shadow-inner">
+                  <p className="text-xs sm:text-sm font-medium text-destructive group-hover:font-bold transition-all duration-300">
                     Risk: Poor decisions affecting 1000+ employees daily
                   </p>
                 </div>

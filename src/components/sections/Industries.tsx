@@ -72,7 +72,7 @@ export const Industries = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-32 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-muted/10 to-background"></div>
       <div className="absolute top-40 left-40 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-float"></div>
@@ -80,38 +80,38 @@ export const Industries = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <div className="glass-card inline-flex items-center px-4 py-2 rounded-full mb-6">
             <Target className="h-4 w-4 text-primary mr-2" />
             <span className="text-sm font-medium text-foreground">Diverse Industries</span>
           </div>
-          <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4 sm:mb-6 px-4">
             Serving Every Institution That{" "}
             <span className="bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
               Feeds People
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             From universities to hospitals, our platform adapts to the unique needs of every institution.
           </p>
         </div>
 
         {/* Industries Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {industries.map((industry, index) => (
             <Card key={index} className="glass-card hover:glass-strong transition-all duration-500 border-border/50 overflow-hidden group">
               <div className={`absolute inset-0 bg-gradient-to-br ${industry.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
               
-              <CardContent className="p-6 relative z-10">
-                <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <industry.icon className="h-6 w-6 text-white" />
+              <CardContent className="p-4 sm:p-6">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 gradient-primary rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <industry.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
                 
-                <CardTitle className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                <CardTitle className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3 group-hover:text-primary transition-colors duration-300">
                   {industry.title}
                 </CardTitle>
                 
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {industry.description}
                 </p>
               </CardContent>

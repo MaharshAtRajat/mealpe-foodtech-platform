@@ -16,17 +16,17 @@ export const Header = () => {
     <header className="sticky top-0 z-50 w-full glass-card border-b-0">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
           <img 
             src="/lovable-uploads/04947d49-1a7b-4126-86e6-24c86b687433.png" 
             alt="MealPe" 
-            className="h-8 w-auto"
+            className="h-6 sm:h-8 w-auto"
           />
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-4 xl:space-x-6">
             <Link to="/" className="text-foreground hover:text-primary cursor-pointer transition-colors">
               Home
             </Link>
@@ -136,8 +136,8 @@ export const Header = () => {
               Contact Us
             </Link>
           </div>
-          <div className="flex items-center space-x-3">
-            <Button className="gradient-primary text-white shadow-brand hover:shadow-glow transition-all duration-300">
+          <div className="flex items-center space-x-2 xl:space-x-3 flex-shrink-0">
+            <Button className="gradient-primary text-white shadow-brand hover:shadow-glow transition-all duration-300 px-4 xl:px-6">
               Get Demo
             </Button>
           </div>
@@ -154,9 +154,9 @@ export const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-16 bg-background/95 backdrop-blur-lg border-b border-border/50 z-40 max-h-[calc(100vh-4rem)] overflow-y-auto">
+        <div className="lg:hidden fixed inset-x-0 top-16 bg-background/95 backdrop-blur-lg border-b border-border/50 z-40 max-h-[calc(100vh-4rem)] overflow-y-auto safe-area-inset">
           <div className="container mx-auto px-4 py-4">
-            <div className="space-y-2">
+            <div className="space-y-1">
               <Link to="/" className="block text-foreground py-3 px-2 font-medium hover:bg-muted/50 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Home</Link>
               <Link to="/about" className="block text-foreground py-3 px-2 font-medium hover:bg-muted/50 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>About Us</Link>
               
@@ -234,7 +234,7 @@ export const Header = () => {
               <Link to="/resources" className="block text-foreground py-3 px-2 font-medium hover:bg-muted/50 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Resources</Link>
               <Link to="/contact" className="block text-foreground py-3 px-2 font-medium hover:bg-muted/50 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
             </div>
-            <div className="pt-4 border-t border-border/50 mt-4">
+            <div className="pt-4 border-t border-border/50 mt-4 pb-safe">
               <Button className="w-full gradient-primary text-white" onClick={() => setIsMenuOpen(false)}>Get Demo</Button>
             </div>
           </div>

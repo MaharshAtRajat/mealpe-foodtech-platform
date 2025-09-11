@@ -32,34 +32,38 @@ const CountUp = ({ end, duration = 2 }: { end: string; duration?: number }) => {
 export const KeyStats = () => {
   const stats = [
     {
-      value: "5L+",
+      value: "5000000+",
+      display: "5L+",
       label: "Orders Processed"
     },
     {
       value: "35+",
+      display: "35+",
       label: "Use Cases"
     },
     {
-      value: "30%+",
+      value: "30+",
+      display: "30%+",
       label: "Reduction in Food Wastage"
     },
     {
       value: "50+",
+      display: "50+",
       label: "Vendor Partners PAN India"
     }
   ];
 
   return (
-    <section className="py-16 bg-muted/30 border-y border-border/50">
+    <section className="py-12 sm:py-16 bg-muted/30 border-y border-border/50">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
           {stats.map((stat, index) => (
             <Card key={index} className="glass-card border-border/50 text-center">
-              <CardContent className="p-6">
-                <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
-                  <CountUp end={stat.value} />
+              <CardContent className="p-4 sm:p-6">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-1 sm:mb-2">
+                  {stat.display}
                 </div>
-                <div className="text-sm lg:text-base text-muted-foreground">
+                <div className="text-xs sm:text-sm lg:text-base text-muted-foreground leading-tight">
                   {stat.label}
                 </div>
               </CardContent>

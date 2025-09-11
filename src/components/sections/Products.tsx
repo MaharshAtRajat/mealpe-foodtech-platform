@@ -56,7 +56,7 @@ export const Products = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-32 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-background to-muted/20"></div>
       <div className="absolute top-20 right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
@@ -64,59 +64,59 @@ export const Products = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <div className="glass-card inline-flex items-center px-4 py-2 rounded-full mb-6">
             <CheckCircle className="h-4 w-4 text-primary mr-2" />
             <span className="text-sm font-medium text-foreground">Three Powerful Solutions</span>
           </div>
-          <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4 sm:mb-6 px-4">
             Three Products.{" "}
             <span className="text-primary">Complete Transformation.</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             Purpose-built solutions for every institutional food service challenge.
           </p>
         </div>
 
         {/* Products Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
           {products.map((product, index) => (
-            <Card key={index} className="glass-card hover:glass-strong transition-all duration-500 border-border/50 overflow-hidden group">
+            <Card key={index} className="glass-card hover:glass-strong transition-all duration-500 border-border/50 overflow-hidden group md:col-span-1 lg:col-span-1">
               {/* Product Mockup */}
               <div className="relative overflow-hidden">
                 <img 
                   src={product.mockup}
                   alt={`${product.title} Interface`}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-40 sm:h-48 object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
-                <div className="absolute top-4 left-4">
-                  <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
-                    <product.icon className="h-5 w-5 text-white" />
+                <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 gradient-primary rounded-lg flex items-center justify-center">
+                    <product.icon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                   </div>
                 </div>
               </div>
               
-              <CardContent className="p-6">
-                <CardTitle className="text-xl font-bold text-foreground mb-1">
+              <CardContent className="p-4 sm:p-6">
+                <CardTitle className="text-lg sm:text-xl font-bold text-foreground mb-1">
                   {product.title}
                 </CardTitle>
                 
-                <p className="text-primary font-medium text-sm mb-4">
+                <p className="text-primary font-medium text-xs sm:text-sm mb-3 sm:mb-4">
                   {product.tagline}
                 </p>
                 
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                   {product.description}
                 </p>
                 
                 {/* Features List */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-foreground mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
+                <div className="mb-4 sm:mb-6">
+                  <h4 className="text-xs sm:text-sm font-semibold text-foreground mb-2 sm:mb-3">Key Features:</h4>
+                  <ul className="space-y-1 sm:space-y-2">
                     {product.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
+                      <li key={featureIndex} className="flex items-start text-xs sm:text-sm text-muted-foreground">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 sm:mr-3 mt-1.5 flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
@@ -124,9 +124,9 @@ export const Products = () => {
                 </div>
                 
                 {/* Perfect For */}
-                <div className="mb-6 p-3 glass-card rounded-lg">
-                  <h4 className="text-xs font-semibold text-foreground mb-2">Perfect For:</h4>
-                  <p className="text-sm text-muted-foreground">{product.perfectFor}</p>
+                <div className="mb-4 sm:mb-6 p-2 sm:p-3 glass-card rounded-lg">
+                  <h4 className="text-xs font-semibold text-foreground mb-1 sm:mb-2">Perfect For:</h4>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-tight">{product.perfectFor}</p>
                 </div>
                 
                 {/* CTA */}
@@ -142,7 +142,7 @@ export const Products = () => {
                   ) : (
                     <Link to={index === 0 ? "/products/canteen-digitisation" : "/products/mess-digitisation"}>
                       {product.cta}
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
                     </Link>
                   )}
                 </Button>
@@ -152,13 +152,13 @@ export const Products = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-12 sm:mt-16">
           <Button 
             size="lg" 
-            className="gradient-primary text-white shadow-brand hover:shadow-glow px-8 py-4 text-lg font-semibold transition-all duration-300"
+            className="gradient-primary text-white shadow-brand hover:shadow-glow px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300"
           >
             Explore All Products
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
         </div>
       </div>
