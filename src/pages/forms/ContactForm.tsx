@@ -93,83 +93,83 @@ const ContactForm: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
       <Header />
-      <div className="py-12 px-4">
+      <div className="py-8 sm:py-12 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4">
             Get in Touch with MealPe
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
             Have a question about our products or need help with your food service digitization? We're here to help.
           </p>
         </div>
 
-        <Card className="p-8 lg:p-12 bg-gradient-to-br from-card/50 to-card border-border/50 backdrop-blur-sm">
+        <Card className="p-4 sm:p-6 lg:p-8 xl:p-12 bg-gradient-to-br from-card/50 to-card border-border/50 backdrop-blur-sm">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-              {/* Personal Information */}
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
-                  <div className="w-6 h-6 bg-gradient-primary rounded-lg flex items-center justify-center">
-                    <span className="text-white text-sm font-bold">1</span>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 sm:space-y-8">
+                {/* Personal Information */}
+                <div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4 sm:mb-6 flex items-center gap-2">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-primary rounded-lg flex items-center justify-center">
+                      <span className="text-white text-xs sm:text-sm font-bold">1</span>
+                    </div>
+                    Personal Information
+                  </h3>
+                  <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                    <FormField
+                      control={form.control}
+                      name="fullName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Full Name *</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Enter your full name" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email Address *</FormLabel>
+                          <FormControl>
+                            <Input type="email" placeholder="your.email@company.com" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="phone"
+                      render={({ field }) => (
+                        <FormItem className="sm:col-span-2">
+                          <FormLabel>Phone Number *</FormLabel>
+                          <FormControl>
+                            <Input type="tel" placeholder="+91 98765 43210" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
                   </div>
-                  Personal Information
-                </h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="fullName"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Full Name *</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Enter your full name" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email Address *</FormLabel>
-                        <FormControl>
-                          <Input type="email" placeholder="your.email@company.com" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                      <FormItem className="md:col-span-2">
-                        <FormLabel>Phone Number *</FormLabel>
-                        <FormControl>
-                          <Input type="tel" placeholder="+91 98765 43210" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
                 </div>
-              </div>
 
-              {/* Organization Details */}
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
-                  <div className="w-6 h-6 bg-gradient-primary rounded-lg flex items-center justify-center">
-                    <span className="text-white text-sm font-bold">2</span>
-                  </div>
-                  Organization Details
-                </h3>
-                <div className="grid md:grid-cols-2 gap-6">
+                {/* Organization Details */}
+                <div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4 sm:mb-6 flex items-center gap-2">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-primary rounded-lg flex items-center justify-center">
+                      <span className="text-white text-xs sm:text-sm font-bold">2</span>
+                    </div>
+                    Organization Details
+                  </h3>
+                  <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <FormField
                     control={form.control}
                     name="companyName"
@@ -211,45 +211,45 @@ const ContactForm: React.FC = () => {
                     )}
                   />
 
-                  <FormField
-                    control={form.control}
-                    name="industryType"
-                    render={({ field }) => (
-                      <FormItem className="md:col-span-2">
-                        <FormLabel>Industry Type *</FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value}>
-                          <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select your industry" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            <SelectItem value="university-college">University/College Hostel</SelectItem>
-                            <SelectItem value="corporate-office">Corporate Park/Office</SelectItem>
-                            <SelectItem value="hospital-healthcare">Hospital/Healthcare</SelectItem>
-                            <SelectItem value="coworking-space">Coworking Space</SelectItem>
-                            <SelectItem value="coliving-pg">Coliving/PG Space</SelectItem>
-                            <SelectItem value="manufacturing">Manufacturing/Industrial</SelectItem>
-                            <SelectItem value="hotels">Hotels/Hospitality</SelectItem>
-                            <SelectItem value="other">Other</SelectItem>
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-              </div>
-
-              {/* Inquiry Details */}
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
-                  <div className="w-6 h-6 bg-gradient-primary rounded-lg flex items-center justify-center">
-                    <span className="text-white text-sm font-bold">3</span>
+                    <FormField
+                      control={form.control}
+                      name="industryType"
+                      render={({ field }) => (
+                        <FormItem className="sm:col-span-2">
+                          <FormLabel>Industry Type *</FormLabel>
+                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <FormControl>
+                              <SelectTrigger>
+                                <SelectValue placeholder="Select your industry" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              <SelectItem value="university-college">University/College Hostel</SelectItem>
+                              <SelectItem value="corporate-office">Corporate Park/Office</SelectItem>
+                              <SelectItem value="hospital-healthcare">Hospital/Healthcare</SelectItem>
+                              <SelectItem value="coworking-space">Coworking Space</SelectItem>
+                              <SelectItem value="coliving-pg">Coliving/PG Space</SelectItem>
+                              <SelectItem value="manufacturing">Manufacturing/Industrial</SelectItem>
+                              <SelectItem value="hotels">Hotels/Hospitality</SelectItem>
+                              <SelectItem value="other">Other</SelectItem>
+                            </SelectContent>
+                          </Select>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
                   </div>
-                  Inquiry Details
-                </h3>
-                <div className="space-y-6">
+                </div>
+
+                {/* Inquiry Details */}
+                <div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4 sm:mb-6 flex items-center gap-2">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-primary rounded-lg flex items-center justify-center">
+                      <span className="text-white text-xs sm:text-sm font-bold">3</span>
+                    </div>
+                    Inquiry Details
+                  </h3>
+                  <div className="space-y-4 sm:space-y-6">
                   <FormField
                     control={form.control}
                     name="inquiryType"
@@ -301,15 +301,15 @@ const ContactForm: React.FC = () => {
                 </div>
               </div>
 
-              {/* Preferences */}
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
-                  <div className="w-6 h-6 bg-gradient-primary rounded-lg flex items-center justify-center">
-                    <span className="text-white text-sm font-bold">4</span>
-                  </div>
-                  Preferences
-                </h3>
-                <div className="grid md:grid-cols-2 gap-6">
+                {/* Preferences */}
+                <div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4 sm:mb-6 flex items-center gap-2">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-primary rounded-lg flex items-center justify-center">
+                      <span className="text-white text-xs sm:text-sm font-bold">4</span>
+                    </div>
+                    Preferences
+                  </h3>
+                  <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <FormField
                     control={form.control}
                     name="contactMethod"
@@ -371,23 +371,23 @@ const ContactForm: React.FC = () => {
                 </div>
               </div>
 
-              {/* Submit Button */}
-              <div className="pt-6">
-                <Button 
-                  type="submit" 
-                  size="lg" 
-                  className="w-full md:w-auto min-w-[200px]"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                </Button>
-                <p className="text-sm text-muted-foreground mt-3">
-                  We'll respond within 4 hours during business days
-                </p>
-              </div>
+                {/* Submit Button */}
+                <div className="pt-4 sm:pt-6">
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full sm:w-auto min-w-[200px]"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                  </Button>
+                  <p className="text-xs sm:text-sm text-muted-foreground mt-3">
+                    We'll respond within 4 hours during business days
+                  </p>
+                </div>
 
-              {/* Privacy Notice */}
-              <div className="border-t border-border pt-6">
+                {/* Privacy Notice */}
+                <div className="border-t border-border pt-4 sm:pt-6">
                 <div className="flex items-start gap-3 p-4 bg-muted/30 rounded-lg">
                   <Shield className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <p className="text-sm text-muted-foreground">

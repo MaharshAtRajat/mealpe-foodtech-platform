@@ -28,7 +28,7 @@ export const Hero = () => {
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
                 <span className="text-foreground">The Operating</span><br />
                 <span className="text-foreground">System for</span><br />
                 <span className="bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
@@ -38,26 +38,26 @@ export const Hero = () => {
               </h1>
               
               {/* Subheadline */}
-              <p className="text-lg lg:text-xl mb-8 text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl mb-8 text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 Digitize cafeterias, streamline mess operations, and revolutionize hospital meal management across{" "}
                 <span className="font-semibold text-primary">60,000+ meals served daily</span>.
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-12">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-stretch sm:items-center mb-12">
                 <Button 
                   size="lg" 
-                  className="gradient-primary text-white shadow-brand hover:shadow-glow px-8 py-4 text-lg font-semibold transition-all duration-300 animate-glow"
+                  className="gradient-primary text-white shadow-brand hover:shadow-glow px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 animate-glow w-full sm:w-auto"
                 >
                   Get Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="glass-card border-primary/20 text-foreground hover:glass-strong px-8 py-4 text-lg transition-all duration-300"
+                  className="glass-card border-primary/20 text-foreground hover:glass-strong px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg transition-all duration-300 w-full sm:w-auto"
                 >
-                  <Play className="mr-2 h-5 w-5" />
+                  <Play className="mr-2 h-4 sm:h-5 w-4 sm:w-5" />
                   View Case Studies
                 </Button>
               </div>
@@ -107,27 +107,27 @@ export const Hero = () => {
                 </div>
 
                 {/* Mobile App Mockup */}
-                <div className="absolute -bottom-6 -right-6 w-48 glass-strong rounded-3xl p-1 shadow-glass animate-float" style={{animationDelay: '1s'}}>
+                <div className="hidden lg:block absolute -bottom-6 -right-6 w-32 sm:w-40 lg:w-48 glass-strong rounded-3xl p-1 shadow-glass animate-float" style={{animationDelay: '1s'}}>
                   <div className="bg-background rounded-2xl overflow-hidden">
-                    <div className="bg-primary/10 h-32 flex items-center justify-center">
+                    <div className="bg-primary/10 h-20 sm:h-24 lg:h-32 flex items-center justify-center">
                       <div className="text-center">
-                        <div className="w-12 h-12 gradient-primary rounded-xl mx-auto mb-2 flex items-center justify-center">
-                          <span className="text-white font-bold">M</span>
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 gradient-primary rounded-xl mx-auto mb-2 flex items-center justify-center">
+                          <span className="text-white font-bold text-xs sm:text-sm lg:text-base">M</span>
                         </div>
                         <div className="text-xs font-medium">MealPe Mobile</div>
                       </div>
                     </div>
-                    <div className="p-3 space-y-2">
-                      <div className="h-2 bg-muted rounded w-full"></div>
-                      <div className="h-2 bg-muted rounded w-2/3"></div>
-                      <div className="h-2 bg-muted rounded w-3/4"></div>
+                    <div className="p-2 sm:p-3 space-y-2">
+                      <div className="h-1.5 sm:h-2 bg-muted rounded w-full"></div>
+                      <div className="h-1.5 sm:h-2 bg-muted rounded w-2/3"></div>
+                      <div className="h-1.5 sm:h-2 bg-muted rounded w-3/4"></div>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Floating Elements */}
-              <div className="absolute top-10 -left-10 glass-card p-4 rounded-xl shadow-glass animate-float" style={{animationDelay: '3s'}}>
+              <div className="hidden lg:block absolute top-10 -left-10 glass-card p-4 rounded-xl shadow-glass animate-float" style={{animationDelay: '3s'}}>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">60K+</div>
                   <div className="text-xs text-muted-foreground">Daily Meals</div>

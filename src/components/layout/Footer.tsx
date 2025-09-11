@@ -55,34 +55,38 @@ export const Footer = () => {
         {/* Apps Section */}
         <div className="border-t border-white/20 pt-8 mb-8">
           <h3 className="font-semibold text-white mb-4">Access Our Products</h3>
-          <div className="flex flex-wrap gap-4">
-            <Button asChild variant="outline" className="border-white/30 text-white bg-[hsl(13,100%,62%)] hover:bg-[hsl(13,100%,55%)] hover:border-white/50 transition-all duration-300">
-              <a href="https://apps.apple.com/in/developer/mealpe/id1711393296" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                <Smartphone className="h-4 w-4" />
-                iOS App Store
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            <Button asChild variant="outline" className="border-white/30 text-white bg-[hsl(13,100%,62%)] hover:bg-[hsl(13,100%,55%)] hover:border-white/50 transition-all duration-300 text-xs sm:text-sm">
+              <a href="https://apps.apple.com/in/developer/mealpe/id1711393296" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 justify-center">
+                <Smartphone className="h-3 w-3 sm:h-4 sm:w-4" />
+                <span className="hidden sm:inline">iOS App Store</span>
+                <span className="sm:hidden">iOS</span>
               </a>
             </Button>
-            <Button asChild variant="outline" className="border-white/30 text-white bg-[hsl(13,100%,62%)] hover:bg-[hsl(13,100%,55%)] hover:border-white/50 transition-all duration-300">
-              <a href="https://play.google.com/store/apps/developer?id=MealPe&hl=en_IN" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                <Play className="h-4 w-4" />
-                Google Play
+            <Button asChild variant="outline" className="border-white/30 text-white bg-[hsl(13,100%,62%)] hover:bg-[hsl(13,100%,55%)] hover:border-white/50 transition-all duration-300 text-xs sm:text-sm">
+              <a href="https://play.google.com/store/apps/developer?id=MealPe&hl=en_IN" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 justify-center">
+                <Play className="h-3 w-3 sm:h-4 sm:w-4" />
+                <span className="hidden sm:inline">Google Play</span>
+                <span className="sm:hidden">Android</span>
               </a>
             </Button>
-            <Button asChild variant="outline" className="border-white/30 text-white bg-[hsl(13,100%,62%)] hover:bg-[hsl(13,100%,55%)] hover:border-white/50 transition-all duration-300">
-              <a href="https://web.mealpe.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                <Globe className="h-4 w-4" />
-                User Web App
+            <Button asChild variant="outline" className="border-white/30 text-white bg-[hsl(13,100%,62%)] hover:bg-[hsl(13,100%,55%)] hover:border-white/50 transition-all duration-300 text-xs sm:text-sm">
+              <a href="https://web.mealpe.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 justify-center">
+                <Globe className="h-3 w-3 sm:h-4 sm:w-4" />
+                <span className="hidden sm:inline">User Web App</span>
+                <span className="sm:hidden">Web App</span>
               </a>
             </Button>
-            <Button asChild variant="outline" className="border-white/30 text-white bg-[hsl(13,100%,62%)] hover:bg-[hsl(13,100%,55%)] hover:border-white/50 transition-all duration-300">
-              <a href="https://restaurants.mealpe.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                <Store className="h-4 w-4" />
-                Vendor Admin
+            <Button asChild variant="outline" className="border-white/30 text-white bg-[hsl(13,100%,62%)] hover:bg-[hsl(13,100%,55%)] hover:border-white/50 transition-all duration-300 text-xs sm:text-sm">
+              <a href="https://restaurants.mealpe.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 justify-center">
+                <Store className="h-3 w-3 sm:h-4 sm:w-4" />
+                <span className="hidden sm:inline">Vendor Admin</span>
+                <span className="sm:hidden">Vendor</span>
               </a>
             </Button>
-            <Button asChild variant="outline" className="border-white/30 text-white bg-[hsl(13,100%,62%)] hover:bg-[hsl(13,100%,55%)] hover:border-white/50 transition-all duration-300">
-              <a href="https://medmeals.mealpe.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                <Heart className="h-4 w-4" />
+            <Button asChild variant="outline" className="border-white/30 text-white bg-[hsl(13,100%,62%)] hover:bg-[hsl(13,100%,55%)] hover:border-white/50 transition-all duration-300 text-xs sm:text-sm col-span-2 sm:col-span-1">
+              <a href="https://medmeals.mealpe.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 justify-center">
+                <Heart className="h-3 w-3 sm:h-4 sm:w-4" />
                 MedMeals
               </a>
             </Button>
@@ -90,13 +94,13 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-white/60 text-sm">© 2025 MealPe Online Food Ordering POS Private Limited. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <span className="text-white/60 hover:text-white cursor-pointer text-sm transition-colors">
+        <div className="border-t border-white/20 pt-8 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
+          <p className="text-white/60 text-xs sm:text-sm">© 2025 MealPe Online Food Ordering POS Private Limited. All rights reserved.</p>
+          <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0 mt-4 sm:mt-0">
+            <span className="text-white/60 hover:text-white cursor-pointer text-xs sm:text-sm transition-colors">
               Privacy Policy
             </span>
-            <span className="text-white/60 hover:text-white cursor-pointer text-sm transition-colors">
+            <span className="text-white/60 hover:text-white cursor-pointer text-xs sm:text-sm transition-colors">
               Terms of Service
             </span>
           </div>

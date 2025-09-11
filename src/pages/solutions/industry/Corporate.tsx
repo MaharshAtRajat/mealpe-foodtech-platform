@@ -21,44 +21,44 @@ export const Corporate = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground leading-tight">
                   Digitize Your Corporate Cafeteria with{" "}
                   <span className="text-primary">MealPe</span>{" "}
                   – Smart Food Solutions for Employees
                 </h1>
-                <p className="text-xl text-muted-foreground leading-relaxed">
+                <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed">
                   Streamline cafeteria operations, reduce food wastage, and elevate employee dining experience across corporate campuses with MealPe Digital Cafeteria.
                 </p>
               </div>
 
               {/* Key Benefits Bar */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/20">
-                  <div className="text-2xl font-bold text-primary">80%</div>
-                  <div className="text-sm text-muted-foreground">Queue Reduction</div>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+                <div className="text-center p-3 sm:p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/20">
+                  <div className="text-xl sm:text-2xl font-bold text-primary">80%</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Queue Reduction</div>
                 </div>
-                <div className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/20">
-                  <div className="text-2xl font-bold text-primary">30%</div>
-                  <div className="text-sm text-muted-foreground">Food Waste Reduction</div>
+                <div className="text-center p-3 sm:p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/20">
+                  <div className="text-xl sm:text-2xl font-bold text-primary">30%</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Food Waste Reduction</div>
                 </div>
-                <div className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/20">
-                  <div className="text-2xl font-bold text-primary">95%</div>
-                  <div className="text-sm text-muted-foreground">Employee Satisfaction</div>
+                <div className="text-center p-3 sm:p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/20">
+                  <div className="text-xl sm:text-2xl font-bold text-primary">95%</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Employee Satisfaction</div>
                 </div>
-                <div className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/20">
-                  <div className="text-2xl font-bold text-primary">1-Week</div>
-                  <div className="text-sm text-muted-foreground">Setup</div>
+                <div className="text-center p-3 sm:p-4 bg-white/50 backdrop-blur-sm rounded-lg border border-primary/20">
+                  <div className="text-xl sm:text-2xl font-bold text-primary">1-Week</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Setup</div>
                 </div>
               </div>
 
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg px-8 py-6">
+                <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto">
                   Get a Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
                 </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                  <PlayCircle className="mr-2 h-5 w-5" />
+                <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto">
+                  <PlayCircle className="mr-2 h-4 sm:h-5 w-4 sm:w-5" />
                   Schedule a Free Walkthrough
                 </Button>
               </div>
@@ -81,16 +81,16 @@ export const Corporate = () => {
       {/* Problem Statement Section */}
       <section className="py-20 bg-gradient-to-br from-muted/30 to-background">
         <div className="container mx-auto px-4">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-4xl font-bold text-foreground">
+          <div className="text-center space-y-4 mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
               Why Corporate Cafeterias Need MealPe
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4">
               Managing food services in corporate parks is challenging. High employee volumes create long queues, manual billing errors, and food wastage. Administrators lack insights into consumption trends and vendor performance. MealPe solves these challenges by providing digital cafeteria management software, improving operational efficiency and enhancing employee satisfaction.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
             <Card className="group bg-white/50 backdrop-blur-sm border-destructive/20 hover:bg-white/80 hover:border-destructive/40 hover:shadow-lg hover:shadow-destructive/10 transition-all duration-300 hover:scale-105 cursor-pointer">
               <CardHeader>
                 <div className="w-12 h-12 bg-destructive/10 group-hover:bg-destructive/20 rounded-lg flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110">
@@ -171,90 +171,90 @@ export const Corporate = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
         
         <div className="container mx-auto px-4 relative">
-          <div className="text-center space-y-6 mb-20">
-            <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-6 py-2 text-primary font-medium">
-              <Zap className="h-4 w-4" />
-              <span>Complete Digital Transformation</span>
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
-              MealPe Features for
-              <br />
-              <span className="text-primary">Corporate Cafeterias</span>
-            </h2>
-          </div>
-
-          {/* Feature Deep Dive with Tabs */}
-          <div className="mb-20">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-3 gap-4 mb-8">
-                <Button variant={activeTab === "employee-app" ? "default" : "outline"} className="h-16 flex-col gap-2" onClick={() => setActiveTab("employee-app")}>
-                  <Smartphone className="h-6 w-6" />
-                  <span>Digital Cafeteria for Employees</span>
-                </Button>
-                <Button variant={activeTab === "admin-dashboard" ? "default" : "outline"} className="h-16 flex-col gap-2" onClick={() => setActiveTab("admin-dashboard")}>
-                  <BarChart3 className="h-6 w-6" />
-                  <span>Admin Dashboard</span>
-                </Button>
-                <Button variant={activeTab === "vendor-management" ? "default" : "outline"} className="h-16 flex-col gap-2" onClick={() => setActiveTab("vendor-management")}>
-                  <ChefHat className="h-6 w-6" />
-                  <span>Vendor Management App</span>
-                </Button>
+            <div className="text-center space-y-6 mb-16 lg:mb-20">
+              <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 sm:px-6 py-2 text-primary font-medium">
+                <Zap className="h-4 w-4" />
+                <span className="text-sm sm:text-base">Complete Digital Transformation</span>
               </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground">
+                MealPe Features for
+                <br />
+                <span className="text-primary">Corporate Cafeterias</span>
+              </h2>
+            </div>
+
+            {/* Feature Deep Dive with Tabs */}
+            <div className="mb-16 lg:mb-20">
+              <div className="max-w-6xl mx-auto">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4 mb-6 lg:mb-8">
+                  <Button variant={activeTab === "employee-app" ? "default" : "outline"} className="h-12 sm:h-16 flex-col gap-1 sm:gap-2 text-xs sm:text-sm" onClick={() => setActiveTab("employee-app")}>
+                    <Smartphone className="h-4 w-4 sm:h-6 sm:w-6" />
+                    <span>Digital Cafeteria for Employees</span>
+                  </Button>
+                  <Button variant={activeTab === "admin-dashboard" ? "default" : "outline"} className="h-12 sm:h-16 flex-col gap-1 sm:gap-2 text-xs sm:text-sm" onClick={() => setActiveTab("admin-dashboard")}>
+                    <BarChart3 className="h-4 w-4 sm:h-6 sm:w-6" />
+                    <span>Admin Dashboard</span>
+                  </Button>
+                  <Button variant={activeTab === "vendor-management" ? "default" : "outline"} className="h-12 sm:h-16 flex-col gap-1 sm:gap-2 text-xs sm:text-sm sm:col-span-2 lg:col-span-1" onClick={() => setActiveTab("vendor-management")}>
+                    <ChefHat className="h-4 w-4 sm:h-6 sm:w-6" />
+                    <span>Vendor Management App</span>
+                  </Button>
+                </div>
 
               {/* Dynamic Tab Content */}
               {activeTab === "employee-app" && (
                 <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
-                  <CardContent className="p-8">
-                    <div className="grid lg:grid-cols-2 gap-8 items-center">
-                      <div className="space-y-6">
+                  <CardContent className="p-6 lg:p-8">
+                    <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+                      <div className="space-y-4 lg:space-y-6">
                         <div>
-                          <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center">
-                            <Smartphone className="h-8 w-8 text-primary mr-3" />
+                          <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 flex items-center">
+                            <Smartphone className="h-6 w-6 sm:h-8 sm:w-8 text-primary mr-3" />
                             Digital Cafeteria for Employees
                           </h3>
-                          <p className="text-muted-foreground mb-6">
+                          <p className="text-sm sm:text-base text-muted-foreground mb-4 lg:mb-6">
                             Empower employees with seamless mobile ordering and cashless payments for a superior dining experience.
                           </p>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid sm:grid-cols-2 gap-3 lg:gap-4">
                           <div className="space-y-2">
-                            <div className="flex items-center text-primary font-medium">
-                              <CheckCircle className="h-4 w-4 mr-2" />
+                            <div className="flex items-center text-primary font-medium text-sm lg:text-base">
+                              <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
                               Pre-Order & Scheduled Meals
                             </div>
-                            <p className="text-sm text-muted-foreground">Order in advance and skip the queue</p>
+                            <p className="text-xs sm:text-sm text-muted-foreground">Order in advance and skip the queue</p>
                           </div>
                           <div className="space-y-2">
-                            <div className="flex items-center text-primary font-medium">
-                              <CheckCircle className="h-4 w-4 mr-2" />
+                            <div className="flex items-center text-primary font-medium text-sm lg:text-base">
+                              <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
                               Live Menu Discovery
                             </div>
-                            <p className="text-sm text-muted-foreground">Real-time availability with dietary filters</p>
+                            <p className="text-xs sm:text-sm text-muted-foreground">Real-time availability with dietary filters</p>
                           </div>
                           <div className="space-y-2">
-                            <div className="flex items-center text-primary font-medium">
-                              <CheckCircle className="h-4 w-4 mr-2" />
+                            <div className="flex items-center text-primary font-medium text-sm lg:text-base">
+                              <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
                               Cashless Payments
                             </div>
-                            <p className="text-sm text-muted-foreground">MealPe Wallet, UPI, Cards integration</p>
+                            <p className="text-xs sm:text-sm text-muted-foreground">MealPe Wallet, UPI, Cards integration</p>
                           </div>
                           <div className="space-y-2">
-                            <div className="flex items-center text-primary font-medium">
-                              <CheckCircle className="h-4 w-4 mr-2" />
+                            <div className="flex items-center text-primary font-medium text-sm lg:text-base">
+                              <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
                               Real-time Order Tracking
                             </div>
-                            <p className="text-sm text-muted-foreground">Know exactly when your order is ready</p>
+                            <p className="text-xs sm:text-sm text-muted-foreground">Know exactly when your order is ready</p>
                           </div>
                         </div>
                       </div>
 
-                      <div className="relative">
-                        <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-xl border">
+                      <div className="relative order-first lg:order-last">
+                        <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-4 lg:p-6 shadow-xl border">
                           <div className="aspect-[9/16] bg-primary/10 rounded-xl flex items-center justify-center">
                             <div className="text-center">
-                              <Smartphone className="h-16 w-16 text-primary mx-auto mb-4" />
-                              <p className="text-sm text-muted-foreground">Employee App Interface</p>
+                              <Smartphone className="h-12 w-12 sm:h-16 sm:w-16 text-primary mx-auto mb-4" />
+                              <p className="text-xs sm:text-sm text-muted-foreground">Employee App Interface</p>
                             </div>
                           </div>
                         </div>
@@ -575,19 +575,19 @@ export const Corporate = () => {
               const IconComponent = step.icon;
               return (
                 <div key={index} className="text-center relative">
-                  <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 mb-4">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-4">
+                  <div className="bg-white rounded-xl p-4 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300 mb-4">
+                    <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm lg:text-lg mx-auto mb-3 lg:mb-4">
                       {step.step}
                     </div>
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <IconComponent className="h-8 w-8 text-primary" />
+                    <div className="w-12 h-12 lg:w-16 lg:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 lg:mb-4">
+                      <IconComponent className="h-6 w-6 lg:h-8 lg:w-8 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-3">{step.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                    <h3 className="text-base sm:text-lg lg:text-xl font-bold text-foreground mb-2 lg:mb-3">{step.title}</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{step.description}</p>
                   </div>
                   {index < 4 && (
                     <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
-                      <div className="w-8 h-0.5 bg-primary/40"></div>
+                      <div className="w-6 lg:w-8 h-0.5 bg-primary/40"></div>
                     </div>
                   )}
                 </div>

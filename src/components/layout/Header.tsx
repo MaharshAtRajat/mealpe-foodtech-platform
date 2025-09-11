@@ -154,82 +154,88 @@ export const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="lg:hidden glass-card border-t-0">
-          <div className="container mx-auto px-4 py-4 space-y-4">
-            <div className="space-y-3">
-              <Link to="/" className="block text-foreground py-2 font-medium">Home</Link>
-              <Link to="/about" className="block text-foreground py-2 font-medium">About Us</Link>
+        <div className="lg:hidden fixed inset-x-0 top-16 bg-background/95 backdrop-blur-lg border-b border-border/50 z-40 max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <div className="container mx-auto px-4 py-4">
+            <div className="space-y-2">
+              <Link to="/" className="block text-foreground py-3 px-2 font-medium hover:bg-muted/50 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Home</Link>
+              <Link to="/about" className="block text-foreground py-3 px-2 font-medium hover:bg-muted/50 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>About Us</Link>
               
-              <div className="text-foreground py-2 font-medium">Products</div>
-              <div className="pl-4 space-y-2">
-                <Link to="/products/canteen-digitisation" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Canteen Digitisation
-                </Link>
-                <Link to="/products/mess-digitisation" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Mess Manager Solution
-                </Link>
-                <a href="https://medmeals.mealpe.app" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  MedMeals
-                </a>
+              <div className="py-2">
+                <div className="text-foreground py-2 px-2 font-medium text-sm text-primary">Products</div>
+                <div className="pl-4 space-y-1">
+                  <Link to="/products/canteen-digitisation" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Canteen Digitisation
+                  </Link>
+                  <Link to="/products/mess-digitisation" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Mess Manager Solution
+                  </Link>
+                  <a href="https://medmeals.mealpe.app" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors">
+                    MedMeals
+                  </a>
+                </div>
               </div>
               
-              <div className="text-foreground py-2 font-medium">Solutions</div>
-              <div className="pl-4 space-y-2">
-                <div className="text-xs font-semibold text-muted-foreground py-1">Hardware</div>
-                <Link to="/solutions/hardware/meal-cards" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Meal Cards
-                </Link>
-                <Link to="/solutions/hardware/self-serving-kiosks" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Kiosk Food Ordering
-                </Link>
-                <div className="text-xs font-semibold text-muted-foreground py-1 pt-2">Industry</div>
-                <Link to="/solutions/industry/hostels" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Hostels / Student Housing
-                </Link>
-                <Link to="/solutions/industry/coliving" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Coliving Space / PGs
-                </Link>
-                <Link to="/solutions/industry/coworking" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Coworking Space
-                </Link>
-                <Link to="/solutions/industry/commercial" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Commercial Building
-                </Link>
-                <Link to="/solutions/industry/corporate" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Corporate Park
-                </Link>
-                <Link to="/solutions/industry/hospital" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Hospital / Health Care Centers
-                </Link>
-                <Link to="/solutions/industry/universities" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Universities / Colleges / Schools
-                </Link>
+              <div className="py-2">
+                <div className="text-foreground py-2 px-2 font-medium text-sm text-primary">Solutions</div>
+                <div className="pl-4 space-y-1">
+                  <div className="text-xs font-semibold text-muted-foreground py-1 px-2">Hardware</div>
+                  <Link to="/solutions/hardware/meal-cards" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Meal Cards
+                  </Link>
+                  <Link to="/solutions/hardware/self-serving-kiosks" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Kiosk Food Ordering
+                  </Link>
+                  <div className="text-xs font-semibold text-muted-foreground py-1 px-2 pt-2">Industry</div>
+                  <Link to="/solutions/industry/hostels" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Hostels / Student Housing
+                  </Link>
+                  <Link to="/solutions/industry/coliving" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Coliving Space / PGs
+                  </Link>
+                  <Link to="/solutions/industry/coworking" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Coworking Space
+                  </Link>
+                  <Link to="/solutions/industry/commercial" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Commercial Building
+                  </Link>
+                  <Link to="/solutions/industry/corporate" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Corporate Park
+                  </Link>
+                  <Link to="/solutions/industry/hospital" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Hospital / Health Care Centers
+                  </Link>
+                  <Link to="/solutions/industry/universities" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Universities / Colleges / Schools
+                  </Link>
+                </div>
               </div>
               
-              <div className="text-foreground py-2 font-medium">Services</div>
-              <div className="pl-4 space-y-2">
-                <Link to="/services/vendor-aggregation" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Vendor Aggregation
-                </Link>
-                <Link to="/services/canteen-setup" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Food Court / Canteen / Cafeteria Setup
-                </Link>
-                <Link to="/services/self-ordering-kiosk" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Self Ordering Kiosk
-                </Link>
-                <Link to="/services/campus-food-delivery" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Campus Food Delivery
-                </Link>
-                <Link to="/services/food-audit" className="block text-sm text-muted-foreground hover:text-primary py-1">
-                  Food Audit as a Service
-                </Link>
+              <div className="py-2">
+                <div className="text-foreground py-2 px-2 font-medium text-sm text-primary">Services</div>
+                <div className="pl-4 space-y-1">
+                  <Link to="/services/vendor-aggregation" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Vendor Aggregation
+                  </Link>
+                  <Link to="/services/canteen-setup" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Food Court / Canteen / Cafeteria Setup
+                  </Link>
+                  <Link to="/services/self-ordering-kiosk" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Self Ordering Kiosk
+                  </Link>
+                  <Link to="/services/campus-food-delivery" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Campus Food Delivery
+                  </Link>
+                  <Link to="/services/food-audit" className="block text-sm text-muted-foreground hover:text-primary py-2 px-2 hover:bg-muted/30 rounded transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Food Audit as a Service
+                  </Link>
+                </div>
               </div>
               
-              <Link to="/resources" className="block text-foreground py-2 font-medium">Resources</Link>
-              <Link to="/contact" className="block text-foreground py-2 font-medium">Contact Us</Link>
+              <Link to="/resources" className="block text-foreground py-3 px-2 font-medium hover:bg-muted/50 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Resources</Link>
+              <Link to="/contact" className="block text-foreground py-3 px-2 font-medium hover:bg-muted/50 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
             </div>
-            <div className="space-y-3 pt-4 border-t">
-              <Button className="w-full gradient-primary text-white">Get Demo</Button>
+            <div className="pt-4 border-t border-border/50 mt-4">
+              <Button className="w-full gradient-primary text-white" onClick={() => setIsMenuOpen(false)}>Get Demo</Button>
             </div>
           </div>
         </div>
