@@ -212,7 +212,7 @@ export const About = () => {
                   <CardHeader className="text-center">
                     <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
                       <img 
-                        src="/lovable-uploads/fc73eae4-95a4-4008-a062-2fc950cec588.png"
+                        src="/lovable-uploads/e9ab43f2-a5b7-4fbe-bda0-046b5f91a295.png"
                         alt="Maharsh Shah - Co-Founder & CEO"
                         className="w-full h-full object-cover"
                       />
@@ -250,7 +250,7 @@ export const About = () => {
                   <CardHeader className="text-center">
                     <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
                       <img 
-                        src="/lovable-uploads/e9ab43f2-a5b7-4fbe-bda0-046b5f91a295.png"
+                        src="/lovable-uploads/fc73eae4-95a4-4008-a062-2fc950cec588.png"
                         alt="Deval Patel - Co-Founder & COO"
                         className="w-full h-full object-cover"
                       />
