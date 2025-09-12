@@ -113,38 +113,44 @@ export const About = () => {
               </div>
               
               <div className="grid md:grid-cols-3 gap-8">
-                <Card className="glass-card hover:shadow-brand transition-all duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-foreground">MealPe Digital Cafeteria</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-muted-foreground leading-relaxed">
-                      A contactless cafeteria management platform for universities, corporates, and co-working spaces.
-                    </CardDescription>
-                  </CardContent>
-                </Card>
+                <Link to="/products/canteen-digitisation">
+                  <Card className="glass-card hover:shadow-brand transition-all duration-300 cursor-pointer h-full">
+                    <CardHeader>
+                      <CardTitle className="text-xl text-foreground">MealPe Digital Cafeteria</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-muted-foreground leading-relaxed">
+                        A contactless cafeteria management platform for universities, corporates, and co-working spaces.
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                </Link>
 
-                <Card className="glass-card hover:shadow-brand transition-all duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-foreground">MealPe Mess Manager</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-muted-foreground leading-relaxed">
-                      A mess operations solution that digitizes fixed meal plans, attendance, and food planning.
-                    </CardDescription>
-                  </CardContent>
-                </Card>
+                <Link to="/products/mess-digitisation">
+                  <Card className="glass-card hover:shadow-brand transition-all duration-300 cursor-pointer h-full">
+                    <CardHeader>
+                      <CardTitle className="text-xl text-foreground">MealPe Mess Manager</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-muted-foreground leading-relaxed">
+                        A mess operations solution that digitizes fixed meal plans, attendance, and food planning.
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                </Link>
 
-                <Card className="glass-card hover:shadow-brand transition-all duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-foreground">MealPe MedMeals</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-muted-foreground leading-relaxed">
-                      A hospital-focused meal management platform designed for patients and staff, integrated with dietary prescriptions and hospital systems.
-                    </CardDescription>
-                  </CardContent>
-                </Card>
+                <a href="https://medmeals.mealpe.app" target="_blank" rel="noopener noreferrer">
+                  <Card className="glass-card hover:shadow-brand transition-all duration-300 cursor-pointer h-full">
+                    <CardHeader>
+                      <CardTitle className="text-xl text-foreground">MealPe MedMeals</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-muted-foreground leading-relaxed">
+                        A hospital-focused meal management platform designed for patients and staff, integrated with dietary prescriptions and hospital systems.
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                </a>
               </div>
             </div>
           </div>
