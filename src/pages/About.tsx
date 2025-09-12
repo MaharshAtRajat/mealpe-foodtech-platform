@@ -47,7 +47,7 @@ export const About = () => {
                 <img 
                   src="/lovable-uploads/770d3ce0-7c0e-4528-9c74-8b46b33fb193.png"
                   alt="MealPe founders taking a team selfie"
-                  className="w-full h-auto rounded-xl shadow-lg mx-auto"
+                  className="w-full h-auto rounded-xl mx-auto"
                 />
               </div>
               
