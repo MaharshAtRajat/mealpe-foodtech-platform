@@ -39,7 +39,10 @@ export const About = () => {
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-foreground">Our Story</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+                  <span className="text-foreground">Our </span>
+                  <span className="text-primary">Story</span>
+                </h2>
                 <p className="text-xl text-muted-foreground mb-12">The journey that started with a simple yet powerful idea</p>
               </div>
               
