@@ -11,21 +11,21 @@ export const About = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-[80vh] flex items-center px-4 overflow-hidden">
-          {/* Animated Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-primary/10"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.3),transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.2),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(120,119,198,0.2),transparent_50%)] dark:bg-[radial-gradient(circle_at_70%_80%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+        <section className="relative min-h-[80vh] flex items-center px-4 overflow-hidden bg-white">
+          {/* Subtle Orange Fades */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white via-orange-50/30 to-orange-100/20"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(255,154,0,0.08),transparent_60%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,rgba(255,154,0,0.05),transparent_60%)]"></div>
           
-          {/* Floating Elements */}
+          {/* Floating Orange Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-20 left-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float opacity-60"></div>
-            <div className="absolute bottom-32 right-32 w-96 h-96 bg-primary/15 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/10 to-transparent rounded-full blur-3xl animate-pulse opacity-30"></div>
+            <div className="absolute top-20 left-20 w-72 h-72 bg-orange-200/15 rounded-full blur-3xl animate-float opacity-40"></div>
+            <div className="absolute bottom-32 right-32 w-96 h-96 bg-orange-300/10 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-orange-100/8 to-transparent rounded-full blur-3xl animate-pulse opacity-30"></div>
           </div>
           
-          {/* Grid Pattern */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.05)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)] opacity-20"></div>
+          {/* Subtle Grid Pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,154,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,154,0,0.02)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)] opacity-30"></div>
           
           <div className="container mx-auto relative z-10">
             <div className="max-w-5xl mx-auto text-center">
