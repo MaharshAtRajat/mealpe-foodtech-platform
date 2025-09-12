@@ -210,7 +210,7 @@ export const About = () => {
               <div className="grid md:grid-cols-3 gap-8">
                 <Card className="glass-card">
                   <CardHeader className="text-center">
-                    <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
+                    <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
                       <img 
                         src="/lovable-uploads/0ea6be42-0bb9-4782-96c2-e49f0e511804.png"
                         alt="Maharsh Shah - Co-Founder & CEO"
@@ -229,7 +229,7 @@ export const About = () => {
 
                 <Card className="glass-card">
                   <CardHeader className="text-center">
-                    <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
+                    <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
                       <img 
                         src="/lovable-uploads/dab8baea-453d-43a1-be49-de0f401ce630.png"
                         alt="Satya Mehta - Co-Founder & CBO"
@@ -248,7 +248,7 @@ export const About = () => {
 
                 <Card className="glass-card">
                   <CardHeader className="text-center">
-                    <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
+                    <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
                       <img 
                         src="/lovable-uploads/73e3b2dc-3a59-4df8-bb5e-abb8bb8aea51.png"
                         alt="Deval Patel - Co-Founder & COO"
