@@ -35,7 +35,7 @@ export const About = () => {
         </section>
 
         {/* Our Story */}
-        <section className="py-16 lg:py-24 bg-background">
+        <section className="py-12 lg:py-16 bg-background">
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
@@ -67,7 +67,7 @@ export const About = () => {
         </section>
 
         {/* Mission & Vision */}
-        <section className="py-16 lg:py-24 bg-muted/30">
+        <section className="py-12 lg:py-16 bg-muted/30">
           <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12">
@@ -104,7 +104,7 @@ export const About = () => {
         </section>
 
         {/* What We Do */}
-        <section className="py-16 lg:py-24 bg-background">
+        <section className="py-12 lg:py-16 bg-background">
           <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
@@ -157,7 +157,7 @@ export const About = () => {
         </section>
 
         {/* Milestones & Achievements */}
-        <section className="py-16 lg:py-24 bg-muted/30">
+        <section className="py-12 lg:py-16 bg-muted/30">
           <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
@@ -199,7 +199,7 @@ export const About = () => {
         </section>
 
         {/* Meet the Founders */}
-        <section className="py-16 lg:py-24 bg-background">
+        <section className="py-12 lg:py-16 bg-background">
           <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
@@ -270,7 +270,7 @@ export const About = () => {
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-16 lg:py-24 bg-muted/30">
+        <section className="py-12 lg:py-16 bg-muted/30">
           <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
@@ -314,7 +314,7 @@ export const About = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="relative overflow-hidden gradient-primary text-white py-16 lg:py-24">
+        <section className="relative overflow-hidden gradient-primary text-white py-12 lg:py-16">
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
