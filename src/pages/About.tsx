@@ -37,31 +37,27 @@ export const About = () => {
         {/* Our Story */}
         <section className="py-16 lg:py-24 bg-background">
           <div className="container mx-auto">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-foreground">Our Story</h2>
-                <p className="text-xl text-muted-foreground">The journey that started with a simple yet powerful idea</p>
+                <p className="text-xl text-muted-foreground mb-12">The journey that started with a simple yet powerful idea</p>
               </div>
               
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div className="order-2 lg:order-1">
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                    Founded in 2023, MealPe was born out of a simple yet powerful idea — to modernize food service operations across institutions. Universities, corporates, and hospitals have long faced challenges of manual meal management, long queues, miscommunication, and food wastage.
-                  </p>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    We set out to solve this by creating a tech-first platform that connects administrators, vendors, and users on a single digital ecosystem.
-                  </p>
-                </div>
-                
-                <div className="order-1 lg:order-2">
-                  <div className="glass-card p-8 rounded-2xl overflow-hidden">
-                    <img 
-                      src="/lovable-uploads/770d3ce0-7c0e-4528-9c74-8b46b33fb193.png"
-                      alt="MealPe founders taking a team selfie"
-                      className="w-full h-auto rounded-xl shadow-lg"
-                    />
-                  </div>
-                </div>
+              <div className="mb-12">
+                <img 
+                  src="/lovable-uploads/770d3ce0-7c0e-4528-9c74-8b46b33fb193.png"
+                  alt="MealPe founders taking a team selfie"
+                  className="w-full h-auto rounded-xl shadow-lg mx-auto"
+                />
+              </div>
+              
+              <div className="space-y-6">
+                <p className="text-lg text-muted-foreground leading-relaxed text-center">
+                  Founded in 2023, MealPe was born out of a simple yet powerful idea — to modernize food service operations across institutions. Universities, corporates, and hospitals have long faced challenges of manual meal management, long queues, miscommunication, and food wastage.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed text-center">
+                  We set out to solve this by creating a tech-first platform that connects administrators, vendors, and users on a single digital ecosystem.
+                </p>
               </div>
             </div>
           </div>
