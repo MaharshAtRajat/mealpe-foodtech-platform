@@ -36,6 +36,7 @@ import { FoodAudit } from "./pages/services/FoodAudit";
 // Other Pages
 import { Features } from "./pages/Features";
 import { Contact } from "./pages/Contact";
+import { About } from "./pages/About";
 
 // Forms
 import ContactForm from "./pages/forms/ContactForm";
@@ -82,6 +83,7 @@ const App = () => (
           
           {/* Other Pages */}
           <Route path="/features" element={<Features />} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           
           {/* Forms */}
