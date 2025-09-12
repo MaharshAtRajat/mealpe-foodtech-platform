@@ -67,10 +67,10 @@ export const About = () => {
         </section>
 
         {/* Mission & Vision */}
-        <section className="py-12 lg:py-16 bg-muted/30">
+        <section className="py-8 lg:py-12 bg-muted/30">
           <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12">
+              <div className="grid lg:grid-cols-2 gap-8">
                 <Card className="glass-card border-primary/20">
                   <CardHeader className="text-center">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
