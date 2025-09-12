@@ -4,90 +4,32 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Target, Eye, Users, Award, Zap, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export const About = () => {
-  return (
-    <>
+  return <>
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-[80vh] flex items-center px-4 overflow-hidden bg-white">
-          {/* Subtle Orange Fades */}
-          <div className="absolute inset-0 bg-gradient-to-br from-white via-orange-50/30 to-orange-100/20"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(255,154,0,0.08),transparent_60%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,rgba(255,154,0,0.05),transparent_60%)]"></div>
-          
-          {/* Floating Orange Elements */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-20 left-20 w-72 h-72 bg-orange-200/15 rounded-full blur-3xl animate-float opacity-40"></div>
-            <div className="absolute bottom-32 right-32 w-96 h-96 bg-orange-300/10 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-orange-100/8 to-transparent rounded-full blur-3xl animate-pulse opacity-30"></div>
+        <section className="relative min-h-[60vh] bg-gradient-to-br from-background via-background to-muted/30 flex items-center px-4 overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-20 left-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float opacity-60"></div>
+            <div className="absolute bottom-32 right-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" style={{
+            animationDelay: '2s'
+          }}></div>
           </div>
           
-          {/* Subtle Grid Pattern */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,154,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,154,0,0.02)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)] opacity-30"></div>
-          
           <div className="container mx-auto relative z-10">
-            <div className="max-w-5xl mx-auto text-center">
-              {/* Badge */}
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-8 animate-fade-in">
-                <span className="text-sm font-medium text-primary">🚀 Leading FoodTech Innovation in India</span>
-              </div>
-              
-              {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight animate-fade-in" style={{animationDelay: '0.2s'}}>
-                <span className="text-foreground">Reimagining</span>
-                <br />
-                <span className="relative">
-                  <span className="bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
-                    Institutional Food Services
-                  </span>
-                  <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-primary-light/20 blur-xl opacity-50 animate-pulse"></div>
-                </span>
-                <br />
-                <span className="text-foreground">with</span>{" "}
-                <span className="relative">
-                  <span className="text-primary font-bold">Technology</span>
-                  <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary-light rounded-full transform scale-x-0 animate-[scale-x_0.8s_ease-out_1s_forwards] origin-left"></div>
-                </span>
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                <span className="text-foreground">Reimagining</span><br />
+                <span className="bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
+                  Institutional Food Services
+                </span><br />
+                <span className="text-foreground">with Technology</span>
               </h1>
               
-              {/* Subheadline */}
-              <p className="text-xl sm:text-2xl lg:text-3xl mb-12 text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{animationDelay: '0.4s'}}>
-                At <span className="text-primary font-semibold">MealPe</span>, we digitize cafeterias, messes, and hospital meal management to make food service{" "}
-                <span className="text-foreground font-medium">seamless, transparent, and efficient</span> for organizations and their people.
+              <p className="text-lg sm:text-xl lg:text-2xl mb-8 text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                At MealPe, we digitize cafeterias, messes, and hospital meal management to make food service seamless, transparent, and efficient for organizations and their people.
               </p>
-              
-              {/* Key Stats */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto mb-12 animate-fade-in" style={{animationDelay: '0.6s'}}>
-                <div className="glass-card p-6 text-center hover-scale">
-                  <div className="text-3xl font-bold text-primary mb-2">60K+</div>
-                  <p className="text-sm text-muted-foreground">Daily Meals Served</p>
-                </div>
-                <div className="glass-card p-6 text-center hover-scale">
-                  <div className="text-3xl font-bold text-primary mb-2">8+</div>
-                  <p className="text-sm text-muted-foreground">Institutions Powered</p>
-                </div>
-                <div className="glass-card p-6 text-center hover-scale">
-                  <div className="text-3xl font-bold text-primary mb-2">₹10Cr</div>
-                  <p className="text-sm text-muted-foreground">Pre-Seed Valuation</p>
-                </div>
-              </div>
-              
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{animationDelay: '0.8s'}}>
-                <Link to="/products/canteen-digitisation">
-                  <Button size="lg" className="gradient-primary text-white hover:shadow-brand transition-all duration-300 px-8 py-4 text-lg font-semibold w-full sm:w-auto group">
-                    Explore Our Products
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button variant="outline" size="lg" className="border-primary/30 hover:bg-primary/10 px-8 py-4 text-lg font-semibold w-full sm:w-auto backdrop-blur-sm">
-                    Schedule Demo
-                  </Button>
-                </Link>
-              </div>
             </div>
           </div>
         </section>
@@ -117,8 +59,8 @@ export const About = () => {
                       <div className="w-16 h-16 gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                         <span className="text-white font-bold text-2xl">M</span>
                       </div>
-                      <h3 className="text-2xl font-bold text-foreground mb-2">MealPe</h3>
-                      <p className="text-muted-foreground">Est. 2023</p>
+                      
+                      
                     </div>
                   </div>
                 </div>
@@ -386,6 +328,5 @@ export const About = () => {
         </section>
       </main>
       <Footer />
-    </>
-  );
+    </>;
 };
