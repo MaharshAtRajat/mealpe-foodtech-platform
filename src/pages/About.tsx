@@ -54,14 +54,12 @@ export const About = () => {
                 </div>
                 
                 <div className="order-1 lg:order-2">
-                  <div className="glass-card p-8 rounded-2xl">
-                    <div className="text-center">
-                      <div className="w-16 h-16 gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-white font-bold text-2xl">M</span>
-                      </div>
-                      
-                      
-                    </div>
+                  <div className="glass-card p-8 rounded-2xl overflow-hidden">
+                    <img 
+                      src="/lovable-uploads/770d3ce0-7c0e-4528-9c74-8b46b33fb193.png"
+                      alt="MealPe founders taking a team selfie"
+                      className="w-full h-auto rounded-xl shadow-lg"
+                    />
                   </div>
                 </div>
               </div>
