@@ -68,69 +68,34 @@ export const Hero = () => {
               </div>
             </div>
 
-            {/* Right Content - Product Mockup */}
-            <div className="relative mt-8 lg:mt-0">
-              <div className="relative z-10">
-                {/* Main Dashboard Mockup */}
-                <div className="glass-strong rounded-xl sm:rounded-2xl p-1 shadow-glass mb-4 sm:mb-6 animate-float">
-                  <div className="bg-background rounded-xl overflow-hidden">
-                    <img 
-                      src={heroSplitScreen}
-                      alt="Traditional vs Digital Food Service - MealPe Transformation"
-                      className="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-t-xl"
-                    />
-                    <div className="p-3 sm:p-4 lg:p-6">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full"></div>
-                          <div className="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-500 rounded-full"></div>
-                          <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full"></div>
-                        </div>
-                        <div className="text-xs sm:text-sm text-muted-foreground">MealPe Dashboard</div>
-                      </div>
-                      <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4">
-                        <div className="glass-card p-2 sm:p-3 rounded-lg text-center">
-                          <div className="text-lg sm:text-xl lg:text-2xl font-bold text-primary">72K+</div>
-                          <div className="text-xs text-muted-foreground">Orders</div>
-                        </div>
-                        <div className="glass-card p-2 sm:p-3 rounded-lg text-center">
-                          <div className="text-lg sm:text-xl lg:text-2xl font-bold text-primary">5+</div>
-                          <div className="text-xs text-muted-foreground">Use Cases</div>
-                        </div>
-                        <div className="glass-card p-2 sm:p-3 rounded-lg text-center">
-                          <div className="text-lg sm:text-xl lg:text-2xl font-bold text-primary">7+</div>
-                          <div className="text-xs text-muted-foreground">Partners</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Mobile App Mockup */}
-                <div className="hidden lg:block absolute -bottom-4 lg:-bottom-6 -right-4 lg:-right-6 w-32 lg:w-40 xl:w-48 glass-strong rounded-2xl lg:rounded-3xl p-1 shadow-glass animate-float" style={{animationDelay: '1s'}}>
-                  <div className="bg-background rounded-2xl overflow-hidden">
-                    <div className="bg-primary/10 h-16 lg:h-20 xl:h-24 flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="w-6 h-6 lg:w-8 lg:h-8 xl:w-10 xl:h-10 gradient-primary rounded-lg mx-auto mb-1 lg:mb-2 flex items-center justify-center">
-                          <span className="text-white font-bold text-xs lg:text-sm">M</span>
-                        </div>
-                        <div className="text-xs font-medium">MealPe</div>
-                      </div>
-                    </div>
-                    <div className="p-2 lg:p-3 space-y-1 lg:space-y-2">
-                      <div className="h-1 lg:h-1.5 bg-muted rounded w-full"></div>
-                      <div className="h-1 lg:h-1.5 bg-muted rounded w-2/3"></div>
-                      <div className="h-1 lg:h-1.5 bg-muted rounded w-3/4"></div>
-                    </div>
-                  </div>
+            {/* Right Content - Mobile App Mockup */}
+            <div className="relative mt-8 lg:mt-0 flex justify-center lg:justify-end">
+              <div className="relative z-10 max-w-sm mx-auto lg:mx-0">
+                {/* Mobile App Image */}
+                <div className="relative animate-float">
+                  <img 
+                    src="/lovable-uploads/e6132474-18e5-475e-8414-d69c42a220a2.png"
+                    alt="MealPe Mobile App - Ahmedabad Campus Food Ordering Interface"
+                    className="w-full max-w-xs lg:max-w-sm xl:max-w-md mx-auto drop-shadow-2xl"
+                  />
+                  
+                  {/* Glow effect behind phone */}
+                  <div className="absolute inset-0 bg-primary/20 rounded-[2.5rem] blur-2xl scale-110 -z-10 animate-pulse"></div>
                 </div>
               </div>
 
-              {/* Floating Elements */}
-              <div className="hidden xl:block absolute top-8 lg:top-10 -left-8 lg:-left-10 glass-card p-3 lg:p-4 rounded-lg lg:rounded-xl shadow-glass animate-float" style={{animationDelay: '3s'}}>
+              {/* Floating Stats */}
+              <div className="hidden xl:block absolute top-8 -left-8 glass-card p-4 rounded-xl shadow-glass animate-float" style={{animationDelay: '2s'}}>
                 <div className="text-center">
-                  <div className="text-lg lg:text-xl xl:text-2xl font-bold text-primary">60K+</div>
+                  <div className="text-2xl font-bold text-primary">60K+</div>
                   <div className="text-xs text-muted-foreground">Daily Meals</div>
+                </div>
+              </div>
+              
+              <div className="hidden xl:block absolute bottom-16 -left-4 glass-card p-3 rounded-lg shadow-glass animate-float" style={{animationDelay: '3s'}}>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-primary">8+</div>
+                  <div className="text-xs text-muted-foreground">Institutions</div>
                 </div>
               </div>
             </div>
