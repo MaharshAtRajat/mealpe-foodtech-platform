@@ -167,27 +167,30 @@ export const About = () => {
               
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="glass-card p-6 text-center">
-                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">60K+</div>
+                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">1 Million</div>
                   <p className="text-muted-foreground">Meals processed across campuses and hospitals</p>
                 </div>
 
                 <div className="glass-card p-6 text-center">
-                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">8+</div>
+                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">12+</div>
                   <p className="text-muted-foreground">Institutions deployed with 50+ vendor partners</p>
                 </div>
 
                 <div className="glass-card p-6 text-center">
-                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">₹45L</div>
-                  <p className="text-muted-foreground">SISFS funding secured</p>
+                  <img 
+                    src="/lovable-uploads/e2bf57c9-0ee4-42bc-89f9-9b643745651a.png"
+                    alt="SISFS Seed Fund Scheme"
+                    className="h-12 w-auto mx-auto mb-2"
+                  />
+                  <p className="text-muted-foreground">Backed by SISFS</p>
                 </div>
 
-                <div className="glass-card p-6 text-center sm:col-span-2 lg:col-span-1">
-                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">₹10Cr</div>
-                  <p className="text-muted-foreground">Pre-Seed round valuation</p>
-                </div>
-
-                <div className="glass-card p-6 text-center sm:col-span-2 lg:col-span-2">
-                  <Award className="h-8 w-8 text-primary mx-auto mb-2" />
+                <div className="glass-card p-6 text-center sm:col-span-2 lg:col-span-3">
+                  <img 
+                    src="/src/assets/i-venture-logo.png"
+                    alt="I-Venture Accelerator"
+                    className="h-12 w-auto mx-auto mb-2"
+                  />
                   <p className="text-muted-foreground">Selected for ISB i-Propel Accelerator Cohort (July 2025)</p>
                 </div>
               </div>
