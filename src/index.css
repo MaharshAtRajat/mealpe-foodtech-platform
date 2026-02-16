@@ -9,7 +9,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* MealPe Brand Colors */
-    --background: 0 0% 97.3%; /* #f8f9fa background gray */
+    --background: 0 0% 100%; /* Pure white */
     --foreground: 231 18% 11%; /* #11111f black */
 
     --card: 0 0% 100%;
