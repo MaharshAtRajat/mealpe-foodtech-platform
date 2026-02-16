@@ -1,25 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
-import heroSplitScreen from "@/assets/hero-split-screen.jpg";
-import Aurora from "@/components/ui/Aurora/Aurora";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-white flex items-center px-4 sm:px-0">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Aurora Background */}
-        <div className="absolute inset-0" style={{ opacity: 0.4 }}>
-          <Aurora
-            colorStops={["#ff2600", "#ff583a", "#ffffff"]}
-            amplitude={1.4}
-            blend={0.94}
-          />
-        </div>
-        
-        {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,88,58,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,88,58,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-      </div>
+    <section className="relative min-h-screen overflow-hidden bg-background flex items-center px-4 sm:px-0">
 
       <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-20 relative z-10">
         <div className="max-w-6xl mx-auto">
