@@ -1,9 +1,37 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
+import Grainient from "@/components/ui/Grainient/Grainient";
 
 export const Hero = () => {
   return (
     <section className="relative min-h-screen overflow-hidden bg-background flex items-center px-4 sm:px-0">
+      {/* Grainient Background */}
+      <div className="absolute inset-0">
+        <Grainient
+          color1="#ff583a"
+          color2="#ffffff"
+          color3="#ff2600"
+          timeSpeed={0.7}
+          colorBalance={-0.18}
+          warpStrength={3.15}
+          warpFrequency={3.6}
+          warpSpeed={1.6}
+          warpAmplitude={50}
+          blendAngle={-10}
+          blendSoftness={0.17}
+          rotationAmount={320}
+          noiseScale={0.4}
+          grainAmount={0.06}
+          grainScale={2.2}
+          grainAnimated={false}
+          contrast={1.3}
+          gamma={1}
+          saturation={1}
+          centerX={-0.19}
+          centerY={-0.19}
+          zoom={0.6}
+        />
+      </div>
 
       <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-20 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -65,11 +93,8 @@ export const Hero = () => {
                   <img 
                     src="/lovable-uploads/e6132474-18e5-475e-8414-d69c42a220a2.png"
                     alt="MealPe Mobile App - Ahmedabad Campus Food Ordering Interface"
-                    className="w-full max-w-xs lg:max-w-sm xl:max-w-md mx-auto drop-shadow-2xl"
+                    className="w-full max-w-xs lg:max-w-sm xl:max-w-md mx-auto"
                   />
-                  
-                  {/* Glow effect behind phone */}
-                  <div className="absolute inset-0 bg-primary/20 rounded-[2.5rem] blur-2xl scale-110 -z-10 animate-pulse"></div>
                 </div>
               </div>
 
