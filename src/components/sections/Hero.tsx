@@ -5,7 +5,7 @@ import Aurora from "@/components/ui/Aurora/Aurora";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-background via-background to-muted/30 flex items-center px-4 sm:px-0">
+    <section className="relative min-h-screen overflow-hidden bg-white flex items-center px-4 sm:px-0">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Aurora Background */}
