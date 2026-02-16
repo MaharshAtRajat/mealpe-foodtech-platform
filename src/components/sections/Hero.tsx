@@ -1,16 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
 import heroSplitScreen from "@/assets/hero-split-screen.jpg";
+import Aurora from "@/components/ui/Aurora/Aurora";
 
 export const Hero = () => {
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-background via-background to-muted/30 flex items-center px-4 sm:px-0">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Animated gradient orbs */}
-        <div className="absolute top-20 left-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float opacity-60"></div>
-        <div className="absolute bottom-32 right-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-primary rounded-full blur-3xl opacity-5"></div>
+        {/* Aurora Background */}
+        <div className="absolute inset-0" style={{ opacity: 0.4 }}>
+          <Aurora
+            colorStops={["#ff2600", "#ff583a", "#ffffff"]}
+            amplitude={1.4}
+            blend={0.94}
+          />
+        </div>
         
         {/* Grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,88,58,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,88,58,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
